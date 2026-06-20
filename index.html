@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Loreto · A Private Dive Journey — Sea of Cortez</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#14242c; --ink-soft:#46606b; --ink-faint:#7c929b;
+    --teal:#0c6b80; --teal-deep:#083e4c; --teal-bright:#15a39a;
+    --gold:#c08a3e; --gold-soft:#e7cfa6;
+    --sand:#f6f2ea; --paper:#ffffff; --line:#e7ded0; --line-cool:#e2e9ec;
+    --shadow:0 10px 40px rgba(8,62,76,.10);
+    --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+    --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; background:var(--sand); color:var(--ink);
+    font-family:var(--sans); font-weight:400; line-height:1.65; font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{font-family:var(--serif); font-weight:600; letter-spacing:.2px; line-height:1.15; margin:0;}
+  a{color:var(--teal); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .eyebrow{font-family:var(--sans); font-weight:600; font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:var(--gold);}
+
+  /* scroll progress */
+  #progress{position:fixed; top:0; left:0; height:3px; width:0%; background:linear-gradient(90deg,var(--teal-bright),var(--gold)); z-index:120; transition:width .1s linear;}
+
+  /* hero */
+  .hero{position:relative; min-height:88vh; display:flex; align-items:center; justify-content:center;
+    text-align:center; color:#fff; overflow:hidden;
+    background:linear-gradient(160deg,#06303b 0%,#0a5466 45%,#0e7e80 100%);}
+  .hero::after{content:""; position:absolute; inset:0; background:
+    radial-gradient(circle at 78% 18%, rgba(255,255,255,.10), transparent 42%),
+    radial-gradient(circle at 12% 88%, rgba(21,163,154,.30), transparent 46%);}
+  .hero .wave{position:absolute; bottom:-1px; left:0; width:100%; z-index:2; display:block;}
+  .hero-inner{position:relative; z-index:3; padding:40px 24px 90px; max-width:880px;}
+  .hero .eyebrow{color:var(--gold-soft);}
+  .hero h1{font-size:clamp(44px,8vw,84px); font-weight:500; margin:.18em 0 .12em; text-shadow:0 2px 30px rgba(0,0,0,.25);}
+  .hero h1 .it{font-style:italic; color:var(--gold-soft);}
+  .hero .sub{font-size:clamp(16px,2.2vw,20px); font-weight:300; color:#dff0f0; max-width:620px; margin:0 auto;}
+  .hero .facts{display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin-top:34px;}
+  .hero .fact{background:rgba(255,255,255,.10); backdrop-filter:blur(6px); border:1px solid rgba(255,255,255,.22);
+    border-radius:999px; padding:9px 18px; font-size:13.5px; font-weight:500;}
+  .hero .fact b{color:#fff;}
+
+  /* sticky nav */
+  nav.bar{position:sticky; top:0; z-index:100; background:rgba(255,255,255,.86); backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line); }
+  .bar-inner{max-width:1080px; margin:0 auto; display:flex; align-items:center; gap:6px; padding:0 18px; height:58px; overflow-x:auto;}
+  .bar .brand{font-family:var(--serif); font-weight:600; font-size:19px; color:var(--teal-deep); margin-right:14px; white-space:nowrap;}
+  .bar a{color:var(--ink-soft); font-size:13px; font-weight:500; padding:7px 11px; border-radius:8px; white-space:nowrap; letter-spacing:.02em;}
+  .bar a:hover{background:var(--sand); text-decoration:none; color:var(--teal-deep);}
+  .bar a.active{color:var(--teal-deep); background:var(--sand);}
+  .bar a.active::after{content:""; display:block; height:2px; background:var(--gold); border-radius:2px; margin-top:5px;}
+
+  /* layout */
+  main{max-width:1080px; margin:0 auto; padding:0 22px;}
+  section.block{padding:64px 0 26px; scroll-margin-top:70px;}
+  .sec-head{display:flex; align-items:flex-end; justify-content:space-between; gap:16px; margin-bottom:26px; border-bottom:1px solid var(--line); padding-bottom:16px;}
+  .sec-head h2{font-size:clamp(28px,4.4vw,40px); font-weight:500; color:var(--teal-deep);}
+  .sec-head .lead{font-size:15px; color:var(--ink-soft); max-width:440px; margin-top:6px;}
+  .collapse-btn{flex:0 0 auto; font-family:var(--sans); font-size:12px; font-weight:600; letter-spacing:.04em;
+    color:var(--ink-faint); background:none; border:1px solid var(--line); border-radius:999px; padding:6px 14px; cursor:pointer; transition:.2s;}
+  .collapse-btn:hover{color:var(--teal-deep); border-color:var(--teal);}
+  .sec-body{overflow:hidden; transition:max-height .45s ease, opacity .3s ease;}
+  section.collapsed .sec-body{max-height:0 !important; opacity:0; pointer-events:none;}
+  section.collapsed .collapse-btn::after{content:" ＋";}
+  .collapse-btn::after{content:" −";}
+
+  /* cards & grids */
+  .grid{display:grid; gap:18px;}
+  .g2{grid-template-columns:repeat(2,1fr);}
+  .g3{grid-template-columns:repeat(3,1fr);}
+  .g4{grid-template-columns:repeat(4,1fr);}
+  @media(max-width:860px){.g2,.g3,.g4{grid-template-columns:1fr;}}
+  .card{background:var(--paper); border:1px solid var(--line); border-radius:16px; padding:22px 24px; box-shadow:var(--shadow);}
+  .card.flat{box-shadow:none;}
+
+  /* KPIs */
+  .kpis{display:grid; grid-template-columns:repeat(4,1fr); gap:14px;}
+  @media(max-width:680px){.kpis{grid-template-columns:repeat(2,1fr);}}
+  .kpi{background:var(--paper); border:1px solid var(--line); border-radius:14px; padding:18px 12px; text-align:center;}
+  .kpi .n{font-family:var(--serif); font-size:30px; font-weight:600; color:var(--teal);}
+  .kpi .l{font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint); margin-top:4px;}
+
+  .callout{background:linear-gradient(135deg,#fbf6ec,#f6efe1); border:1px solid var(--gold-soft); border-left:4px solid var(--gold);
+    border-radius:12px; padding:16px 20px; font-size:14.5px; color:#6f5a2e; margin-top:20px;}
+  .callout b{color:#5a4720;}
+  .note-cool{background:#eef6f8; border:1px solid var(--line-cool); border-left:4px solid var(--teal); border-radius:12px; padding:16px 20px; font-size:14.5px; color:var(--teal-deep); margin-top:18px;}
+
+  p{margin:10px 0;}
+  .muted{color:var(--ink-soft); font-size:14px;}
+  ul.clean{margin:8px 0; padding-left:20px;} ul.clean li{margin:5px 0;}
+
+  /* dive site accordion */
+  .dive{background:var(--paper); border:1px solid var(--line); border-radius:16px; margin-bottom:14px; overflow:hidden; box-shadow:var(--shadow);}
+  .dive-head{display:flex; align-items:center; gap:16px; padding:20px 22px; cursor:pointer; transition:background .2s;}
+  .dive-head:hover{background:#fbf8f2;}
+  .dive-rank{flex:0 0 46px; height:46px; border-radius:50%; background:linear-gradient(150deg,var(--teal),var(--teal-deep)); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-family:var(--serif); font-size:22px; font-weight:600;}
+  .dive-head .t{flex:1; min-width:0;}
+  .dive-head h3{font-size:23px; font-weight:600; color:var(--teal-deep);}
+  .dive-head .meta{font-size:12.5px; color:var(--ink-faint); margin-top:3px; display:flex; flex-wrap:wrap; gap:6px 14px;}
+  .dive-head .meta b{color:var(--ink-soft); font-weight:600;}
+  .chev{flex:0 0 auto; color:var(--ink-faint); transition:transform .3s; font-size:18px;}
+  .dive.open .chev{transform:rotate(180deg);}
+  .dive-body{max-height:0; overflow:hidden; transition:max-height .5s ease;}
+  .dive-body-inner{padding:2px 22px 24px; border-top:1px solid var(--line);}
+  .dive-body-inner .lvl{display:inline-block; font-size:11px; font-weight:700; letter-spacing:.05em; text-transform:uppercase;
+    padding:3px 10px; border-radius:6px; margin:14px 8px 6px 0;}
+  .lvl.beg{background:#e2f3ec; color:#0c7a52;} .lvl.int{background:#fdf0d8; color:#9a6b15;}
+  .lvl.adv{background:#fbe4e0; color:#b0432f;}
+  .see{display:flex; flex-wrap:wrap; gap:7px; margin-top:10px;}
+  .see span{background:var(--sand); border:1px solid var(--line); border-radius:7px; padding:4px 10px; font-size:12.5px; color:var(--ink-soft);}
+
+  /* bookmark star */
+  .bm{flex:0 0 auto; background:none; border:none; cursor:pointer; font-size:20px; line-height:1; color:var(--line); transition:.2s; padding:4px;}
+  .bm:hover{transform:scale(1.18);}
+  .bm.on{color:var(--gold);}
+
+  /* hotel */
+  .hotel-hero{display:grid; grid-template-columns:1.3fr 1fr; gap:0; border-radius:18px; overflow:hidden; box-shadow:var(--shadow); border:1px solid var(--line);}
+  @media(max-width:760px){.hotel-hero{grid-template-columns:1fr;}}
+  .hotel-hero .left{background:linear-gradient(150deg,#0a5466,#083e4c); color:#fff; padding:30px 30px;}
+  .hotel-hero .left h3{font-size:30px; font-weight:500; color:#fff;}
+  .hotel-hero .left .stars{color:var(--gold-soft); letter-spacing:3px; margin:6px 0 2px;}
+  .hotel-hero .right{background:var(--paper); padding:26px 28px;}
+  .amen{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px;}
+  .amen span{background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.25); border-radius:999px; padding:5px 13px; font-size:12.5px;}
+  .quote{font-family:var(--serif); font-style:italic; font-size:17px; color:var(--teal-deep); border-left:3px solid var(--gold); padding-left:14px; margin:10px 0;}
+  .rev-row{display:flex; gap:10px; align-items:baseline; margin:8px 0; font-size:14px;}
+  .rev-row .tick{color:var(--teal-bright); font-weight:700;}
+
+  /* itinerary timeline */
+  .tl{position:relative; margin-top:8px;}
+  .tl::before{content:""; position:absolute; left:78px; top:6px; bottom:6px; width:2px; background:var(--line);}
+  @media(max-width:680px){.tl::before{left:54px;}}
+  .leg{position:relative; display:flex; gap:20px; padding:12px 0;}
+  .leg .date{flex:0 0 60px; text-align:right; font-family:var(--serif); font-weight:600; color:var(--teal); font-size:15px; line-height:1.2; padding-top:2px;}
+  .leg .date small{display:block; font-family:var(--sans); font-weight:600; font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-faint);}
+  .leg .dot{position:absolute; left:71px; top:8px; width:14px; height:14px; border-radius:50%; background:#fff; border:3px solid var(--teal); z-index:2;}
+  .leg.dive .dot{background:var(--teal);} .leg.star .dot{border-color:var(--gold); background:var(--gold);}
+  @media(max-width:680px){.leg .dot{left:47px;} .leg{gap:14px;} .leg .date{flex-basis:40px;}}
+  .leg .body{flex:1; background:var(--paper); border:1px solid var(--line); border-radius:13px; padding:14px 18px; margin-left:26px;}
+  .leg .body h4{font-size:17px; font-weight:600; color:var(--ink);}
+  .leg .body .din{font-size:13px; color:var(--ink-soft); margin-top:5px;}
+  .leg .body .din b{color:var(--gold);}
+  .tag-sm{display:inline-block; font-size:10px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; padding:2px 8px; border-radius:5px; vertical-align:middle; margin-left:6px;}
+  .tag-dive{background:#e2f3ec; color:#0c7a52;} .tag-rest{background:#eef0f2; color:#5b6b72;} .tag-cel{background:#f7e7c8; color:#9a6b15;}
+
+  /* table */
+  table{width:100%; border-collapse:collapse; font-size:14.5px; margin-top:8px; background:var(--paper); border-radius:12px; overflow:hidden;}
+  th,td{text-align:left; padding:12px 16px; border-bottom:1px solid var(--line);}
+  th{background:var(--teal-deep); color:#fff; font-family:var(--sans); font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; font-weight:600;}
+  td.num{text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap;}
+  tr.total td{font-weight:700; background:#fbf6ec; border-top:2px solid var(--gold-soft); font-size:16px;}
+  tr:last-child td{border-bottom:none;}
+
+  /* checklist */
+  .check{display:flex; gap:12px; align-items:flex-start; padding:12px 0; border-bottom:1px solid var(--line);}
+  .check:last-child{border:none;}
+  .check .box{flex:0 0 22px; height:22px; border:2px solid var(--teal); border-radius:6px; cursor:pointer; transition:.2s; position:relative; margin-top:2px;}
+  .check.done .box{background:var(--teal);}
+  .check.done .box::after{content:"✓"; color:#fff; position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700;}
+  .check.done .txt{text-decoration:line-through; color:var(--ink-faint);}
+  .check .txt{font-size:14.5px;}
+
+  /* bookmark panel */
+  #bmToggle{position:fixed; right:20px; bottom:20px; z-index:110; background:var(--teal-deep); color:#fff; border:none;
+    border-radius:999px; padding:13px 20px; font-family:var(--sans); font-weight:600; font-size:14px; cursor:pointer; box-shadow:0 8px 26px rgba(8,62,76,.34); display:flex; align-items:center; gap:8px;}
+  #bmToggle:hover{background:var(--teal);}
+  #bmPanel{position:fixed; right:20px; bottom:74px; z-index:111; width:300px; max-width:calc(100vw - 40px); background:#fff; border:1px solid var(--line);
+    border-radius:16px; box-shadow:0 16px 50px rgba(8,62,76,.26); padding:18px 18px 12px; display:none;}
+  #bmPanel.show{display:block;}
+  #bmPanel h4{font-size:18px; color:var(--teal-deep); margin-bottom:4px;}
+  #bmPanel .empty{font-size:13px; color:var(--ink-faint); padding:8px 0 4px;}
+  #bmList{list-style:none; margin:8px 0 0; padding:0; max-height:46vh; overflow:auto;}
+  #bmList li{display:flex; align-items:center; gap:8px; padding:8px 4px; border-bottom:1px solid var(--line); font-size:13.5px;}
+  #bmList li:last-child{border:none;}
+  #bmList li .go{flex:1; cursor:pointer; color:var(--ink);}
+  #bmList li .go:hover{color:var(--teal);}
+  #bmList li .rm{cursor:pointer; color:var(--ink-faint); font-size:16px; line-height:1;}
+  #bmList li .rm:hover{color:#b0432f;}
+
+  #toTop{position:fixed; left:20px; bottom:20px; z-index:110; width:44px; height:44px; border-radius:50%; background:#fff; border:1px solid var(--line);
+    color:var(--teal-deep); font-size:20px; cursor:pointer; box-shadow:var(--shadow); opacity:0; pointer-events:none; transition:.3s;}
+  #toTop.show{opacity:1; pointer-events:auto;}
+
+  footer{background:var(--teal-deep); color:#cfe3e6; margin-top:60px; padding:40px 22px 30px; text-align:center; font-size:13px;}
+  footer .src{max-width:1000px; margin:0 auto 16px; font-size:12px; line-height:1.9; color:#9fc2c8;}
+  footer .src a{color:#bfe0e4;}
+  footer a{color:#dff0f0;}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">A Private Dive Journey · Sea of Cortez</div>
+    <h1>Loreto, <span class="it">Baja Sur</span></h1>
+    <p class="sub">Five wild islands, black-coral walls and a returning sea-lion colony — an intimate anniversary week in "the Aquarium of the World."</p>
+    <div class="facts">
+      <div class="fact">📅 <b>Aug 29 – Sep 3, 2026</b> · 5 nights</div>
+      <div class="fact">🥂 Anniversary <b>Aug 30</b></div>
+      <div class="fact">🤿 2 divers · Nitrox · advanced</div>
+      <div class="fact">🏨 Hotel La Misión</div>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,48 C240,90 480,10 720,40 C960,70 1200,20 1440,52 L1440,90 L0,90 Z" fill="#f6f2ea"/>
+  </svg>
+</header>
+
+<!-- NAV -->
+<nav class="bar">
+  <div class="bar-inner">
+    <span class="brand">Loreto</span>
+    <a href="#overview">Overview</a>
+    <a href="#dives">Dive Sites</a>
+    <a href="#operator">Operator</a>
+    <a href="#hotel">Hotel</a>
+    <a href="#itinerary">Itinerary</a>
+    <a href="#dining">Dining</a>
+    <a href="#flights">Flights</a>
+    <a href="#budget">Budget</a>
+    <a href="#checklist">Checklist</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- OVERVIEW -->
+<section class="block" id="overview">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">The Destination</div>
+      <h2>Why Loreto, Why Now</h2>
+      <p class="lead">Warm, clear late-summer water and a marine park that begins just minutes from the marina.</p>
+    </div>
+    <button class="collapse-btn" data-target="overview">Collapse</button>
+  </div>
+  <div class="sec-body">
+    <p>Loreto fronts the Sea of Cortez — the body of water Jacques Cousteau called "the aquarium of the world." Its national marine park protects more than <b>2,000 km², five islands</b> and over <b>800 species of fish</b>, with 30-plus dive sites a short boat ride offshore. Late summer brings the warmest water and the season's best visibility, and your dates land just as the sea lions return to the colonies after their summer mating closure.</p>
+    <div class="kpis" style="margin-top:18px">
+      <div class="kpi"><div class="n">82–86°F</div><div class="l">Water temp</div></div>
+      <div class="kpi"><div class="n">60–100ft</div><div class="l">Visibility</div></div>
+      <div class="kpi"><div class="n">800+</div><div class="l">Fish species</div></div>
+      <div class="kpi"><div class="n">3</div><div class="l">Dive days</div></div>
+    </div>
+    <div class="callout"><b>Your dates are well-timed.</b> The sea-lion mating closure runs through Aug 31, so arriving Aug 29 and staying into early September catches the colonies <b>returning</b> — peak warmth and visibility, plus a real shot at playful sea-lion encounters, with your <b>Aug 30 anniversary</b> early in the trip. Bring a 3mm wetsuit for the thermocline that drops into the 70s around 90 ft.</div>
+  </div>
+</section>
+
+<!-- DIVE SITES -->
+<section class="block" id="dives">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">Underwater</div>
+      <h2>The Dive Sites</h2>
+      <p class="lead">Profiles drawn from Blue Nation's dive program. Tap a site to expand; star the ones you want.</p>
+    </div>
+    <button class="collapse-btn" data-target="dives">Collapse</button>
+  </div>
+  <div class="sec-body">
+
+    <!-- Coronado -->
+    <div class="dive open" id="site-coronado">
+      <div class="dive-head">
+        <div class="dive-rank">1</div>
+        <div class="t">
+          <h3>Isla Coronado — "The Classic"</h3>
+          <div class="meta"><span><b>Level:</b> Beginner–Advanced</span><span><b>Depth:</b> 30–100 ft</span><span><b>Trip:</b> 4–5 hrs · 2 dives</span><span><b>Your day:</b> Sun Aug 30 🥂</span></div>
+        </div>
+        <button class="bm" data-bm="coronado" data-title="Isla Coronado dive" title="Bookmark">★</button>
+        <span class="chev">▾</span>
+      </div>
+      <div class="dive-body"><div class="dive-body-inner">
+        <p>The closest island — an ancient dormant volcano and home to the resident <b>sea-lion rookery</b>. Dramatic lava formations create caverns, ledges and deep, steep walls ribbed with soft coral, over a bright white sandy bottom. Several spots also run as gentle <b>drift dives</b>.</p>
+        <span class="lvl beg">Easy · all levels</span>
+        <div class="see">
+          <span>🦭 Playful sea lions</span><span>🪨 Lava caverns &amp; ledges</span><span>🧱 Steep soft-coral walls</span><span>🐟 Schooling jacks</span><span>🌊 Drift options</span>
+        </div>
+      </div></div>
+    </div>
+
+    <!-- Danzante -->
+    <div class="dive" id="site-danzante">
+      <div class="dive-head">
+        <div class="dive-rank">2</div>
+        <div class="t">
+          <h3>Isla Danzante &amp; the Pinnacles — "The Deep South"</h3>
+          <div class="meta"><span><b>Level:</b> Easy north / Advanced south</span><span><b>Depth:</b> to 100+ ft</span><span><b>Trip:</b> 5–6 hrs · 2 dives</span><span><b>Your day:</b> Mon Aug 31</span></div>
+        </div>
+        <button class="bm" data-bm="danzante" data-title="Danzante &amp; Pinnacles dive" title="Bookmark">★</button>
+        <span class="chev">▾</span>
+      </div>
+      <div class="dive-body"><div class="dive-body-inner">
+        <p>Some of the most spectacular diving in the whole park. The <b>north half</b> of Danzante is pristine and easy — walls, boulders, rocky slopes and sand mingle for huge biodiversity (moray eels, turtles, reef fish, rays). The <b>southern tip and offshore seamounts</b> are advanced: strong currents, deep steep pinnacles and walls thick with <b>black coral, sea fans and gorgonians</b>, with nudibranchs in great numbers and eagle rays and horn sharks cruising the deep.</p>
+        <p>Close to shore lies the wreck of the <b>C-54 "Agustín Melgar,"</b> a 180-ft minesweeper sunk for diving — easy penetrations plus advanced training opportunities.</p>
+        <span class="lvl adv">Advanced on the seamounts</span>
+        <div class="see">
+          <span>🪸 Black-coral forests</span><span>🦅 Eagle rays</span><span>🦈 Horn sharks</span><span>🐢 Turtles &amp; morays</span><span>🚢 C-54 wreck</span><span>🐌 Nudibranchs</span>
+        </div>
+      </div></div>
+    </div>
+
+    <!-- Carmen -->
+    <div class="dive" id="site-carmen">
+      <div class="dive-head">
+        <div class="dive-rank">3</div>
+        <div class="t">
+          <h3>Isla del Carmen — "The Wild North"</h3>
+          <div class="meta"><span><b>Level:</b> Intermediate–Advanced</span><span><b>Depth:</b> variable, steep</span><span><b>Trip:</b> 4–5 hrs · 2 dives</span><span><b>Your day:</b> Tue Sep 1</span></div>
+        </div>
+        <button class="bm" data-bm="carmen" data-title="Carmen / Wild North dive" title="Bookmark">★</button>
+        <span class="chev">▾</span>
+      </div>
+      <div class="dive-body"><div class="dive-body-inner">
+        <p>The park's largest island, and its most exposed coast. The steep north shore can get rougher when the wind blows — and those conditions are exactly what draw <b>pelagics and big fish</b>: mobula rays, great schools of barracuda, huge groupers and snappers, and baitballs. Underwater scenery is steep and abrupt, with deep drop-offs of giant boulders, tunnels and canyons. The boat ride passes towering limestone cliffs, sea caves and hidden beaches.</p>
+        <span class="lvl adv">Intermediate–Advanced</span>
+        <div class="see">
+          <span>🐡 Mobula rays</span><span>🐟 Barracuda schools</span><span>🪨 Tunnels &amp; canyons</span><span>🎣 Baitballs</span><span>🦞 Groupers &amp; snappers</span>
+        </div>
+      </div></div>
+    </div>
+
+    <!-- Montserrat -->
+    <div class="dive" id="site-montserrat">
+      <div class="dive-head">
+        <div class="dive-rank">4</div>
+        <div class="t">
+          <h3>Isla Montserrat &amp; Las Galeras — "The Remote Splurge"</h3>
+          <div class="meta"><span><b>Level:</b> Advanced</span><span><b>Trip:</b> 7–8 hrs private · 2 dives</span><span><b>Optional upgrade</b></span></div>
+        </div>
+        <button class="bm" data-bm="montserrat" data-title="Montserrat private day" title="Bookmark">★</button>
+        <span class="chev">▾</span>
+      </div>
+      <div class="dive-body"><div class="dive-body-inner">
+        <p>A full-day private charter (about 1 hr 40 min each way) to the park's most remote, least-visited island. You'll dive untouched seamounts like <b>Bajo Sandia</b> and <b>La Reinita</b>, sail past <b>Las Galeras</b> — twin islets in turquoise water with their own sea-lion colony — and watch for dolphins along the way, with a stop at a sandy cove on the way home. Booked as a private day (up to 6 divers).</p>
+        <p class="muted">A wonderful upgrade if you'd rather trade the Carmen day (or your buffer day) for something wilder and more exclusive — ask Blue Nation for the per-boat rate.</p>
+        <span class="lvl adv">Advanced · private charter</span>
+        <div class="see">
+          <span>🏝️ Remote seamounts</span><span>🐬 Dolphins en route</span><span>🦭 Las Galeras sea lions</span><span>🐢 Olive ridley turtles</span><span>🏖️ Beach stop</span>
+        </div>
+      </div></div>
+    </div>
+
+    <!-- Night -->
+    <div class="dive" id="site-night">
+      <div class="dive-head">
+        <div class="dive-rank">★</div>
+        <div class="t">
+          <h3>Coronado Night Dive — "Bioluminescence"</h3>
+          <div class="meta"><span><b>Trip:</b> 4 hrs · sunset + 1 dive</span><span><b>Optional</b></span></div>
+        </div>
+        <button class="bm" data-bm="night" data-title="Coronado night dive" title="Bookmark">★</button>
+        <span class="chev">▾</span>
+      </div>
+      <div class="dive-body"><div class="dive-body-inner">
+        <p>Sail out at sunset with drinks, then dive after dark. The first half is spent in <b>total darkness</b>, waiting for the bioluminescence to peak — thousands of tiny planktonic lights swarming around you like floating through space. Then lights on to find lobsters, hermit crabs, grazing sea hares and hunting predators.</p>
+        <p class="muted">Note: a night dive adds nitrogen — only add this if you build an extra dive day, not the night before flying.</p>
+        <span class="lvl int">Magical add-on</span>
+        <div class="see"><span>✨ Bioluminescence</span><span>🦞 Lobsters</span><span>🌅 Cortez sunset</span></div>
+      </div></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- OPERATOR -->
+<section class="block" id="operator">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">Your Dive Shop</div>
+      <h2>Blue Nation Baja</h2>
+      <p class="lead">Loreto's most specialized operator — and one of the only Nitrox shops in Baja.</p>
+    </div>
+    <button class="collapse-btn" data-target="operator">Collapse</button>
+  </div>
+  <div class="sec-body">
+    <div class="grid g2">
+      <div class="card">
+        <h3 style="font-size:22px;color:var(--teal-deep)">Why them</h3>
+        <p class="muted">Family-run and eco-minded, Blue Nation runs every tour personally on their own boat, the <i>Aguacate</i> — no outsourced boats or guides. Each trip carries a captain plus a knowledgeable, multilingual, CPR/First-Aid-trained guide, with full emergency kit including oxygen. They're the area's specialist for <b>Nitrox</b> (and tech), which is rare in Baja and ideal for your deeper seamount days.</p>
+        <div class="see" style="margin-top:6px">
+          <span>✔ Own boat &amp; guides</span><span>✔ Nitrox fills on site</span><span>✔ Small groups</span><span>✔ Emergency O₂</span>
+        </div>
+        <p class="muted" style="margin-top:14px"><a href="https://www.bluenationbaja.com/diving/" target="_blank" rel="noopener">bluenationbaja.com/diving →</a></p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:22px;color:var(--teal-deep)">Fits your profile</h3>
+        <div class="rev-row"><span class="tick">●</span><div><b>2 divers · intermediate/advanced</b> — both Nitrox-certified, recreational (no tech).</div></div>
+        <div class="rev-row"><span class="tick">●</span><div><b>Small boats, groups ≤6</b> — their boat caps at 6 divers, so this is the norm. Confirm group size per day at booking.</div></div>
+        <div class="rev-row"><span class="tick">●</span><div><b>Nitrox</b> must be ordered ≥48 hrs ahead (~$16/tank); bring your Nitrox card.</div></div>
+        <div class="rev-row"><span class="tick">●</span><div>A 2-tank day ≈ <b>$150 pp</b>, and includes tanks, weights, guide, light lunch &amp; marine-park passes.</div></div>
+        <p class="muted" style="margin-top:10px"><b>Backup:</b> <a href="https://www.dolphindivebaja.com/" target="_blank" rel="noopener">Dolphin Dive Baja</a> — excellent reviews, flexible guiding, good fallback if dates don't line up.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOTEL -->
+<section class="block" id="hotel">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">Where You'll Stay</div>
+      <h2>Hotel La Misión</h2>
+      <p class="lead">The most refined address in town — right on the malecón, steps from the dive shops.</p>
+    </div>
+    <button class="collapse-btn" data-target="hotel">Collapse</button>
+  </div>
+  <div class="sec-body">
+    <div class="hotel-hero">
+      <div class="left">
+        <div class="stars">★★★★</div>
+        <h3><a href="https://www.booking.com/hotel/mx/la-mision-loreto.html" target="_blank" rel="noopener" style="color:#fff; text-decoration:underline; text-decoration-color:var(--gold-soft);">La Misión Loreto ↗</a></h3>
+        <p style="color:#dff0f0; font-size:14.5px;">Waterfront on the malecón, across from Loreto's beach-walk and a short stroll to the plaza and the 1697 mission. The town's most upscale, "American-style" property — large rooms, big balconies, and an on-site restaurant over the bay.</p>
+        <div class="amen">
+          <span>🌊 Sea-view rooms</span><span>🏊 Saltwater pool</span><span>💆 Spa</span><span>🍳 Breakfast buffet</span><span>🍽️ Los Olivos restaurant</span><span>🚶 Walk to dives</span><span>📶 Free Wi-Fi</span>
+        </div>
+        <p style="color:var(--gold-soft); font-size:13.5px; margin-top:16px;">Standard rooms ~$154–209/night · suites from ~$253 · <b>5 nights ≈ $800–1,050</b></p>
+      </div>
+      <div class="right">
+        <div class="eyebrow" style="color:var(--gold)">From the reviews</div>
+        <p class="quote">"Large, beautiful, spotless rooms with the most comfortable beds — and a balcony over the sea."</p>
+        <div class="rev-row"><span class="tick">✓</span><div>Balconies with seating and views of the Sea of Cortez &amp; islands (or the mountains)</div></div>
+        <div class="rev-row"><span class="tick">✓</span><div>Guests rave about the <b>saltwater pool</b> and the views from nearly every room</div></div>
+        <div class="rev-row"><span class="tick">✓</span><div>Spa offers massages, facials &amp; reflexology</div></div>
+        <div class="rev-row"><span class="tick">✓</span><div><b>Extensive, delicious breakfast buffet</b> — a great pre-dive start</div></div>
+        <div class="rev-row"><span class="tick">✓</span><div>Repeatedly called clean, quiet, safe, with friendly, accommodating staff</div></div>
+      </div>
+    </div>
+    <div class="callout"><b>Booking tips:</b> breakfast isn't automatic — book the <b>breakfast-inclusive rate</b> (the buffet is worth it). Request an <b>ocean-view balcony room</b> for the nights around Aug 30 and mention the anniversary; many guests note the staff will add a small touch. <a href="https://www.tripadvisor.com/Hotel_Review-g150772-d1159002-Reviews-Hotel_La_Mision_Loreto-Loreto_Baja_California.html" target="_blank" rel="noopener">Reviews →</a></div>
+  </div>
+</section>
+
+<!-- ITINERARY -->
+<section class="block" id="itinerary">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">Day by Day</div>
+      <h2>The Week</h2>
+      <p class="lead">Three dive days, an anniversary, and a built-in buffer before flying home.</p>
+    </div>
+    <button class="collapse-btn" data-target="itinerary">Collapse</button>
+  </div>
+  <div class="sec-body">
+    <div class="tl">
+      <div class="leg">
+        <div class="date">29<small>Sat</small></div><div class="dot"></div>
+        <div class="body"><h4>Arrive Loreto <span class="tag-sm tag-rest">Travel</span></h4>
+          <p class="muted">Fly LAX → LTO on Alaska, check into La Misión, settle in, sunset stroll on the malecón.</p>
+          <div class="din"><b>Dinner:</b> Los Olivos, at the hotel — an easy first night.</div></div>
+      </div>
+      <div class="leg dive star">
+        <div class="date">30<small>Sun</small></div><div class="dot"></div>
+        <div class="body"><h4>Anniversary Dive — Isla Coronado <span class="tag-sm tag-cel">🥂 Anniversary</span> <span class="tag-sm tag-dive">2-tank Nitrox</span></h4>
+          <p class="muted">Black coral, lava walls and the returning sea-lion colony at Coronado, then celebrate.</p>
+          <div class="din"><b>Dinner:</b> Mezzaluna — candlelit, romantic (reserve ahead).</div></div>
+      </div>
+      <div class="leg dive">
+        <div class="date">31<small>Mon</small></div><div class="dot"></div>
+        <div class="body"><h4>Deep South — Danzante &amp; Pinnacles <span class="tag-sm tag-dive">2-tank Nitrox</span></h4>
+          <p class="muted">Deep walls, black-coral seamounts, the C-54 wreck — your most dramatic terrain.</p>
+          <div class="din"><b>Dinner:</b> El Caloron — open-air seafood on the malecón.</div></div>
+      </div>
+      <div class="leg dive">
+        <div class="date">1<small>Tue</small></div><div class="dot"></div>
+        <div class="body"><h4>Wild North — Isla del Carmen <span class="tag-sm tag-dive">2-tank Nitrox</span></h4>
+          <p class="muted">Pelagics and big fish — mobulas, barracuda schools, baitballs. <i>Optional upgrade: Montserrat private day.</i></p>
+          <div class="din"><b>Dinner:</b> Los Mandiles de Santa Lucía — Mexican, shoreline views.</div></div>
+      </div>
+      <div class="leg">
+        <div class="date">2<small>Wed</small></div><div class="dot"></div>
+        <div class="body"><h4>Buffer &amp; Explore <span class="tag-sm tag-rest">No diving</span></h4>
+          <p class="muted">The 1697 mission, town &amp; shops, the spa, or an island snorkel tour. Doubles as your weather make-up day and the no-fly buffer before tomorrow's flight.</p>
+          <div class="din"><b>Dinner:</b> El Andador in the historic district — or revisit a favorite.</div></div>
+      </div>
+      <div class="leg">
+        <div class="date">3<small>Thu</small></div><div class="dot"></div>
+        <div class="body"><h4>Depart <span class="tag-sm tag-rest">Travel</span></h4>
+          <p class="muted">Breakfast, then midday flight LTO → LAX. Last dive was Tue, so you have a ~48-hour no-fly margin. ✓</p></div>
+      </div>
+    </div>
+    <div class="note-cool"><b>Dive safety:</b> the plan keeps ~48 hours between your last dive and your flight (18–24 hrs is the minimum). Three dive days plus a buffer day that protects your departure and covers any blown-out dive.</div>
+  </div>
+</section>
+
+<!-- DINING -->
+<section class="block" id="dining">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">After the Dives</div>
+      <h2>Where to Dine</h2>
+      <p class="lead">All a short, flat walk from La Misión. Star your picks.</p>
+    </div>
+    <button class="collapse-btn" data-target="dining">Collapse</button>
+  </div>
+  <div class="sec-body">
+    <div class="grid g3">
+      <div class="card flat" id="r-mezzaluna">
+        <div style="display:flex; justify-content:space-between; align-items:start;"><h3 style="font-size:20px;color:var(--teal-deep)"><a href="https://www.google.com/maps/search/?api=1&amp;query=Mezzaluna%20Restaurant%20Loreto" target="_blank" rel="noopener">Mezzaluna ↗</a></h3><button class="bm" data-bm="mezzaluna" data-title="Mezzaluna (anniversary)">★</button></div>
+        <p class="muted">Uruguayan–Italian, fresh house pasta, steaks &amp; empanadas in a candlelit room. <b>The anniversary pick.</b></p>
+      </div>
+      <div class="card flat" id="r-olivos">
+        <div style="display:flex; justify-content:space-between; align-items:start;"><h3 style="font-size:20px;color:var(--teal-deep)"><a href="https://www.google.com/maps/search/?api=1&amp;query=Los%20Olivos%20Restaurant%20La%20Mision%20Loreto" target="_blank" rel="noopener">Los Olivos ↗</a></h3><button class="bm" data-bm="olivos" data-title="Los Olivos (in hotel)">★</button></div>
+        <p class="muted">La Misión's 2nd-floor restaurant with balcony views over the malecón. Easy first-night dinner.</p>
+      </div>
+      <div class="card flat" id="r-caloron">
+        <div style="display:flex; justify-content:space-between; align-items:start;"><h3 style="font-size:20px;color:var(--teal-deep)"><a href="https://www.google.com/maps/search/?api=1&amp;query=El%20Caloron%20Loreto" target="_blank" rel="noopener">El Caloron ↗</a></h3><button class="bm" data-bm="caloron" data-title="El Caloron (seafood)">★</button></div>
+        <p class="muted">Open-air, across from the malecón. Baja fish &amp; prawn tacos, aguachile, chocolate clams.</p>
+      </div>
+      <div class="card flat" id="r-mandiles">
+        <div style="display:flex; justify-content:space-between; align-items:start;"><h3 style="font-size:20px;color:var(--teal-deep)"><a href="https://www.google.com/maps/search/?api=1&amp;query=Los%20Mandiles%20de%20Santa%20Lucia%20Loreto" target="_blank" rel="noopener">Los Mandiles ↗</a></h3><button class="bm" data-bm="mandiles" data-title="Los Mandiles (Mexican)">★</button></div>
+        <p class="muted">Right on the malecón across from the sea. Traditional Mexican, warm service, shoreline views.</p>
+      </div>
+      <div class="card flat" id="r-andador">
+        <div style="display:flex; justify-content:space-between; align-items:start;"><h3 style="font-size:20px;color:var(--teal-deep)"><a href="https://www.google.com/maps/search/?api=1&amp;query=El%20Andador%20Restaurant%20Loreto" target="_blank" rel="noopener">El Andador ↗</a></h3><button class="bm" data-bm="andador" data-title="El Andador (historic district)">★</button></div>
+        <p class="muted">Quiet 2nd-floor spot between the plaza and the mission church. Relaxed evening.</p>
+      </div>
+      <div class="card flat" id="r-tacos">
+        <div style="display:flex; justify-content:space-between; align-items:start;"><h3 style="font-size:20px;color:var(--teal-deep)"><a href="https://www.google.com/maps/search/?api=1&amp;query=Calle%20Salvatierra%20tacos%20Loreto" target="_blank" rel="noopener">Pedestrian-street tacos ↗</a></h3><button class="bm" data-bm="tacos" data-title="Street tacos (casual)">★</button></div>
+        <p class="muted">The walking street from malecón to plaza — cold beer and excellent carne asada. Casual night.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FLIGHTS -->
+<section class="block" id="flights">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">Getting There</div>
+      <h2>Flights</h2>
+      <p class="lead">One nonstop carrier from LAX — and it doesn't fly daily.</p>
+    </div>
+    <button class="collapse-btn" data-target="flights">Collapse</button>
+  </div>
+  <div class="sec-body">
+    <div class="grid g2">
+      <div class="card">
+        <h3 style="font-size:22px;color:var(--teal-deep)">LAX → LTO nonstop · Alaska</h3>
+        <p class="muted">Alaska is the <b>only nonstop</b> between LAX and Loreto. Roundtrip typically <b>$350–600 pp</b> in summer; flight time ~2 hrs. Book <b>out Sat Aug 29 / back Thu Sep 3</b>.</p>
+        <p class="muted"><a href="https://www.alaskaair.com/en/flights-from-los-angeles-to-loreto-mx" target="_blank" rel="noopener">Alaska route page →</a> · <a href="https://www.google.com/travel/flights/flights-to-loreto.html" target="_blank" rel="noopener">Compare on Google Flights →</a></p>
+      </div>
+      <div class="card" style="background:#eef6f8; border-color:var(--line-cool);">
+        <h3 style="font-size:22px;color:var(--teal-deep)">⚠ Schedule note</h3>
+        <p class="muted">The route is <b>not daily</b> — for your window it operates <b>Thu, Sat &amp; Sun</b>, with late-morning/midday departures. That's why the trip runs <b>Sat → Thu</b> rather than other combinations. <b>Re-confirm both flights operate that exact week</b> when you book, as late-summer frequency can thin out.</p>
+        <p class="muted">Loreto's airport is tiny — a taxi or hotel shuttle into town is 5–10 minutes, and you won't need a rental car staying on the malecón.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BUDGET -->
+<section class="block" id="budget">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">The Numbers</div>
+      <h2>Estimated Budget</h2>
+      <p class="lead">Two divers · 5 nights · ballpark, late-summer 2026.</p>
+    </div>
+    <button class="collapse-btn" data-target="budget">Collapse</button>
+  </div>
+  <div class="sec-body">
+    <table>
+      <thead><tr><th>Item</th><th>Detail</th><th class="num">Couple total</th></tr></thead>
+      <tbody>
+        <tr><td>Flights</td><td>LAX ↔ LTO nonstop, Alaska (~$450 pp)</td><td class="num">$900</td></tr>
+        <tr><td>Lodging</td><td>La Misión, 5 nts @ ~$185, breakfast-incl.</td><td class="num">$925</td></tr>
+        <tr><td>Diving</td><td>3 × 2-tank days @ ~$155 pp · incl. park passes &amp; lunch</td><td class="num">$930</td></tr>
+        <tr><td>Nitrox fills</td><td>~$16/tank × 6 dives × 2</td><td class="num">$190</td></tr>
+        <tr><td>Gear rental</td><td>Optional — skip if you bring your own</td><td class="num">$240</td></tr>
+        <tr><td>Anniversary dinner</td><td>Mezzaluna, for two</td><td class="num">$120</td></tr>
+        <tr><td>Food &amp; transport</td><td>Dinners out + lunches/taxis (breakfast covered)</td><td class="num">$650</td></tr>
+        <tr class="total"><td>Estimated total</td><td>Excl. travel insurance</td><td class="num">~$3,950</td></tr>
+      </tbody>
+    </table>
+    <p class="muted" style="margin-top:12px">Bringing your own gear drops it to ~$3,700. Swap the Carmen day for a <b>private Montserrat charter</b> (~$150–250 more), or add a Coronado <b>night dive</b> if you build an extra dive day. Strongly consider <b>DAN dive insurance</b>. Keeping Loreto lean banks budget for <b>Wakatobi</b> later in the year.</p>
+  </div>
+</section>
+
+<!-- CHECKLIST -->
+<section class="block" id="checklist">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">Before You Go</div>
+      <h2>Booking Checklist</h2>
+      <p class="lead">Tap to check off. Your progress is saved on this device.</p>
+    </div>
+    <button class="collapse-btn" data-target="checklist">Collapse</button>
+  </div>
+  <div class="sec-body">
+    <div class="card">
+      <div class="check" data-ck="flights"><div class="box"></div><div class="txt"><b>Book Alaska LAX→LTO</b> — out Sat Aug 29 / back Thu Sep 3; confirm both days operate that week.</div></div>
+      <div class="check" data-ck="hotel"><div class="box"></div><div class="txt"><b>Reserve La Misión</b>, 5 nights, breakfast-inclusive rate; request ocean-view balcony &amp; note the Aug 30 anniversary.</div></div>
+      <div class="check" data-ck="dives"><div class="box"></div><div class="txt"><b>Book Blue Nation</b> for Aug 30, 31 &amp; Sep 1 — Nitrox (order ≥48 hrs ahead), small boat/≤6, flag advanced/seamount interest.</div></div>
+      <div class="check" data-ck="dinner"><div class="box"></div><div class="txt"><b>Reserve Mezzaluna</b> for the Aug 30 anniversary dinner.</div></div>
+      <div class="check" data-ck="insurance"><div class="box"></div><div class="txt"><b>Get DAN dive insurance</b> &amp; travel insurance.</div></div>
+      <div class="check" data-ck="gear"><div class="box"></div><div class="txt"><b>Pack &amp; confirm certs</b> — cert + Nitrox cards, dive computer, 3mm wetsuit, logbook.</div></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- bookmark UI -->
+<button id="bmToggle">★ Bookmarks <span id="bmCount">0</span></button>
+<div id="bmPanel">
+  <h4>Your Bookmarks</h4>
+  <div class="empty" id="bmEmpty">Star a dive site or restaurant to save it here.</div>
+  <ul id="bmList"></ul>
+</div>
+<button id="toTop" title="Back to top">↑</button>
+
+<footer>
+  <div class="src">
+    <b>Sources</b> ·
+    <a href="https://www.bluenationbaja.com/diving/">Blue Nation — dive program</a> ·
+    <a href="https://www.dolphindivebaja.com/">Dolphin Dive Baja</a> ·
+    <a href="https://www.padi.com/diving-in/mexico/loreto/">PADI Loreto</a> ·
+    <a href="https://www.liveaboard.com/diving/season-calendar/best-time-to-dive-in-the-sea-of-cortez">Sea of Cortez seasons</a> ·
+    <a href="https://californiadiver.com/diving-loreto-mexico-over-100-dive-sites-in-the-aquarium-of-the-world/">California Diver — Loreto</a> ·
+    <a href="https://www.tripadvisor.com/Hotel_Review-g150772-d1159002-Reviews-Hotel_La_Mision_Loreto-Loreto_Baja_California.html">Hotel La Misión reviews</a> ·
+    <a href="https://www.booking.com/hotel/mx/la-mision-loreto.html">La Misión rates</a> ·
+    <a href="https://www.alaskaair.com/en/flights-from-los-angeles-to-loreto-mx">Alaska LAX–LTO</a> ·
+    <a href="https://www.tripadvisor.com/Restaurants-g150772-Loreto_Baja_California.html">Loreto restaurants</a>
+  </div>
+  <div>Prepared June 2026 · Estimates only — confirm live prices, flight days &amp; sea-lion timing before booking.</div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  // ---------- scroll progress ----------
+  var prog = document.getElementById('progress');
+  var toTop = document.getElementById('toTop');
+  function onScroll(){
+    var h = document.documentElement;
+    var scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight);
+    prog.style.width = (scrolled*100) + '%';
+    toTop.classList.toggle('show', h.scrollTop > 600);
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+  toTop.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+
+  // ---------- active nav highlight ----------
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('nav.bar a'));
+  var sections = navLinks.map(function(a){ return document.querySelector(a.getAttribute('href')); });
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        var id = e.target.id;
+        navLinks.forEach(function(a){ a.classList.toggle('active', a.getAttribute('href') === '#'+id); });
+      }
+    });
+  }, {rootMargin:'-45% 0px -50% 0px'});
+  sections.forEach(function(s){ if(s) obs.observe(s); });
+
+  // ---------- collapsible sections ----------
+  document.querySelectorAll('.collapse-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var sec = document.getElementById(btn.getAttribute('data-target'));
+      var body = sec.querySelector('.sec-body');
+      if(sec.classList.contains('collapsed')){
+        sec.classList.remove('collapsed');
+        body.style.maxHeight = body.scrollHeight + 'px';
+        btn.textContent = 'Collapse';
+        setTimeout(function(){ body.style.maxHeight='none'; }, 460);
+      } else {
+        body.style.maxHeight = body.scrollHeight + 'px';
+        requestAnimationFrame(function(){ body.style.maxHeight='0px'; });
+        sec.classList.add('collapsed');
+        btn.textContent = 'Expand';
+      }
+    });
+  });
+
+  // ---------- dive-site accordion ----------
+  document.querySelectorAll('.dive .dive-head').forEach(function(head){
+    head.addEventListener('click', function(e){
+      if(e.target.closest('.bm')) return; // don't toggle when starring
+      var dive = head.closest('.dive');
+      var body = dive.querySelector('.dive-body');
+      if(dive.classList.contains('open')){
+        body.style.maxHeight = '0px';
+        dive.classList.remove('open');
+      } else {
+        dive.classList.add('open');
+        body.style.maxHeight = body.scrollHeight + 'px';
+      }
+    });
+  });
+  // open the first one by default
+  (function(){ var f=document.querySelector('.dive.open .dive-body'); if(f) f.style.maxHeight = f.scrollHeight+'px'; })();
+
+  // ---------- bookmarks (localStorage) ----------
+  var BM_KEY = 'loreto_bookmarks_v1';
+  var store;
+  try { store = JSON.parse(localStorage.getItem(BM_KEY) || '{}'); } catch(_){ store = {}; }
+  var panel = document.getElementById('bmPanel');
+  var list = document.getElementById('bmList');
+  var empty = document.getElementById('bmEmpty');
+  var countEl = document.getElementById('bmCount');
+
+  function idForButton(btn){
+    // find nearest element with an id to scroll to
+    var el = btn.closest('[id]');
+    return el ? el.id : null;
+  }
+  function save(){ try{ localStorage.setItem(BM_KEY, JSON.stringify(store)); }catch(_){} }
+  function render(){
+    var keys = Object.keys(store);
+    countEl.textContent = keys.length;
+    list.innerHTML = '';
+    empty.style.display = keys.length ? 'none' : 'block';
+    keys.forEach(function(k){
+      var item = store[k];
+      var li = document.createElement('li');
+      var go = document.createElement('span'); go.className='go'; go.innerHTML = '★ ' + item.title;
+      go.addEventListener('click', function(){
+        panel.classList.remove('show');
+        var t = document.getElementById(item.anchor);
+        if(t){ if(t.classList.contains('dive') && !t.classList.contains('open')){ t.querySelector('.dive-head').click(); }
+          t.scrollIntoView({behavior:'smooth', block:'center'}); }
+      });
+      var rm = document.createElement('span'); rm.className='rm'; rm.innerHTML='✕';
+      rm.addEventListener('click', function(){ delete store[k]; save(); syncStars(); render(); });
+      li.appendChild(go); li.appendChild(rm); list.appendChild(li);
+    });
+  }
+  function syncStars(){
+    document.querySelectorAll('.bm').forEach(function(btn){
+      btn.classList.toggle('on', !!store[btn.getAttribute('data-bm')]);
+    });
+  }
+  document.querySelectorAll('.bm').forEach(function(btn){
+    btn.addEventListener('click', function(e){
+      e.stopPropagation();
+      var key = btn.getAttribute('data-bm');
+      if(store[key]){ delete store[key]; }
+      else { store[key] = { title: btn.getAttribute('data-title'), anchor: idForButton(btn) }; }
+      save(); syncStars(); render();
+    });
+  });
+  document.getElementById('bmToggle').addEventListener('click', function(){ panel.classList.toggle('show'); });
+  syncStars(); render();
+
+  // ---------- checklist (localStorage) ----------
+  var CK_KEY = 'loreto_checklist_v1';
+  var ck;
+  try { ck = JSON.parse(localStorage.getItem(CK_KEY) || '{}'); } catch(_){ ck = {}; }
+  document.querySelectorAll('.check').forEach(function(row){
+    var key = row.getAttribute('data-ck');
+    if(ck[key]) row.classList.add('done');
+    row.addEventListener('click', function(){
+      row.classList.toggle('done');
+      ck[key] = row.classList.contains('done');
+      try{ localStorage.setItem(CK_KEY, JSON.stringify(ck)); }catch(_){}
+    });
+  });
+})();
+</script>
+</body>
+</html>
