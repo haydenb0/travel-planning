@@ -35,7 +35,7 @@
   /* hero */
   .hero{position:relative; min-height:88vh; display:flex; align-items:center; justify-content:center;
     text-align:center; color:#fff; overflow:hidden;
-    background:linear-gradient(160deg,#06303b 0%,#0a5466 45%,#0e7e80 100%);}
+    background:linear-gradient(165deg,rgba(6,48,59,.55),rgba(8,62,76,.80)),url('https://images.unsplash.com/photo-1647636739819-1ad6ae9b6bc0?w=1920&q=80&auto=format&fit=crop') center/cover no-repeat;}
   .hero::after{content:""; position:absolute; inset:0; background:
     radial-gradient(circle at 78% 18%, rgba(255,255,255,.10), transparent 42%),
     radial-gradient(circle at 12% 88%, rgba(21,163,154,.30), transparent 46%);}
@@ -119,6 +119,12 @@
   .lvl.adv{background:#fbe4e0; color:#b0432f;}
   .see{display:flex; flex-wrap:wrap; gap:7px; margin-top:10px;}
   .see span{background:var(--sand); border:1px solid var(--line); border-radius:7px; padding:4px 10px; font-size:12.5px; color:var(--ink-soft);}
+
+  /* photos */
+  .banner{width:100%; height:210px; object-fit:cover; border-radius:14px; display:block; margin:0 0 24px; box-shadow:var(--shadow);}
+  @media(max-width:680px){.banner{height:150px;}}
+  .dive-thumb{flex:0 0 62px; width:62px; height:62px; border-radius:12px; object-fit:cover; box-shadow:var(--shadow);}
+  @media(max-width:680px){.dive-thumb{width:50px; height:50px; flex-basis:50px;}}
 
   /* bookmark star */
   .bm{flex:0 0 auto; background:none; border:none; cursor:pointer; font-size:20px; line-height:1; color:var(--line); transition:.2s; padding:4px;}
@@ -249,6 +255,7 @@
     <button class="collapse-btn" data-target="overview">Collapse</button>
   </div>
   <div class="sec-body">
+    <img class="banner" src="https://images.unsplash.com/photo-1674011872258-6d12f926d34c?w=1400&h=420&fit=crop&q=75&auto=format" alt="Sea of Cortez coastline near Loreto" loading="lazy">
     <p>Loreto fronts the Sea of Cortez — the body of water Jacques Cousteau called "the aquarium of the world." Its national marine park protects more than <b>2,000 km², five islands</b> and over <b>800 species of fish</b>, with 30-plus dive sites a short boat ride offshore. Late summer brings the warmest water and the season's best visibility, and your dates land just as the sea lions return to the colonies after their summer mating closure.</p>
     <div class="kpis" style="margin-top:18px">
       <div class="kpi"><div class="n">82–86°F</div><div class="l">Water temp</div></div>
@@ -271,11 +278,12 @@
     <button class="collapse-btn" data-target="dives">Collapse</button>
   </div>
   <div class="sec-body">
+    <img class="banner" src="https://images.unsplash.com/photo-1517627043994-b991abb62fc8?w=1400&h=420&fit=crop&q=75&auto=format" alt="Scuba diver silhouette in blue water" loading="lazy">
 
     <!-- Coronado -->
     <div class="dive open" id="site-coronado">
       <div class="dive-head">
-        <div class="dive-rank">1</div>
+        <img class="dive-thumb" src="https://images.unsplash.com/photo-1576549692057-c125ea835bcb?w=140&h=140&fit=crop&q=70&auto=format" alt="Sea lions underwater" loading="lazy">
         <div class="t">
           <h3>Isla Coronado — "The Classic"</h3>
           <div class="meta"><span><b>Level:</b> Beginner–Advanced</span><span><b>Depth:</b> 30–100 ft</span><span><b>Trip:</b> 4–5 hrs · 2 dives</span><span><b>Your day:</b> Sun Aug 30</span></div>
@@ -295,7 +303,7 @@
     <!-- Danzante -->
     <div class="dive" id="site-danzante">
       <div class="dive-head">
-        <div class="dive-rank">2</div>
+        <img class="dive-thumb" src="https://images.unsplash.com/photo-1602199926649-2e5e447bab97?w=140&h=140&fit=crop&q=70&auto=format" alt="Diver over a deep reef" loading="lazy">
         <div class="t">
           <h3>Isla Danzante &amp; the Pinnacles — "The Deep South"</h3>
           <div class="meta"><span><b>Level:</b> Easy north / Advanced south</span><span><b>Depth:</b> to 100+ ft</span><span><b>Trip:</b> 5–6 hrs · 2 dives</span><span><b>Your day:</b> Mon Aug 31 🥂</span></div>
@@ -316,7 +324,7 @@
     <!-- Carmen -->
     <div class="dive" id="site-carmen">
       <div class="dive-head">
-        <div class="dive-rank">3</div>
+        <img class="dive-thumb" src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=140&h=140&fit=crop&q=70&auto=format" alt="Diver with a school of fish" loading="lazy">
         <div class="t">
           <h3>Isla del Carmen — "The Wild North"</h3>
           <div class="meta"><span><b>Level:</b> Intermediate–Advanced</span><span><b>Depth:</b> variable, steep</span><span><b>Trip:</b> 4–5 hrs · 2 dives</span><span><b>Your day:</b> Tue Sep 1</span></div>
@@ -336,7 +344,7 @@
     <!-- Montserrat -->
     <div class="dive" id="site-montserrat">
       <div class="dive-head">
-        <div class="dive-rank">4</div>
+        <img class="dive-thumb" src="https://images.unsplash.com/photo-1666753719446-a642e7b554f8?w=140&h=140&fit=crop&q=70&auto=format" alt="Remote Baja desert island coast" loading="lazy">
         <div class="t">
           <h3>Isla Montserrat &amp; Las Galeras — "The Remote Splurge"</h3>
           <div class="meta"><span><b>Level:</b> Advanced</span><span><b>Trip:</b> 7–8 hrs private · 2 dives</span><span><b>Optional upgrade</b></span></div>
@@ -357,7 +365,7 @@
     <!-- Night -->
     <div class="dive" id="site-night">
       <div class="dive-head">
-        <div class="dive-rank">★</div>
+        <img class="dive-thumb" src="https://images.unsplash.com/photo-1620595971106-5835a049c41e?w=140&h=140&fit=crop&q=70&auto=format" alt="Sea lion in sunlit water" loading="lazy">
         <div class="t">
           <h3>Coronado Night Dive — "Bioluminescence"</h3>
           <div class="meta"><span><b>Trip:</b> 4 hrs · sunset + 1 dive</span><span><b>Optional</b></span></div>
@@ -387,6 +395,7 @@
     <button class="collapse-btn" data-target="operator">Collapse</button>
   </div>
   <div class="sec-body">
+    <img class="banner" src="https://images.unsplash.com/photo-1664922114319-4700c0ef74b1?w=1400&h=420&fit=crop&q=75&auto=format" alt="Divers underwater in the Sea of Cortez" loading="lazy">
     <div class="grid g2">
       <div class="card">
         <h3 style="font-size:22px;color:var(--teal-deep)">Why them</h3>
@@ -419,6 +428,7 @@
     <button class="collapse-btn" data-target="hotel">Collapse</button>
   </div>
   <div class="sec-body">
+    <img class="banner" src="https://images.unsplash.com/photo-1681702466191-454203e784f3?w=1400&h=420&fit=crop&q=75&auto=format" alt="Historic mission church and palms in Baja town" loading="lazy">
     <div class="hotel-hero">
       <div class="left">
         <div class="stars">★★★★</div>
@@ -506,6 +516,7 @@
     <button class="collapse-btn" data-target="dining">Collapse</button>
   </div>
   <div class="sec-body">
+    <img class="banner" src="https://images.unsplash.com/photo-1700625916627-16ad4fb0553c?w=1400&h=420&fit=crop&q=75&auto=format" alt="Mexican food spread with tacos and salsas" loading="lazy">
     <div class="grid g3">
       <div class="card flat" id="r-mezzaluna">
         <div style="display:flex; justify-content:space-between; align-items:start;"><h3 style="font-size:20px;color:var(--teal-deep)"><a href="https://www.google.com/maps/search/?api=1&amp;query=Mezzaluna%20Restaurant%20Loreto" target="_blank" rel="noopener">Mezzaluna ↗</a></h3><button class="bm" data-bm="mezzaluna" data-title="Mezzaluna (anniversary)">★</button></div>
