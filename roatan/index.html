@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roatán · A Reef &amp; Wreck Getaway — Bay Islands, Honduras</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50' y='55' font-size='70' text-anchor='middle' dominant-baseline='central'>🤿</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#14242c; --ink-soft:#46606b; --ink-faint:#7c929b;
+    --teal:#0c6b80; --teal-deep:#083e4c; --teal-bright:#15a39a;
+    --gold:#c08a3e; --gold-soft:#e7cfa6;
+    --sand:#f6f2ea; --paper:#ffffff; --line:#e7ded0; --line-cool:#e2e9ec;
+    --shadow:0 10px 40px rgba(8,62,76,.10);
+    --good:#0c7a52; --bad:#b0432f;
+    --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+    --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; background:var(--sand); color:var(--ink);
+    font-family:var(--sans); font-weight:400; line-height:1.65; font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{font-family:var(--serif); font-weight:600; letter-spacing:.2px; line-height:1.15; margin:0;}
+  a{color:var(--teal); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .eyebrow{font-family:var(--sans); font-weight:600; font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:var(--gold);}
+
+  #progress{position:fixed; top:0; left:0; height:3px; width:0%; background:linear-gradient(90deg,var(--teal-bright),var(--gold)); z-index:120; transition:width .1s linear;}
+
+  .hero{position:relative; min-height:88vh; display:flex; align-items:center; justify-content:center;
+    text-align:center; color:#fff; overflow:hidden;
+    background:linear-gradient(165deg,rgba(6,48,59,.55),rgba(8,62,76,.80)),url('https://images.unsplash.com/photo-1546026423-cc4642628d2b?w=1920&q=80&auto=format&fit=crop') center/cover no-repeat;}
+  .hero::after{content:""; position:absolute; inset:0; background:
+    radial-gradient(circle at 78% 18%, rgba(255,255,255,.10), transparent 42%),
+    radial-gradient(circle at 12% 88%, rgba(21,163,154,.30), transparent 46%);}
+  .hero .wave{position:absolute; bottom:-1px; left:0; width:100%; z-index:2; display:block;}
+  .hero-inner{position:relative; z-index:3; padding:40px 24px 90px; max-width:880px;}
+  .hero .eyebrow{color:var(--gold-soft);}
+  .hero h1{font-size:clamp(44px,8vw,84px); font-weight:500; margin:.18em 0 .12em; text-shadow:0 2px 30px rgba(0,0,0,.25);}
+  .hero h1 .it{font-style:italic; color:var(--gold-soft);}
+  .hero .sub{font-size:clamp(16px,2.2vw,20px); font-weight:300; color:#dff0f0; max-width:640px; margin:0 auto;}
+  .hero .facts{display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin-top:34px;}
+  .hero .fact{background:rgba(255,255,255,.10); backdrop-filter:blur(6px); border:1px solid rgba(255,255,255,.22);
+    border-radius:999px; padding:9px 18px; font-size:13.5px; font-weight:500;}
+  .hero .fact b{color:#fff;}
+
+  nav.bar{position:sticky; top:0; z-index:100; background:rgba(255,255,255,.86); backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line); }
+  .bar-inner{max-width:1120px; margin:0 auto; display:flex; align-items:center; gap:6px; padding:0 18px; height:58px; overflow-x:auto;}
+  .bar .brand{font-family:var(--serif); font-weight:600; font-size:19px; color:var(--teal-deep); margin-right:14px; white-space:nowrap;}
+  .bar a{color:var(--ink-soft); font-size:13px; font-weight:500; padding:7px 11px; border-radius:8px; white-space:nowrap; letter-spacing:.02em;}
+  .bar a:hover{background:var(--sand); text-decoration:none; color:var(--teal-deep);}
+  .bar a.active{color:var(--teal-deep); background:var(--sand);}
+  .bar a.active::after{content:""; display:block; height:2px; background:var(--gold); border-radius:2px; margin-top:5px;}
+
+  main{max-width:1120px; margin:0 auto; padding:0 22px;}
+  section.block{padding:64px 0 26px; scroll-margin-top:70px;}
+  .sec-head{display:flex; align-items:flex-end; justify-content:space-between; gap:16px; margin-bottom:26px; border-bottom:1px solid var(--line); padding-bottom:16px;}
+  .sec-head h2{font-size:clamp(28px,4.4vw,40px); font-weight:500; color:var(--teal-deep);}
+  .sec-head .lead{font-size:15px; color:var(--ink-soft); max-width:480px; margin-top:6px;}
+  .collapse-btn{flex:0 0 auto; font-family:var(--sans); font-size:12px; font-weight:600; letter-spacing:.04em;
+    color:var(--ink-faint); background:none; border:1px solid var(--line); border-radius:999px; padding:6px 14px; cursor:pointer; transition:.2s;}
+  .collapse-btn:hover{color:var(--teal-deep); border-color:var(--teal);}
+  .sec-body{overflow:hidden; transition:max-height .45s ease, opacity .3s ease;}
+  section.collapsed .sec-body{max-height:0 !important; opacity:0; pointer-events:none;}
+  section.collapsed .collapse-btn::after{content:" ＋";}
+  .collapse-btn::after{content:" −";}
+
+  .grid{display:grid; gap:18px;}
+  .g2{grid-template-columns:repeat(2,1fr);}
+  .g3{grid-template-columns:repeat(3,1fr);}
+  .g4{grid-template-columns:repeat(4,1fr);}
+  @media(max-width:860px){.g2,.g3,.g4{grid-template-columns:1fr;}}
+  .card{background:var(--paper); border:1px solid var(--line); border-radius:16px; padding:22px 24px; box-shadow:var(--shadow);}
+  .card.flat{box-shadow:none;}
+
+  .kpis{display:grid; grid-template-columns:repeat(4,1fr); gap:14px;}
+  @media(max-width:680px){.kpis{grid-template-columns:repeat(2,1fr);}}
+  .kpi{background:var(--paper); border:1px solid var(--line); border-radius:14px; padding:18px 12px; text-align:center;}
+  .kpi .n{font-family:var(--serif); font-size:28px; font-weight:600; color:var(--teal);}
+  .kpi .l{font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint); margin-top:4px;}
+
+  .callout{background:linear-gradient(135deg,#fbf6ec,#f6efe1); border:1px solid var(--gold-soft); border-left:4px solid var(--gold);
+    border-radius:12px; padding:16px 20px; font-size:14.5px; color:#6f5a2e; margin-top:20px;}
+  .callout b{color:#5a4720;}
+  .note-cool{background:#eef6f8; border:1px solid var(--line-cool); border-left:4px solid var(--teal); border-radius:12px; padding:16px 20px; font-size:14.5px; color:var(--teal-deep); margin-top:18px;}
+
+  p{margin:10px 0;}
+  .muted{color:var(--ink-soft); font-size:14px;}
+  ul.clean{margin:8px 0; padding-left:20px;} ul.clean li{margin:5px 0;}
+
+  .dive{background:var(--paper); border:1px solid var(--line); border-radius:16px; margin-bottom:14px; overflow:hidden; box-shadow:var(--shadow);}
+  .dive-head{display:flex; align-items:center; gap:16px; padding:20px 22px; cursor:pointer; transition:background .2s;}
+  .dive-head:hover{background:#fbf8f2;}
+  .dive-rank{flex:0 0 46px; height:46px; border-radius:50%; background:linear-gradient(150deg,var(--teal),var(--teal-deep)); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-family:var(--serif); font-size:22px; font-weight:600;}
+  .dive-head .t{flex:1; min-width:0;}
+  .dive-head h3{font-size:23px; font-weight:600; color:var(--teal-deep);}
+  .dive-head .meta{font-size:12.5px; color:var(--ink-faint); margin-top:3px; display:flex; flex-wrap:wrap; gap:6px 14px;}
+  .dive-head .meta b{color:var(--ink-soft); font-weight:600;}
+  .chev{flex:0 0 auto; color:var(--ink-faint); transition:transform .3s; font-size:18px;}
+  .dive.open .chev{transform:rotate(180deg);}
+  .dive-body{max-height:0; overflow:hidden; transition:max-height .5s ease;}
+  .dive-body-inner{padding:2px 22px 24px; border-top:1px solid var(--line);}
+  .dive-body-inner .lvl{display:inline-block; font-size:11px; font-weight:700; letter-spacing:.05em; text-transform:uppercase;
+    padding:3px 10px; border-radius:6px; margin:14px 8px 6px 0;}
+  .lvl.beg{background:#e2f3ec; color:#0c7a52;} .lvl.int{background:#fdf0d8; color:#9a6b15;}
+  .lvl.adv{background:#fbe4e0; color:#b0432f;}
+  .see{display:flex; flex-wrap:wrap; gap:7px; margin-top:10px;}
+  .see span{background:var(--sand); border:1px solid var(--line); border-radius:7px; padding:4px 10px; font-size:12.5px; color:var(--ink-soft);}
+
+  .banner{width:100%; height:210px; object-fit:cover; border-radius:14px; display:block; margin:0 0 24px; box-shadow:var(--shadow);}
+  @media(max-width:680px){.banner{height:150px;}}
+  .dive-thumb{flex:0 0 62px; width:62px; height:62px; border-radius:12px; object-fit:cover; box-shadow:var(--shadow);}
+  @media(max-width:680px){.dive-thumb{width:50px; height:50px; flex-basis:50px;}}
+
+  .mapwrap{display:grid; grid-template-columns:320px 1fr; gap:18px; align-items:start;}
+  @media(max-width:760px){.mapwrap{grid-template-columns:1fr;}}
+  .legend{list-style:none; margin:14px 0 0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:8px 18px;}
+  @media(max-width:560px){.legend{grid-template-columns:1fr;}}
+  .legend li{display:flex; gap:9px; align-items:flex-start; font-size:13px; color:var(--ink-soft);}
+  .legend .b{flex:0 0 20px; height:20px; border-radius:50%; color:#fff; font-size:11px; font-weight:700; display:flex; align-items:center; justify-content:center; margin-top:1px;}
+  .figcap{font-size:12px; color:var(--ink-faint); margin-top:8px; font-style:italic;}
+
+  /* lodging categories */
+  .cat-quick{border:1px solid var(--line); border-radius:16px; padding:20px 20px 18px; background:var(--paper); box-shadow:var(--shadow); display:flex; flex-direction:column; height:100%;}
+  .cat-quick .num{display:inline-flex; width:34px; height:34px; border-radius:50%; align-items:center; justify-content:center;
+    font-family:var(--serif); font-weight:700; font-size:17px; color:#fff; margin-bottom:10px;}
+  .cat-quick h4{font-size:19px; color:var(--teal-deep);}
+  .cat-quick .price{font-family:var(--serif); font-size:22px; color:var(--teal); font-weight:600; margin:6px 0 2px;}
+  .cat-quick .verdict{font-size:13.5px; color:var(--ink-soft); flex:1;}
+  .cat-quick a.jump{font-size:12.5px; font-weight:600; margin-top:10px; display:inline-block;}
+  .cat1 .num{background:linear-gradient(150deg,var(--gold),#9a6b15);}
+  .cat2 .num{background:linear-gradient(150deg,var(--teal),var(--teal-deep));}
+  .cat3 .num{background:linear-gradient(150deg,var(--teal-bright),#0c7a52);}
+
+  .cat-section{border-top:3px solid var(--line); margin-top:34px; padding-top:28px;}
+  .cat-section.cat1{border-top-color:var(--gold-soft);}
+  .cat-section.cat2{border-top-color:var(--teal);}
+  .cat-section.cat3{border-top-color:var(--teal-bright);}
+  .cat-title{display:flex; align-items:center; gap:14px; margin-bottom:6px;}
+  .cat-title .num{flex:0 0 40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-family:var(--serif); font-size:19px; font-weight:700;}
+  .cat-title h3{font-size:25px; color:var(--teal-deep);}
+
+  .procon{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:16px;}
+  @media(max-width:680px){.procon{grid-template-columns:1fr;}}
+  .procon .box{border-radius:12px; padding:16px 18px;}
+  .procon .pros{background:#eef8f3; border:1px solid #cfe9dc;}
+  .procon .cons{background:#fbeeec; border:1px solid #f0d3cc;}
+  .procon h5{font-size:13px; letter-spacing:.06em; text-transform:uppercase; margin-bottom:8px;}
+  .procon .pros h5{color:var(--good);} .procon .cons h5{color:var(--bad);}
+  .procon ul{margin:0; padding-left:18px; font-size:13.5px; color:var(--ink-soft);}
+  .procon ul li{margin:5px 0;}
+
+  .reco{background:linear-gradient(135deg,#eef8f3,#e4f3ec); border:1px solid #cfe9dc; border-left:4px solid var(--good);
+    border-radius:12px; padding:14px 18px; font-size:14px; color:#0c5a3e; margin-top:16px;}
+  .reco b{color:#0a4a33;}
+
+  .foodtag{display:inline-block; font-size:11px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; padding:3px 9px; border-radius:6px;}
+  .foodtag.strong{background:#e2f3ec; color:#0c7a52;}
+  .foodtag.ok{background:#fdf0d8; color:#9a6b15;}
+  .foodtag.weak{background:#fbe4e0; color:#b0432f;}
+
+  /* hotel-style card reuse */
+  .hotel-hero{display:grid; grid-template-columns:1.3fr 1fr; gap:0; border-radius:18px; overflow:hidden; box-shadow:var(--shadow); border:1px solid var(--line);}
+  @media(max-width:760px){.hotel-hero{grid-template-columns:1fr;}}
+  .hotel-hero .left{background:linear-gradient(150deg,#0a5466,#083e4c); color:#fff; padding:30px 30px;}
+  .hotel-hero .left h3{font-size:27px; font-weight:500; color:#fff;}
+  .hotel-hero .left .stars{color:var(--gold-soft); letter-spacing:3px; margin:6px 0 2px;}
+  .hotel-hero .right{background:var(--paper); padding:26px 28px;}
+  .amen{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px;}
+  .amen span{background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.25); border-radius:999px; padding:5px 13px; font-size:12.5px;}
+  .quote{font-family:var(--serif); font-style:italic; font-size:17px; color:var(--teal-deep); border-left:3px solid var(--gold); padding-left:14px; margin:10px 0;}
+  .rev-row{display:flex; gap:10px; align-items:baseline; margin:8px 0; font-size:14px;}
+  .rev-row .tick{color:var(--teal-bright); font-weight:700;}
+
+  .tl{position:relative; margin-top:8px;}
+  .tl::before{content:""; position:absolute; left:78px; top:6px; bottom:6px; width:2px; background:var(--line);}
+  @media(max-width:680px){.tl::before{left:54px;}}
+  .leg{position:relative; display:flex; gap:20px; padding:12px 0;}
+  .leg .date{flex:0 0 60px; text-align:right; font-family:var(--serif); font-weight:600; color:var(--teal); font-size:15px; line-height:1.2; padding-top:2px;}
+  .leg .date small{display:block; font-family:var(--sans); font-weight:600; font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-faint);}
+  .leg .dot{position:absolute; left:71px; top:8px; width:14px; height:14px; border-radius:50%; background:#fff; border:3px solid var(--teal); z-index:2;}
+  .leg.dive .dot{background:var(--teal);} .leg.star .dot{border-color:var(--gold); background:var(--gold);}
+  @media(max-width:680px){.leg .dot{left:47px;} .leg{gap:14px;} .leg .date{flex-basis:40px;}}
+  .leg .body{flex:1; background:var(--paper); border:1px solid var(--line); border-radius:13px; padding:14px 18px; margin-left:26px;}
+  .leg .body h4{font-size:17px; font-weight:600; color:var(--ink);}
+  .leg .body .din{font-size:13px; color:var(--ink-soft); margin-top:5px;}
+  .leg .body .din b{color:var(--gold);}
+  .tag-sm{display:inline-block; font-size:10px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; padding:2px 8px; border-radius:5px; vertical-align:middle; margin-left:6px;}
+  .tag-dive{background:#e2f3ec; color:#0c7a52;} .tag-rest{background:#eef0f2; color:#5b6b72;} .tag-cel{background:#f7e7c8; color:#9a6b15;}
+
+  table{width:100%; border-collapse:collapse; font-size:14px; margin-top:8px; background:var(--paper); border-radius:12px; overflow:hidden;}
+  th,td{text-align:left; padding:11px 14px; border-bottom:1px solid var(--line); vertical-align:top;}
+  th{background:var(--teal-deep); color:#fff; font-family:var(--sans); font-size:11px; letter-spacing:.08em; text-transform:uppercase; font-weight:600;}
+  td.num{text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap;}
+  tr.total td{font-weight:700; background:#fbf6ec; border-top:2px solid var(--gold-soft); font-size:15.5px;}
+  tr:last-child td{border-bottom:none;}
+  .table-scroll{overflow-x:auto;}
+
+  .check{display:flex; gap:12px; align-items:flex-start; padding:12px 0; border-bottom:1px solid var(--line);}
+  .check:last-child{border:none;}
+  .check .box{flex:0 0 22px; height:22px; border:2px solid var(--teal); border-radius:6px; cursor:pointer; transition:.2s; position:relative; margin-top:2px;}
+  .check.done .box{background:var(--teal);}
+  .check.done .box::after{content:"✓"; color:#fff; position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700;}
+  .check.done .txt{text-decoration:line-through; color:var(--ink-faint);}
+  .check .txt{font-size:14.5px;}
+
+  #toTop{position:fixed; left:20px; bottom:20px; z-index:110; width:44px; height:44px; border-radius:50%; background:#fff; border:1px solid var(--line);
+    color:var(--teal-deep); font-size:20px; cursor:pointer; box-shadow:var(--shadow); opacity:0; pointer-events:none; transition:.3s;}
+  #toTop.show{opacity:1; pointer-events:auto;}
+
+  footer{background:var(--teal-deep); color:#cfe3e6; margin-top:60px; padding:40px 22px 30px; text-align:center; font-size:13px;}
+  footer .src{max-width:1040px; margin:0 auto 16px; font-size:12px; line-height:1.9; color:#9fc2c8;}
+  footer .src a{color:#bfe0e4;}
+  footer a{color:#dff0f0;}
+
+  @media(max-width:680px){
+    body{font-size:15.5px;}
+    main{padding:0 16px;}
+    section.block{padding:44px 0 18px; scroll-margin-top:60px;}
+    .hero{min-height:76vh;}
+    .hero-inner{padding:30px 18px 80px;}
+    .sec-head{flex-wrap:wrap;}
+    .sec-head .collapse-btn{order:3; margin-top:4px;}
+    .bar-inner{height:52px; gap:2px;}
+    table{font-size:12.5px;}
+    th,td{padding:8px 9px;}
+    .card{padding:18px 16px;}
+    .dive-head{gap:11px; padding:15px 15px;}
+    .dive-head h3{font-size:19px;}
+    .dive-body-inner{padding:2px 16px 20px;}
+    #toTop{width:40px; height:40px; left:14px; bottom:14px;}
+    .g3.quickcompare{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+<div id="progress"></div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">A Reef &amp; Wreck Getaway · Western Caribbean</div>
+    <h1>Roatán, <span class="it">Bay Islands</span></h1>
+    <p class="sub">Wall dives, two shipwrecks and a bioluminescent night dive — a week for three on Honduras's most-dived island.</p>
+    <div class="facts">
+      <div class="fact">📅 <b>~1 week, October 2026</b> · dates TBD</div>
+      <div class="fact">🤿 <b>3 divers</b> · reef + wreck + night dive</div>
+      <div class="fact">🏡 <b>Lodging:</b> 3 options under review</div>
+      <div class="fact">✈️ LAX, 1 connection</div>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,48 C240,90 480,10 720,40 C960,70 1200,20 1440,52 L1440,90 L0,90 Z" fill="#f6f2ea"/>
+  </svg>
+</header>
+
+<!-- NAV -->
+<nav class="bar">
+  <div class="bar-inner">
+    <span class="brand">Roatán</span>
+    <a href="#overview">Overview</a>
+    <a href="#regions">Regions</a>
+    <a href="#about">About Roatán</a>
+    <a href="#lodging">Lodging Options</a>
+    <a href="#dives">Dive Sites</a>
+    <a href="#operators">Operators</a>
+    <a href="#itinerary">Itinerary</a>
+    <a href="#dining">Dining</a>
+    <a href="#flights">Flights</a>
+    <a href="#budget">Budget</a>
+    <a href="#checklist">Checklist</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- OVERVIEW -->
+<section class="block" id="overview">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">The Destination</div>
+      <h2>Why Roatán, Why Now</h2>
+      <p class="lead">Warm water, 100+ dive sites five minutes offshore, and a village small enough to walk everywhere.</p>
+    </div>
+    <button class="collapse-btn" data-target="overview">Collapse</button>
+  </div>
+  <div class="sec-body">
+    <img class="banner" src="https://images.unsplash.com/photo-1546026423-cc4642628d2b?w=1400&h=420&fit=crop&q=75&auto=format" alt="Coral reef with tropical fish" loading="lazy">
+    <p>Roatán is the largest of Honduras's Bay Islands and sits along the Mesoamerican Reef — the second-largest barrier reef system on Earth. A wall runs close to shore for most of its north coast, so dramatic drop-offs, swim-through canyons, and two purpose-sunk wrecks are all a short boat ride from the dock. October puts you in the island's rainy season, but that trades only a little visibility for warm water, thinner crowds, and noticeably better off-season pricing on lodging.</p>
+    <div class="kpis" style="margin-top:18px">
+      <div class="kpi"><div class="n">81–82°F</div><div class="l">Water temp</div></div>
+      <div class="kpi"><div class="n">40–60+ft</div><div class="l">Visibility (Oct)</div></div>
+      <div class="kpi"><div class="n">100+</div><div class="l">Dive sites</div></div>
+      <div class="kpi"><div class="n">5</div><div class="l">Dive days</div></div>
+    </div>
+    <div class="callout"><b>October is rainy season, but low hurricane risk.</b> October/November bring the year's heaviest rain and the best chance of a blown-out dive day, but Roatán sits outside the main Caribbean hurricane belt — direct hits are rare (Hurricane Mitch, 1998, was the notable exception). Build one buffer day into the plan and consider travel insurance.</div>
+  </div>
+</section>
+
+<!-- REGIONS -->
+<section class="block" id="regions">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">Where On The Island</div>
+      <h2>Regions of Roatán</h2>
+      <p class="lead">The island splits into five distinct areas — here's how they compare before you narrow in on West End.</p>
+    </div>
+    <button class="collapse-btn" data-target="regions">Collapse</button>
+  </div>
+  <div class="sec-body">
+    <p>Roatán is 37 miles long and 5 miles wide, and its character changes a lot from west to east. Most visitors never get past the western third — West End, West Bay, and Sandy Bay — because that's where the diving infrastructure, restaurants, and walkable village life all live. Further east it gets progressively quieter, more residential, and less set up for a compact dive-focused week. Here's the full picture so you can see why West End keeps coming up as the base for this trip.</p>
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th>Region</th><th>Vibe</th><th>Best for</th><th>Trade-offs</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><b>West End</b></td>
+          <td>Walkable beach village, casual/bohemian, the island's dive hub</td>
+          <td>Divers and budget-to-mid travelers who want everything — dive shops, restaurants, nightlife — within a few minutes' walk</td>
+          <td>Half Moon Bay's beach is small compared to West Bay; can feel busy/backpacker-ish in high season</td>
+        </tr>
+        <tr>
+          <td><b>West Bay</b></td>
+          <td>Resort row behind a world-famous white-sand beach</td>
+          <td>Beach-first travelers, honeymooners, all-inclusive resort stays (Mayan Princess, Bananarama)</td>
+          <td>More expensive; quieter at night outside a few beach bars; a $3–5 water-taxi or taxi ride from West End's wider dining scene</td>
+        </tr>
+        <tr>
+          <td><b>Sandy Bay</b></td>
+          <td>Tranquil, more residential, a popular cruise-tour stop</td>
+          <td>Travelers who want to be near West End but quieter — home to Anthony's Key Resort and the RIMS dolphin encounter</td>
+          <td>Thinner restaurant/nightlife options of its own; still walkable-ish to West End but less compact</td>
+        </tr>
+        <tr>
+          <td><b>French Harbour &amp; Coxen Hole</b></td>
+          <td>The island's commercial and administrative hub — shipping, fishing, the main cruise port and hospital</td>
+          <td>Errands, banking, the ferry from La Ceiba, duty-free shopping — not really a lodging base</td>
+          <td>Industrial working town, not a resort area; French Cay Harbour has had recent fires affecting docks/marinas nearby</td>
+        </tr>
+        <tr>
+          <td><b>East End</b> (Oak Ridge, Punta Gorda, Camp Bay)</td>
+          <td>Authentic, unhurried island life — stilt houses over the water, mangrove canals, Garifuna culture</td>
+          <td>Travelers wanting a quieter, off-the-beaten-path stay and arguably the island's best untouched beach (Camp Bay)</td>
+          <td>Limited road access and electricity in places; far from West End's dive shops and restaurant density — not practical for a compact dive week</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="note-cool"><b>Why this points to West End:</b> given a one-week trip built around daily diving plus easy access to a range of restaurants, West End is the only region that puts a dive dock, dozens of restaurants, and lodging of every budget all within the same short walk. Sandy Bay and West Bay are both reasonable adjacent options (and factor into the Lodging comparison below); French Harbour/Coxen Hole and the East End are included here for a complete picture of the island, not as realistic bases for this itinerary.</div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="block" id="about">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">The Island</div>
+      <h2>About Roatán</h2>
+      <p class="lead">Pirates, Cayman fishing families, and an English-speaking Caribbean culture — plus plenty to do topside.</p>
+    </div>
+    <button class="collapse-btn" data-target="about">Collapse</button>
+  </div>
+  <div class="sec-body">
+    <p>Roatán was originally home to the Paya (Pech) people, later a Garifuna settlement point, and a notorious 17th-century pirate haven — Henry Morgan and others hid from Spanish patrols in its bays. English-speaking Cayman fishing families settled the island in the 1800s, which is why much of it, especially West End, still speaks a distinct Bay Islands English creole alongside Spanish. Roatán formally became part of Honduras in 1861 after a long dispute with Britain.</p>
+
+    <h3 style="font-size:22px;color:var(--teal-deep);margin:26px 0 14px">Getting oriented</h3>
+    <div class="mapwrap">
+      <div class="card flat" style="background:#fbfaf6">
+        <iframe title="Map of Roatán within the Bay Islands, Honduras" width="100%" height="360" style="border:1px solid #e7ded0;border-radius:10px;display:block" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.openstreetmap.org/export/embed.html?bbox=-87.8%2C15.6%2C-85.0%2C17.0&amp;layer=mapnik&amp;marker=16.3025%2C-86.5937"></iframe>
+        <p class="figcap">Roatán sits ~40 miles off mainland Honduras — no nonstop from LAX, but a short hop once you connect. <a href="https://www.openstreetmap.org/?mlat=16.3025&amp;mlon=-86.5937#map=9/16.30/-86.59" target="_blank" rel="noopener">View larger map</a> · © OpenStreetMap contributors</p>
+      </div>
+      <div class="card flat" style="background:#fbfaf6">
+        <svg viewBox="0 0 720 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;border-radius:10px;border:1px solid #e7ded0">
+          <defs><linearGradient id="seaG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cdeaef"/><stop offset="1" stop-color="#8ec6d2"/></linearGradient></defs>
+          <rect width="720" height="400" fill="url(#seaG)"/>
+          <path d="M0,230 C120,210 180,250 260,235 C340,220 380,245 460,232 C560,218 620,238 720,225 L720,400 L0,400 Z" fill="#f1ebdf" stroke="#e3d3ac" stroke-width="3"/>
+          <path d="M0,230 C120,210 180,250 260,235 C340,220 380,245 460,232 C560,218 620,238 720,225" fill="none" stroke="#8ec6d2" stroke-width="6" opacity="0.5"/>
+          <text x="360" y="60" fill="#3f7f93" font-family="Inter,sans-serif" font-size="13" text-anchor="middle" letter-spacing="2">CARIBBEAN SEA (NORTH SHORE)</text>
+          <text x="360" y="330" fill="#9a7b3e" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" letter-spacing="1">Main Street — West End village →</text>
+          <g transform="translate(46,44)"><circle r="15" fill="#fff" stroke="#cdbfa3"/><path d="M0,-8 L4,6 L0,2 L-4,6 Z" fill="#0a6e8a"/><text x="0" y="-18" font-size="9" fill="#46606b" text-anchor="middle" font-family="Inter,sans-serif">N</text></g>
+          <g font-family="Inter,sans-serif" font-size="13" font-weight="700" text-anchor="middle">
+            <g><circle cx="150" cy="255" r="14" fill="#c08a3e" stroke="#fff" stroke-width="2"/><text x="150" y="260" fill="#fff">1</text></g>
+            <g><circle cx="210" cy="248" r="14" fill="#0c6b80" stroke="#fff" stroke-width="2"/><text x="210" y="253" fill="#fff">2</text></g>
+            <g><circle cx="270" cy="245" r="14" fill="#0c6b80" stroke="#fff" stroke-width="2"/><text x="270" y="250" fill="#fff">3</text></g>
+            <g><circle cx="330" cy="243" r="14" fill="#2a9d8f" stroke="#fff" stroke-width="2"/><text x="330" y="248" fill="#fff">4</text></g>
+            <g><circle cx="105" cy="262" r="14" fill="#2f7fa3" stroke="#fff" stroke-width="2"/><text x="105" y="267" fill="#fff">5</text></g>
+            <g><circle cx="420" cy="238" r="14" fill="#2f7fa3" stroke="#fff" stroke-width="2"/><text x="420" y="243" fill="#fff">6</text></g>
+            <g><circle cx="560" cy="228" r="14" fill="#c25a4a" stroke="#fff" stroke-width="2"/><text x="560" y="233" fill="#fff">7</text></g>
+          </g>
+          <text x="14" y="392" font-size="10" fill="#8a7a5e" font-family="Inter,sans-serif">Orientation only — not to scale; positions approximate</text>
+        </svg>
+        <ul class="legend">
+          <li><span class="b" style="background:#c08a3e">1</span> <span><b>Seagrape Plantation</b> — quiet western edge</span></li>
+          <li><span class="b" style="background:#0c6b80">2</span> <span><b>Splash Inn</b> — Main Street, on-site dive center</span></li>
+          <li><span class="b" style="background:#0c6b80">3</span> <span><b>Sunset Villas</b> / Roatan Divers cluster</span></li>
+          <li><span class="b" style="background:#2a9d8f">4</span> <span><b>Half Moon Bay &amp; Sundowners</b> — village center</span></li>
+          <li><span class="b" style="background:#2f7fa3">5</span> <span><b>Lost Paradise Inn</b> / West End Dive Center</span></li>
+          <li><span class="b" style="background:#2f7fa3">6</span> <span><b>Casa Sierra/Canuck</b> — Mangrove Bight</span></li>
+          <li><span class="b" style="background:#c25a4a">7</span> <span><b>Water-taxi dock</b> — to West Bay ($3pp)</span></li>
+        </ul>
+        <p class="figcap">West End is a single walkable strip — every lodging option and dive shop below sits within a few minutes of each other.</p>
+      </div>
+    </div>
+
+    <h3 style="font-size:22px;color:var(--teal-deep);margin:30px 0 14px">Beyond the dives</h3>
+    <div class="grid g3">
+      <div class="card flat">
+        <h4 style="font-size:17px;color:var(--teal-deep)">🐒 Gumbalimba Park</h4>
+        <p class="muted">Nature preserve between West End and West Bay — capuchin monkeys, botanical gardens, a pirate cave, and West Bay beach access.</p>
+      </div>
+      <div class="card flat">
+        <h4 style="font-size:17px;color:var(--teal-deep)">🦥 Sloth &amp; monkey sanctuaries</h4>
+        <p class="muted">Mayan Eden Eco Park, Daniel Johnson's, and others — hold a sloth, meet parrots, walk a butterfly trail.</p>
+      </div>
+      <div class="card flat">
+        <h4 style="font-size:17px;color:var(--teal-deep)">🐬 Dolphin encounter (RIMS)</h4>
+        <p class="muted">Roatán Institute for Marine Sciences at Anthony's Key — wild-born dolphins in a natural lagoon, from a wade-in intro to open-water swims.</p>
+      </div>
+      <div class="card flat">
+        <h4 style="font-size:17px;color:var(--teal-deep)">🌴 Zip-lining</h4>
+        <p class="muted">Canopy tours through the island's hills — one of only two certified canopy tours in Honduras.</p>
+      </div>
+      <div class="card flat">
+        <h4 style="font-size:17px;color:var(--teal-deep)">🏖️ West Bay Beach</h4>
+        <p class="muted">A short walk or $3 water-taxi ride from West End — powder sand and calm, snorkel-friendly water for a non-dive day.</p>
+      </div>
+      <div class="card flat">
+        <h4 style="font-size:17px;color:var(--teal-deep)">🍫 Roatán Chocolate Factory</h4>
+        <p class="muted">Free factory tour upstairs, cafe downstairs — an easy stop in the village between dives.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LODGING -->
+<section class="block" id="lodging">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">The Big Decision</div>
+      <h2>Lodging Options</h2>
+      <p class="lead">Three fundamentally different ways to do this trip — compared on price, food, diving convenience and flexibility.</p>
+    </div>
+    <button class="collapse-btn" data-target="lodging">Collapse</button>
+  </div>
+  <div class="sec-body">
+    <p>Every option below fits three travelers in or near West End. The category that fits best depends on how you weigh four things: <b>total price</b>, <b>food quality</b> (you said "not high-end, but we prefer quality"), <b>diving convenience</b> (5-min walk to a dock, or arranged pickup), and how much you value <b>flexibility</b> to pick any restaurant or operator versus a bundled, no-logistics package.</p>
+
+    <div class="grid g3 quickcompare" style="margin-top:20px">
+      <div class="cat-quick cat1">
+        <span class="num">1</span>
+        <h4>All-Inclusive Dive Resort</h4>
+        <div class="price">~$8.0K–$11.1K <span style="font-size:12px;color:var(--ink-faint);font-weight:500">/ 3 people</span></div>
+        <p class="verdict">Anthony's Key, Mayan Princess, CoCo View, Turquoise Bay. Zero logistics — room, meals and diving all bundled with one operator.</p>
+        <a class="jump" href="#cat1">See full comparison ↓</a>
+      </div>
+      <div class="cat-quick cat2">
+        <span class="num">2</span>
+        <h4>Semi All-Inclusive + Restaurant</h4>
+        <div class="price">~$6.65K <span style="font-size:12px;color:var(--ink-faint);font-weight:500">/ 3 people</span></div>
+        <p class="verdict">Splash Inn, Seagrape, Lost Paradise Inn, West End Dive Resort. Room + meals + diving bundled, but casual and West-End-village based.</p>
+        <a class="jump" href="#cat2">See full comparison ↓</a>
+      </div>
+      <div class="cat-quick cat3">
+        <span class="num">3</span>
+        <h4>Condo + À La Carte</h4>
+        <div class="price">~$7.15K <span style="font-size:12px;color:var(--ink-faint);font-weight:500">/ 3 people</span></div>
+        <p class="verdict">Sunset Villas, Casa Sierra/Canuck, Iron Shore. Cheapest lodging, full choice of operator and restaurant, but you arrange everything separately.</p>
+        <a class="jump" href="#cat3">See full comparison ↓</a>
+      </div>
+    </div>
+
+    <div class="note-cool">All figures assume October = low/off-season pricing (confirmed for every property below) and a consistent ~19% tax assumption where a property didn't publish tax-inclusive rates, so the three categories compare like-for-like. Full line-item math is in the <a href="#budget">Budget</a> section.</div>
+
+    <!-- CATEGORY 1 -->
+    <div class="cat-section cat1" id="cat1">
+      <div class="cat-title"><span class="num" style="background:linear-gradient(150deg,var(--gold),#9a6b15)">1</span><h3>Mid-Range All-Inclusive Dive Resorts</h3></div>
+      <p class="muted">Everything bundled into one price with one operator — you show up and dive. Anthony's Key's Fall 2026 discount (15% off + a discounted 12-dive add-on) is the headline finding here: it now lands in the <b>same price cluster</b> as the other three resorts, rather than standing far above them at rack rate.</p>
+      <div class="table-scroll">
+      <table>
+        <thead><tr><th>Resort</th><th>Location</th><th>7-night package (pp, tax-adjusted)</th><th>What's included</th></tr></thead>
+        <tbody>
+          <tr><td><b>Turquoise Bay</b></td><td>East End</td><td class="num">~$1,665</td><td>15 boat dives + 1 night dive; Nitrox +$10/tank. Best value of the four, but East End is far from West End's dining/nightlife.</td></tr>
+          <tr><td><b>Mayan Princess</b></td><td>West Bay</td><td class="num">~$2,379</td><td>15 dives, beachfront, 2 pools, in-house Mayan Divers, same ownership as Turquoise Bay.</td></tr>
+          <tr><td><b>CoCo View Resort</b></td><td>South side (French Cay)</td><td class="num">~$2,500</td><td>2 boat dives/day + unlimited house-reef ("Front Yard") diving. Closer to Mary's Place than West End is.</td></tr>
+          <tr><td><b>Anthony's Key</b></td><td>Sandy Bay</td><td class="num">~$2,713</td><td>Fall 2026 special: 15% off room package + $480pp 12-dive add-on. Dolphin lagoon (RIMS) &amp; hyperbaric chamber on-site. Still the priciest of the four, but no longer a dramatic outlier.</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <div class="procon">
+        <div class="box pros"><h5>Pros</h5><ul>
+          <li>Zero logistics — one price covers room, all meals, and diving</li>
+          <li>Anthony's Key adds a dolphin lagoon and hyperbaric chamber unmatched elsewhere</li>
+          <li>CoCo View's unlimited house-reef diving rewards self-guided extra dives</li>
+          <li>Consistent, resort-grade food quality across all four</li>
+        </ul></div>
+        <div class="box cons"><h5>Cons</h5><ul>
+          <li>By far the most expensive category — roughly 20–70% more than Categories 2 or 3</li>
+          <li>Locked into one operator's house reef and schedule</li>
+          <li>Turquoise Bay (cheapest) is on East End — resort-bound most evenings</li>
+          <li>Mary's Place still requires a special trip except from CoCo View</li>
+        </ul></div>
+      </div>
+      <div class="reco"><b>Our read:</b> pick this category if you want a completely hands-off week and don't mind paying for it. Turquoise Bay is the value play if East End's isolation doesn't bother you; Anthony's Key is worth a serious look now that its Fall discount closes most of the price gap, especially if the dolphin lagoon appeals.</div>
+    </div>
+
+    <!-- CATEGORY 2 -->
+    <div class="cat-section cat2" id="cat2">
+      <div class="cat-title"><span class="num" style="background:linear-gradient(150deg,var(--teal),var(--teal-deep))">2</span><h3>Semi All-Inclusive / Budget Dive Resort + Restaurant</h3></div>
+      <p class="muted">Room, meals and diving still bundled, but casual, West-End-village-based, and noticeably cheaper. Food quality was the deciding filter here — each entry below reflects what reviews actually say, not just that a restaurant exists on-site.</p>
+      <div class="table-scroll">
+      <table>
+        <thead><tr><th>Resort</th><th>Pricing</th><th>Included</th><th>Food quality</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><b>Splash Inn Dive Resort</b><br><span class="foodtag strong">Strongest food</span></td>
+            <td class="num">~$1,099 pp<br><span class="muted" style="font-size:12px">(7 nts, +19% tax)</span></td>
+            <td>Room + 3 meals/day + transfers + 3 dives/day (6 dive days) + gear + pool</td>
+            <td>4.5/5, <b>#30 of 211</b> restaurants island-wide. Breakfast buffet &amp; pizza singled out repeatedly; some non-breakfast meals "hit or miss," but baseline is genuinely good.</td>
+          </tr>
+          <tr>
+            <td><b>Seagrape Plantation</b><br><span class="foodtag weak">Weakest food</span></td>
+            <td class="num">~$450–495 pp<br><span class="muted" style="font-size:12px">(dbl/triple, transfers+breakfast+lunch)</span></td>
+            <td>3 dives/day + night dives ~2×/week; quiet western edge of the village</td>
+            <td>"Ricky's Buffet" = breakfast &amp; lunch <b>only</b> — no dinner, no alcohol on-site. Reviews call the food "decent" but mixed overall; you'd walk 5–8 min for every dinner.</td>
+          </tr>
+          <tr>
+            <td><b>Lost Paradise Inn</b><br><span class="foodtag ok">Solid food</span></td>
+            <td class="num">Package via West End Dive Center</td>
+            <td>Free airport transport; heart-of-the-village location, next to the dive center</td>
+            <td>Reviews call it "a nice restaurant" with no major complaints, and it sits directly beside West End's restaurant row.</td>
+          </tr>
+          <tr>
+            <td><b>West End Dive Resort</b><br><span class="foodtag ok">Solid food</span></td>
+            <td class="num">Package via roatandivecenter.com</td>
+            <td>~5 min walk to village center; on-site restaurant</td>
+            <td>Guest reviews call the food "excellent," staff care "unbeatable" — thin on detail but consistently positive.</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      <p class="muted" style="margin-top:14px"><b>Splash Inn also runs the "South Side Special 2"</b> — Mary's Place + the Prince Albert wreck in one day, min. 4 divers, $50 with a dive package / $135 à la carte. That's the cheapest way to reach Mary's Place while staying based in West End.</p>
+      <div class="procon">
+        <div class="box pros"><h5>Pros</h5><ul>
+          <li>Cheapest bundled (room+meals+diving) option by a clear margin</li>
+          <li>All four sit directly in West End village — confirmed walkable to Main Street's broader restaurant strip, not just the in-house kitchen</li>
+          <li>Splash Inn's food quality is independently verified strong, not just convenient</li>
+          <li>Splash Inn's South Side Special is the cheapest route to Mary's Place</li>
+        </ul></div>
+        <div class="box cons"><h5>Cons</h5><ul>
+          <li>Seagrape's on-site food is the weakest match for your "quality food" priority — no dinner or alcohol served</li>
+          <li>Rooms are simpler than Category 1 — standard hotel rooms, not resort bungalows</li>
+          <li>Lost Paradise Inn / West End Dive Resort pricing wasn't as precisely published — needs a direct quote</li>
+        </ul></div>
+      </div>
+      <div class="reco"><b>Our read:</b> given food quality is a stated priority, <b>Splash Inn is the clear pick</b> of these four — independently rated, not just present. It's also the cheapest scenario in the whole comparison once diving is bundled in (see Budget). Seagrape fits the profile you asked about but underdelivers specifically on food; treat it as a fallback rather than the primary choice.</div>
+    </div>
+
+    <!-- CATEGORY 3 -->
+    <div class="cat-section cat3" id="cat3">
+      <div class="cat-title"><span class="num" style="background:linear-gradient(150deg,var(--teal-bright),#0c7a52)">3</span><h3>Condo / Airbnb-Style, Self-Catered</h3></div>
+      <p class="muted">Cheapest lodging line-item, full choice of dive operator and restaurant — but you arrange diving and every meal separately. Two criteria applied: walkability to a <b>wide spread</b> of restaurants (you're eating out every meal), and <b>diving convenience</b> — a confirmed ~5-min walk to a dock, or an operator that treats the property as a standard pickup point.</p>
+      <div class="table-scroll">
+      <table>
+        <thead><tr><th>Property</th><th>Pricing (group of 3, 7 nts)</th><th>Restaurant walkability</th><th>Diving convenience</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><b>Sunset Villas</b><br><span class="foodtag strong">Best-documented fit</span></td>
+            <td class="num">~$1,290<br><span class="muted" style="font-size:12px">($155/nt triple, tax incl.)</span></td>
+            <td>~5 min to West End's full Main Street restaurant row</td>
+            <td><b>Confirmed ~5 min walk</b> to Roatan Divers, West End Divers, Reef Gliders &amp; Splash Inn's dock. Roatan Dive Center (a separate shop) lists this property as one of its own package accommodations.</td>
+          </tr>
+          <tr>
+            <td><b>Casa Sierra / Casa Canuck</b></td>
+            <td class="num">Rate not confirmed<br><span class="muted" style="font-size:12px">(direct quote needed)</span></td>
+            <td>"A few minutes' walk" to grocery, bars, restaurants, shopping — reviews say "no need for a car here"</td>
+            <td>Described as "easy walking distance of multiple dive operators," but no exact minutes figure found for a specific dock — confirm directly.</td>
+          </tr>
+          <tr>
+            <td><b>Iron Shore Vacation Rentals</b></td>
+            <td class="num">Rate not confirmed<br><span class="muted" style="font-size:12px">(direct quote needed)</span></td>
+            <td>5-min walk (paved road) to Sundowners &amp; restaurants</td>
+            <td>Explicitly quoted: <b>"5-min walk on a paved road"</b> to dive shops — meets the criterion directly.</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      <div class="note-cool"><b>On "included pickup":</b> none of the West End dive shops advertise condo pickup as a standard feature — the village is small enough that guests are simply expected to walk the last few minutes. If door-to-door pickup matters more than a short walk, that's a point in favor of Category 1 or 2 instead.</div>
+      <div class="procon">
+        <div class="box pros"><h5>Pros</h5><ul>
+          <li>Cheapest lodging line of the three categories by a wide margin</li>
+          <li>Full choice of dive operator (Roatan Divers, Sun Divers, Native Sons, Splash Inn's shop) and restaurant, every meal</li>
+          <li>2BR/2BA layout gives each traveler real private space, plus a kitchen for breakfasts</li>
+          <li>Sunset Villas has the most concrete evidence of meeting both new criteria</li>
+        </ul></div>
+        <div class="box cons"><h5>Cons</h5><ul>
+          <li>Not actually cheaper overall once you price in eating out for every meal — lands close to Category 2's total</li>
+          <li>You're the one coordinating diving, transfers, and reservations rather than one bundled itinerary</li>
+          <li>Casa Sierra/Canuck and Iron Shore pricing needs a direct quote — less firm than the other two categories</li>
+        </ul></div>
+      </div>
+      <div class="reco"><b>Our read:</b> if flexibility matters more than convenience, <b>Sunset Villas</b> is the strongest of the three — it's the only property with a confirmed ~5-minute walk to multiple named dive docks and independent evidence that at least one operator already treats it as a package accommodation.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- DIVE SITES -->
+<section class="block" id="dives">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">Underwater</div>
+      <h2>The Dive Sites</h2>
+      <p class="lead">Wall, wreck, and night diving — all reachable from West End. Tap any group to expand.</p>
+    </div>
+    <button class="collapse-btn" data-target="dives">Collapse</button>
+  </div>
+  <div class="sec-body">
+    <img class="banner" src="https://images.unsplash.com/photo-1517627043994-b991abb62fc8?w=1400&h=420&fit=crop&q=75&auto=format" alt="Scuba diver silhouette in blue water" loading="lazy">
+    <p>Roatán's wall runs close to the north shore, so most day-to-day diving sits within a 5–15 minute boat ride of West End. Add two purpose-sunk wrecks in Sandy Bay, a famous bioluminescent night dive, and — if you're willing to go south — the volcanic canyon at Mary's Place.</p>
+    <div class="see" style="margin:12px 0 4px">
+      <span>🌡️ Oct water ~81–82°F</span><span>👁️ Viz 40–60+ ft (rainy season)</span><span>🐢 Turtles &amp; morays year-round</span><span>🦈 Occasional reef sharks</span><span>✨ Bioluminescence on new-moon nights</span>
+    </div>
+
+    <div class="dive open" id="site-westend">
+      <div class="dive-head">
+        <img class="dive-thumb" src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=140&h=140&fit=crop&q=70&auto=format" alt="Diver with a school of fish" loading="lazy">
+        <div class="t">
+          <h3>West End's home reef — walls, canyons &amp; swim-throughs</h3>
+          <div class="meta"><span><b>Level:</b> All levels</span><span><b>Boat ride:</b> 5–15 min</span><span><b>10+ named sites</b></span></div>
+        </div>
+        <span class="chev">▾</span>
+      </div>
+      <div class="dive-body"><div class="dive-body-inner">
+        <p>The wall runs right along West End and Sandy Bay's shore, so most day-to-day diving is close to the dock. Named sites include <b>West End Wall, Pablo's Place, Hole in the Wall</b> (iconic canyons, swim-throughs, even a small cave), <b>Dennis' Drop-off</b> (wall), <b>Mandy's Eel Garden, Blue Channel, Canyon Reef</b> (a network of swim-throughs, some shallow enough for Open Water divers with good buoyancy), <b>Zack's Patch, Green Pearl</b> (wall + swim-throughs + a cleaning station), and <b>Spooky Channel</b> (a deep channel where the walls narrow to ~6 ft apart near the top).</p>
+        <span class="lvl beg">All levels</span>
+        <div class="see">
+          <span>🪸 Wall dives</span><span>🕳️ Swim-throughs</span><span>🐠 Reef fish</span><span>🧹 Cleaning stations</span><span>🐍 Moray eels</span>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="dive" id="site-wrecks">
+      <div class="dive-head">
+        <img class="dive-thumb" src="https://images.unsplash.com/photo-1602199926649-2e5e447bab97?w=140&h=140&fit=crop&q=70&auto=format" alt="Diver over a deep reef" loading="lazy">
+        <div class="t">
+          <h3>Sandy Bay wrecks — El Aguila &amp; Odyssey</h3>
+          <div class="meta"><span><b>Level:</b> Advanced</span><span><b>Depth:</b> ~110–115 ft</span><span><b>~15 min by boat</b> from West End</span></div>
+        </div>
+        <span class="chev">▾</span>
+      </div>
+      <div class="dive-body"><div class="dive-body-inner">
+        <p><b>El Aguila</b>: a 210-ft cargo ship sunk in 1997, broken into three sections by Hurricane Mitch (1998) — each piece explorable separately, resting around 100–110 ft, just a couple hundred yards offshore. <b>Odyssey</b>: the Caribbean's largest shipwreck dive — 300 ft long, 50 ft wide, 85 ft tall, sunk in 2002, resting at ~110–115 ft in Sandy Bay. Both need Advanced certification (or a guided deep-dive briefing) given the depth.</p>
+        <span class="lvl adv">Advanced — depth &amp; possible current</span>
+        <div class="see">
+          <span>🚢 Two full wrecks</span><span>🦈 Occasional reef sharks</span><span>🐡 Groupers &amp; snapper</span><span>🐍 Green moray eels</span>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="dive" id="site-night">
+      <div class="dive-head">
+        <img class="dive-thumb" src="https://images.unsplash.com/photo-1664922114319-4700c0ef74b1?w=140&h=140&fit=crop&q=70&auto=format" alt="Divers underwater at dusk" loading="lazy">
+        <div class="t">
+          <h3>Night diving — West End's "String of Pearls"</h3>
+          <div class="meta"><span><b>Level:</b> All levels</span><span><b>Local reef</b></span><span><b>Best on new-moon nights</b></span></div>
+        </div>
+        <span class="chev">▾</span>
+      </div>
+      <div class="dive-body"><div class="dive-body-inner">
+        <p>A Firelight/bioluminescence night dive, best about an hour after sunset on a new-moon night: divers turn off all lights to watch tiny ostracod crustaceans glow — Roatán's famous "string of pearls" effect drifting upward like stars. Most West End shops offer this on set nights (Roatan Divers runs Tue/Thu); Splash Inn and Sun Divers also offer it à la carte.</p>
+        <span class="lvl beg">All levels</span>
+        <div class="see">
+          <span>✨ Bioluminescence</span><span>🌑 Best on new moon</span><span>🔦 Torch required</span><span>👥 Min. divers varies by shop</span>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="dive" id="site-marys">
+      <div class="dive-head">
+        <img class="dive-thumb" src="https://images.unsplash.com/photo-1546026423-cc4642628d2b?w=140&h=140&fit=crop&q=70&auto=format" alt="Coral canyon with sponges" loading="lazy">
+        <div class="t">
+          <h3>Mary's Place (optional — south side)</h3>
+          <div class="meta"><span><b>Level:</b> Advanced</span><span><b>Depth:</b> ~100 ft canyon</span><span><b>Far from West End</b></span></div>
+        </div>
+        <span class="chev">▾</span>
+      </div>
+      <div class="dive-body"><div class="dive-body-inner">
+        <p>A dramatic volcanic fissure/canyon off Brick Bay near French Harbour, widely called one of the best dives in the Caribbean — steep walls packed with coral and sponges forming a narrow labyrinth. Too far for most West End shops to run as a standard day; <b>Splash Inn's "South Side Special 2"</b> (Mary's Place + Prince Albert wreck, min. 4 divers, $50 with a package/$135 à la carte) is the most affordable route from a West-End base, and CoCo View (Category 1) sits close enough to include it more easily.</p>
+        <span class="lvl adv">Advanced · special trip required</span>
+        <div class="see">
+          <span>🌋 Volcanic canyon</span><span>🪸 Dense coral &amp; sponges</span><span>🐍 Resident green moray</span><span>📅 Weather &amp; min.-diver dependent</span>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="note-cool"><b>Decision needed:</b> is Mary's Place worth a special day, or do you stay reef/wreck-focused and skip it? Splash Inn's combo trip makes it cheap to say yes without leaving West End.</div>
+  </div>
+</section>
+
+<!-- OPERATORS -->
+<section class="block" id="operators">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">If You Book Diving Separately</div>
+      <h2>Dive Operators</h2>
+      <p class="lead">Relevant if you choose Category 3 (or want à la carte diving alongside a Category 1/2 stay).</p>
+    </div>
+    <button class="collapse-btn" data-target="operators">Collapse</button>
+  </div>
+  <div class="sec-body">
+    <p class="muted">Category 1 and 2 resorts bundle their own diving — this section only matters if you land on Category 3, or want a second opinion on operators near any of the properties above.</p>
+    <div class="grid g3" style="margin-top:14px">
+      <div class="card">
+        <h3 style="font-size:20px;color:var(--teal-deep)">Roatan Divers</h3>
+        <p class="muted">Boutique PADI 5-Star/Eco/Tec center, max 6 divers per instructor, 4 custom boats, private docks. 3 dive times daily (9/11:30/2:30), night dives Tue &amp; Thu.</p>
+        <p class="muted"><b>Pricing:</b> 1 dive $60 · 2 $110 · 5 $265 · 10 $500 · 20 $800. Nitrox +$8/tank, night dive +$20.</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:20px;color:var(--teal-deep)">Sun Divers</h3>
+        <p class="muted">5-star rated, featured in Forbes/NYT coverage of Roatán's reef. Runs the Mary's Place special trip.</p>
+        <p class="muted"><b>Pricing:</b> 1–4 dives $53/tank · 5-pack $49 · 10-pack $47 · 20-pack $45. Night dive $65 (torch incl., min. 4). Mary's Place +$35 (min. 6).</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:20px;color:var(--teal-deep)">Native Sons</h3>
+        <p class="muted">West End's longest continuously-run shop, owner Alvin Jackson diving Roatán's reefs 60+ years. 1,200+ five-star reviews, valet-style diving.</p>
+        <p class="muted">Pricing not published — request a direct quote.</p>
+      </div>
+    </div>
+    <div class="note-cool">Splash Inn's own dive center is also a valid à la carte option even outside its bundled package: 1 dive $45 · 2–9 $40/dive · 10+ $35/dive — the cheapest per-tank rate of any West End shop.</div>
+  </div>
+</section>
+
+<!-- ITINERARY -->
+<section class="block" id="itinerary">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">Day by Day</div>
+      <h2>Draft Itinerary</h2>
+      <p class="lead">7 nights — adjust once lodging category and exact dates are locked.</p>
+    </div>
+    <button class="collapse-btn" data-target="itinerary">Collapse</button>
+  </div>
+  <div class="sec-body">
+    <div class="tl">
+      <div class="leg">
+        <div class="date">Sat<small>Day 1</small></div><div class="dot"></div>
+        <div class="body"><h4>Arrive RTB <span class="tag-sm tag-rest">Travel</span></h4>
+          <p class="muted">Fly LAX → RTB via 1 connection, check in, settle in, sunset at Half Moon Bay.</p>
+          <div class="din"><b>Dinner:</b> an easy first night on Main Street.</div></div>
+      </div>
+      <div class="leg dive">
+        <div class="date">Sun<small>Day 2</small></div><div class="dot"></div>
+        <div class="body"><h4>West End home reef <span class="tag-sm tag-dive">2-tank</span></h4>
+          <p class="muted">Check-out dive — Hole in the Wall / Mandy's Eel Garden.</p></div>
+      </div>
+      <div class="leg dive">
+        <div class="date">Mon<small>Day 3</small></div><div class="dot"></div>
+        <div class="body"><h4>West End Wall / Canyon Reef <span class="tag-sm tag-dive">2-tank</span></h4>
+          <p class="muted">More of the home reef's wall and swim-throughs.</p></div>
+      </div>
+      <div class="leg dive star">
+        <div class="date">Tue<small>Day 4</small></div><div class="dot"></div>
+        <div class="body"><h4>Sandy Bay wrecks + night dive <span class="tag-sm tag-dive">2-tank + night</span></h4>
+          <p class="muted">El Aguila &amp; Odyssey, then the bioluminescent "String of Pearls" night dive.</p></div>
+      </div>
+      <div class="leg">
+        <div class="date">Wed<small>Day 5</small></div><div class="dot"></div>
+        <div class="body"><h4>Buffer / explore <span class="tag-sm tag-rest">No diving</span></h4>
+          <p class="muted">Gumbalimba Park, sloth sanctuary, or a West Bay beach day. Also covers a weather-cancelled dive day.</p></div>
+      </div>
+      <div class="leg dive">
+        <div class="date">Thu<small>Day 6</small></div><div class="dot"></div>
+        <div class="body"><h4>Reef highlights (or Mary's Place special) <span class="tag-sm tag-dive">2-tank</span></h4>
+          <p class="muted">Return to a favorite site, or take the South Side Special if Mary's Place made the cut.</p></div>
+      </div>
+      <div class="leg dive">
+        <div class="date">Fri<small>Day 7</small></div><div class="dot"></div>
+        <div class="body"><h4>Last dive day <span class="tag-sm tag-dive">2-tank</span></h4>
+          <p class="muted">Keep a ~18–24 hr no-fly buffer before Saturday's flight.</p></div>
+      </div>
+      <div class="leg">
+        <div class="date">Sat<small>Day 8</small></div><div class="dot"></div>
+        <div class="body"><h4>Depart RTB → LAX <span class="tag-sm tag-rest">Travel</span></h4></div>
+      </div>
+    </div>
+    <div class="note-cool"><b>Dive safety:</b> 5 dive days (~10 tank dives) + 1 night dive, one buffer day, and a no-fly gap before departure.</div>
+  </div>
+</section>
+
+<!-- DINING -->
+<section class="block" id="dining">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">After the Dives</div>
+      <h2>Where to Eat — West End</h2>
+      <p class="lead">Over 40 restaurants and street vendors along a single walkable strip — here's the complete, top-reviewed shortlist by category.</p>
+    </div>
+    <button class="collapse-btn" data-target="dining">Collapse</button>
+  </div>
+  <div class="sec-body">
+    <p>West End's dining scene is the most diverse on the island — Honduran street food, Texas-style BBQ, Italian, Thai, healthy cafes, and beachfront bars all sit within a mile-long strip. This list pulls from local rankings and reviews and groups everything by what you're in the mood for, rather than one flat list.</p>
+
+    <h3 style="font-size:20px;color:var(--teal-deep);margin:26px 0 12px">🥇 The must-eats</h3>
+    <div class="grid g3">
+      <div class="card"><h3 style="font-size:18px;color:var(--teal-deep)">Sandy Buns Bakery &amp; Cafe</h3><p class="muted">The runaway #1 in West End. Texan-run bakery-cafe — legendary cinnamon rolls, smoked brisket, Dirty Bird chicken sandwich. Breakfast/lunch only, closed Sundays; go early, only 10–12 tables.</p></div>
+      <div class="card"><h3 style="font-size:18px;color:var(--teal-deep)">Roatán Oasis</h3><p class="muted">Hillside fine dining, winner of Honduras' Best Restaurant (World Culinary Awards). Internationally inspired menu, craft cocktails. Needs transport + reservations — the special-occasion pick.</p></div>
+      <div class="card"><h3 style="font-size:18px;color:var(--teal-deep)">Sundowners Beach Bar</h3><p class="muted">West End's iconic sunset spot right on Half Moon Bay — burgers, wraps, tropical cocktails (try the Monkey La La), live music most evenings.</p></div>
+    </div>
+
+    <h3 style="font-size:20px;color:var(--teal-deep);margin:26px 0 12px">🍝 Italian &amp; pizza</h3>
+    <div class="grid g3">
+      <div class="card flat"><h3 style="font-size:17px;color:var(--teal-deep)">Pazzo's</h3><p class="muted">Six tables, homemade pasta, BYOB. Reservation essential — the Beef Carpaccio is the standout starter.</p></div>
+      <div class="card flat"><h3 style="font-size:17px;color:var(--teal-deep)">Drunken Sailor</h3><p class="muted">Northern-Italian owner, homemade pasta and some of the best pizza and gnocchi on the island. The lasagna is a favorite.</p></div>
+      <div class="card flat"><h3 style="font-size:17px;color:var(--teal-deep)">Junior's Patio</h3><p class="muted">Fresh dough daily, wood-fired, build-your-own pie in a string-lit courtyard. BYOB, cash only, limited hours (Mon–Fri, ~4:30–8pm) — call ahead.</p></div>
+      <div class="card flat"><h3 style="font-size:17px;color:var(--teal-deep)">Bigros / C Level Pizzeria</h3><p class="muted">4.8 stars, Travelers' Choice award. Strong gluten-free and vegan-cheese options.</p></div>
+    </div>
+
+    <h3 style="font-size:20px;color:var(--teal-deep);margin:26px 0 12px">🐟 Seafood &amp; grills</h3>
+    <div class="grid g3">
+      <div class="card flat"><h3 style="font-size:17px;color:var(--teal-deep)">Ginger's Caribbean Grill</h3><p class="muted">Half Moon Bay alcove, sustainably-sourced fish from local fishermen. Lionfish tacos and bang bang shrimp are the draw.</p></div>
+      <div class="card flat"><h3 style="font-size:17px;color:var(--teal-deep)">Argentinian Grill</h3><p class="muted">Open-flame grilled steaks, pork, chicken, shrimp and lobster. Beachfront seating between the palms overlooking Half Moon Bay.</p></div>
+      <div class="card flat"><h3 style="font-size:17px;color:var(--teal-deep)">Creole's Rotisserie Chicken</h3><p class="muted">The island's go-to rotisserie chicken — $20 for a whole bird + 4 sides. Limited nightly supply; arrive by 7pm.</p></div>
+      <div class="card flat"><h3 style="font-size:17px;color:var(--teal-deep)">Anthony's Chicken</h3><p class="muted">Creole's jerk-chicken rival — spicier, and reliably open later in the evening.</p></div>
+    </div>
+
+    <h3 style="font-size:20px;color:var(--teal-deep);margin:26px 0 12px">🌮 Local &amp; cheap eats</h3>
+    <div class="grid g3">
+      <div class="card flat"><h3 style="font-size:17px;color:var(--teal-deep)">Yahongreh</h3><p class="muted">The island's best baleada for about $2 — cash only, breakfast/lunch, tucked into the Chili's hotel grounds.</p></div>
+      <div class="card flat"><h3 style="font-size:17px;color:var(--teal-deep)">Calelu's</h3><p class="muted">Another top pick for traditional Honduran baleadas.</p></div>
+      <div class="card flat"><h3 style="font-size:17px;color:var(--teal-deep)">Loretta's Island Cooking</h3><p class="muted">Home-style island cooking in Loretta's own yard in Half Moon Bay — fried chicken, coconut rice, and an over-the-top lobster pasta. A local hidden gem.</p></div>
+    </div>
+
+    <h3 style="font-size:20px;color:var(--teal-deep);margin:26px 0 12px">☕ Cafes &amp; healthy options</h3>
+    <div class="grid g3">
+      <div class="card flat"><h3 style="font-size:17px;color:var(--teal-deep)">Café Escondido</h3><p class="muted">Upper-deck cafe above West End Divers — smoothies, healthy breakfast/lunch, good wifi for a slow morning.</p></div>
+      <div class="card flat"><h3 style="font-size:17px;color:var(--teal-deep)">Crisp</h3><p class="muted">Poke bowls, cold-pressed juices, salads — vegan/vegetarian/gluten-free friendly, at Coconut Tree Plaza.</p></div>
+      <div class="card flat"><h3 style="font-size:17px;color:var(--teal-deep)">Café de Palo</h3><p class="muted">Serene jungle-garden cafe inside the Arco Orquídeas hotel at the end of Half Moon Bay. Breakfast/lunch only, closed Tuesdays.</p></div>
+      <div class="card flat"><h3 style="font-size:17px;color:var(--teal-deep)">Roatán Chocolate Factory</h3><p class="muted">Free factory tour upstairs, cafe downstairs — an easy between-dives stop.</p></div>
+    </div>
+
+    <h3 style="font-size:20px;color:var(--teal-deep);margin:26px 0 12px">🍽️ Worth knowing about</h3>
+    <div class="grid g3">
+      <div class="card flat"><h3 style="font-size:17px;color:var(--teal-deep)">Stowaway Gastrobar</h3><p class="muted">Newest arrival, Mediterranean-inspired, daily-changing menu cooked to order. A little off the main strip north of Half Moon Bay.</p></div>
+      <div class="card flat"><h3 style="font-size:17px;color:var(--teal-deep)">Thai Blue Elephant</h3><p class="muted">Authentic Thai for 16+ years, Travelers' Choice award — pad Thai, yellow curry, tom yum. Higher prices ($7–44) but worth it.</p></div>
+      <div class="card flat"><h3 style="font-size:17px;color:var(--teal-deep)">Splash Inn Restaurant</h3><p class="muted">Open to the public, not just hotel guests — solid international menu on a terrace over Half Moon Bay (see the Lodging section for its independent rating).</p></div>
+      <div class="card flat"><h3 style="font-size:17px;color:var(--teal-deep)">Pura Vida</h3><p class="muted">Newer Costa Rican spot on Half Moon Bay next to Ginger's — try the Rondon soup and tropical sangria.</p></div>
+      <div class="card flat"><h3 style="font-size:17px;color:var(--teal-deep)">Lily Pond House</h3><p class="muted">Transforms into the island's most romantic dinner spot after dark — a good anniversary-style pick if the trip calls for one.</p></div>
+      <div class="card flat"><h3 style="font-size:17px;color:var(--teal-deep)">Mila del Mar (The Beach House)</h3><p class="muted">Two stories above Half Moon Bay — arguably the best sunset view of any restaurant in West End, plus a weekend dock happy hour.</p></div>
+    </div>
+
+    <div class="note-cool"><b>Practical notes:</b> cash is still preferred at several spots (Junior's is cash-only; Sandy Buns and Sundowners also take Venmo). Tipping runs 10–15%, similar to the US. Most places are walk-in, but Pazzo's and Junior's Patio genuinely need a reservation/advance call. If you want to range further, West Bay is a $3–5 water-taxi or short taxi ride away and has its own scene (Beachers, JavaVine, Bananarama's Thirsty Turtle).</div>
+  </div>
+</section>
+
+<!-- FLIGHTS -->
+<section class="block" id="flights">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">Getting There</div>
+      <h2>Flights</h2>
+      <p class="lead">No nonstop from LAX — every routing needs one connection.</p>
+    </div>
+    <button class="collapse-btn" data-target="flights">Collapse</button>
+  </div>
+  <div class="sec-body">
+    <div class="grid g2">
+      <div class="card">
+        <h3 style="font-size:22px;color:var(--teal-deep)">Connection options</h3>
+        <p class="muted"><b>United via Houston (IAH)</b> — most frequent, simplest single-stop. <b>American via Dallas (DFW)</b> — well-timed. <b>Alaska + TAG via Guatemala City (GUA)</b> — an extra carrier hand-off. Shortest total travel time found: ~7h26m.</p>
+        <p class="muted"><a href="https://www.flightroutes.com/LAX-RTB" target="_blank" rel="noopener">Route options →</a> · <a href="https://www.google.com/travel/flights/flights-to-roatan.html" target="_blank" rel="noopener">Compare on Google Flights →</a></p>
+      </div>
+      <div class="card" style="background:#eef6f8; border-color:var(--line-cool);">
+        <h3 style="font-size:22px;color:var(--teal-deep)">💵 Pricing &amp; arrival</h3>
+        <p class="muted">Roundtrip fares ranged <b>~$687–$900+ pp</b> in searches; budget <b>~$800 pp</b> and recheck closer to booking. Roatán's airport is small — a short taxi/shuttle into West End is ~20–25 min.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BUDGET -->
+<section class="block" id="budget">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">The Numbers</div>
+      <h2>Estimated Budget</h2>
+      <p class="lead">Three travelers · 7 nights · six scenarios matching the lodging categories.</p>
+    </div>
+    <button class="collapse-btn" data-target="budget">Collapse</button>
+  </div>
+  <div class="sec-body">
+    <p class="muted">Flights (~$800 pp → $2,400 for the group) and ~$200 in shared non-dive activities are constant across every scenario — the swing is almost entirely in the lodging/diving bundle.</p>
+    <div class="table-scroll">
+    <table>
+      <thead><tr><th>Scenario</th><th>Basis</th><th class="num">Group total (3 people)</th></tr></thead>
+      <tbody>
+        <tr><td><b>A1 — Turquoise Bay</b></td><td>~$1,665 pp × 3, incl. 15 dives + 1 night dive; Nitrox extra</td><td class="num">~$8,050</td></tr>
+        <tr><td><b>A2 — Mayan Princess</b></td><td>~$2,379 pp × 3, incl. 15 dives; Nitrox extra</td><td class="num">~$10,100</td></tr>
+        <tr><td><b>A3 — Anthony's Key</b></td><td>Fall 2026 special, cheapest bungalow + 12 dives, ~$2,713 pp × 3; Nitrox extra</td><td class="num">~$11,100</td></tr>
+        <tr><td><b>A4 — CoCo View</b></td><td>Oceanfront + unlimited house-reef diving, ~$2,500 pp × 3; Nitrox extra</td><td class="num">~$10,460</td></tr>
+        <tr><td><b>B — Splash Inn</b></td><td>~$157 pp/day × 7 × 3 (room+meals+3 dives/day) + 1 night dive + Nitrox</td><td class="num">~$6,650</td></tr>
+        <tr><td><b>C — Sunset Villas + Roatan Divers</b></td><td>Villa ~$1,290 total + 10-dive pkg + night dive + Nitrox + full food/transport budget</td><td class="num">~$7,150</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="muted" style="margin-top:14px">Taxes for Mayan Princess, CoCo View and Turquoise Bay weren't published, so a 19% tax is <i>assumed</i> on all three for fair comparison with Anthony's Key's confirmed tax-inclusive figure — treat A1/A2/A4 as slightly softer numbers than A3. With that adjustment, Anthony's Key's Fall 2026 discount lands it in the <b>same $8,000–$11,100 cluster</b> as the other Category 1 resorts rather than standing apart. <b>Scenario B (Splash Inn) is the cheapest overall</b> by a clear margin; Scenario C gives the most flexibility but isn't actually cheaper once you price in eating out for every meal.</p>
+    <div class="callout"><b>Consider DAN dive insurance</b> for the group, plus standard travel insurance given the October rainy-season timing. All figures above are planning-stage estimates — confirm live rates for your actual week before booking.</div>
+  </div>
+</section>
+
+<!-- CHECKLIST -->
+<section class="block" id="checklist">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">Before You Go</div>
+      <h2>Booking Checklist</h2>
+      <p class="lead">Tap to check off. Your progress is saved on this device.</p>
+    </div>
+    <button class="collapse-btn" data-target="checklist">Collapse</button>
+  </div>
+  <div class="sec-body">
+    <div class="card">
+      <div class="check" data-ck="dates"><div class="box"></div><div class="txt"><b>Lock exact dates</b> — proposed Sat → Sat window in October 2026; confirm against flight availability.</div></div>
+      <div class="check" data-ck="lodging"><div class="box"></div><div class="txt"><b>Pick a lodging category</b> — all-inclusive resort, Splash Inn-style semi-all-inclusive, or condo + à la carte diving.</div></div>
+      <div class="check" data-ck="flights"><div class="box"></div><div class="txt"><b>Book flights LAX → RTB</b> — compare Houston / Dallas / Guatemala City connections, ~$800 pp.</div></div>
+      <div class="check" data-ck="operator"><div class="box"></div><div class="txt"><b>Book a dive operator</b> (only if Category 3, or à la carte alongside a resort) — Roatan Divers, Sun Divers, Splash Inn's shop, or a Native Sons quote.</div></div>
+      <div class="check" data-ck="marysplace"><div class="box"></div><div class="txt"><b>Decide on Mary's Place</b> — Splash Inn's South Side Special ($50–135), or skip it and stay reef/wreck-focused.</div></div>
+      <div class="check" data-ck="insurance"><div class="box"></div><div class="txt"><b>Get DAN dive insurance</b> &amp; travel insurance — worth it given October's rainy season.</div></div>
+      <div class="check" data-ck="gear"><div class="box"></div><div class="txt"><b>Pack &amp; confirm certs</b> — cert + Nitrox cards, dive computer, logbook, reef-safe sunscreen.</div></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- back to top -->
+<button id="toTop" title="Back to top">↑</button>
+
+<footer>
+  <div class="src">
+    <b>Sources</b> ·
+    <a href="https://roatandivers.com/fun-diving">Roatan Divers</a> ·
+    <a href="https://sundiversroatan.com/pricing/">Sun Divers Roatan pricing</a> ·
+    <a href="https://www.roatandivingnativesons.com/">Native Sons Diving</a> ·
+    <a href="https://roatansplashinn.com/en/dive-rates/">Splash Inn dive rates &amp; all-inclusive package</a> ·
+    <a href="https://www.seagraperoatan.com/">Seagrape Plantation Resort</a> ·
+    <a href="https://anthonyskey.com/specials/15-off-resort-package-fall-2026/">Anthony's Key Fall 2026 special</a> ·
+    <a href="https://www.mayanprincess.com/roatan-packages">Mayan Princess packages</a> ·
+    <a href="https://www.cocoviewresort.com/rates/">CoCo View Resort rates</a> ·
+    <a href="https://www.turquoisebayresort.com/rates-and-packages/">Turquoise Bay Resort rates</a> ·
+    <a href="https://roatandivers.com/blog/the-best-dive-sites-in-roatan">Best dive sites in Roatan</a> ·
+    <a href="https://sundiversroatan.com/diving-marys-place-in-roatan/">Mary's Place</a> ·
+    <a href="https://www.flightroutes.com/LAX-RTB">LAX–RTB flight routing</a>
+  </div>
+  <div>Prepared July 2026 · Estimates only — confirm live prices, flight routing &amp; operator availability before booking.</div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  var prog = document.getElementById('progress');
+  var toTop = document.getElementById('toTop');
+  function onScroll(){
+    var h = document.documentElement;
+    var scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight);
+    prog.style.width = (scrolled*100) + '%';
+    toTop.classList.toggle('show', h.scrollTop > 600);
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+  toTop.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('nav.bar a'));
+  var sections = navLinks.map(function(a){ return document.querySelector(a.getAttribute('href')); });
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        var id = e.target.id;
+        navLinks.forEach(function(a){ a.classList.toggle('active', a.getAttribute('href') === '#'+id); });
+      }
+    });
+  }, {rootMargin:'-45% 0px -50% 0px'});
+  sections.forEach(function(s){ if(s) obs.observe(s); });
+
+  document.querySelectorAll('.collapse-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var sec = document.getElementById(btn.getAttribute('data-target'));
+      var body = sec.querySelector('.sec-body');
+      if(sec.classList.contains('collapsed')){
+        sec.classList.remove('collapsed');
+        body.style.maxHeight = body.scrollHeight + 'px';
+        btn.textContent = 'Collapse';
+        setTimeout(function(){ body.style.maxHeight='none'; }, 460);
+      } else {
+        body.style.maxHeight = body.scrollHeight + 'px';
+        requestAnimationFrame(function(){ body.style.maxHeight='0px'; });
+        sec.classList.add('collapsed');
+        btn.textContent = 'Expand';
+      }
+    });
+  });
+
+  document.querySelectorAll('.dive .dive-head').forEach(function(head){
+    head.addEventListener('click', function(){
+      var dive = head.closest('.dive');
+      var body = dive.querySelector('.dive-body');
+      if(dive.classList.contains('open')){
+        body.style.maxHeight = '0px';
+        dive.classList.remove('open');
+      } else {
+        dive.classList.add('open');
+        body.style.maxHeight = body.scrollHeight + 'px';
+      }
+    });
+  });
+  (function(){ var f=document.querySelector('.dive.open .dive-body'); if(f) f.style.maxHeight = f.scrollHeight+'px'; })();
+
+  var CK_KEY = 'roatan_checklist_v1';
+  var ck;
+  try { ck = JSON.parse(localStorage.getItem(CK_KEY) || '{}'); } catch(_){ ck = {}; }
+  document.querySelectorAll('.check').forEach(function(row){
+    var key = row.getAttribute('data-ck');
+    if(ck[key]) row.classList.add('done');
+    row.addEventListener('click', function(){
+      row.classList.toggle('done');
+      ck[key] = row.classList.contains('done');
+      try{ localStorage.setItem(CK_KEY, JSON.stringify(ck)); }catch(_){}
+    });
+  });
+})();
+</script>
+</body>
+</html>
