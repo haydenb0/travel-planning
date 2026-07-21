@@ -13,6 +13,7 @@
     --ink:#14242c; --ink-soft:#46606b; --ink-faint:#7c929b;
     --teal:#0c6b80; --teal-deep:#083e4c; --teal-bright:#15a39a;
     --gold:#c08a3e; --gold-soft:#e7cfa6;
+    --plum:#6a4e9e; --plum-soft:#cdb8e8;
     --sand:#f6f2ea; --paper:#ffffff; --line:#e7ded0; --line-cool:#e2e9ec;
     --shadow:0 10px 40px rgba(8,62,76,.10);
     --good:#0c7a52; --bad:#b0432f;
@@ -137,13 +138,15 @@
   .cat-quick .verdict{font-size:13.5px; color:var(--ink-soft); flex:1;}
   .cat-quick a.jump{font-size:12.5px; font-weight:600; margin-top:10px; display:inline-block;}
   .cat1 .num{background:linear-gradient(150deg,var(--gold),#9a6b15);}
-  .cat2 .num{background:linear-gradient(150deg,var(--teal),var(--teal-deep));}
-  .cat3 .num{background:linear-gradient(150deg,var(--teal-bright),#0c7a52);}
+  .cat2 .num{background:linear-gradient(150deg,var(--plum),#4a3670);}
+  .cat3 .num{background:linear-gradient(150deg,var(--teal),var(--teal-deep));}
+  .cat4 .num{background:linear-gradient(150deg,var(--teal-bright),#0c7a52);}
 
   .cat-section{border-top:3px solid var(--line); margin-top:34px; padding-top:28px;}
   .cat-section.cat1{border-top-color:var(--gold-soft);}
-  .cat-section.cat2{border-top-color:var(--teal);}
-  .cat-section.cat3{border-top-color:var(--teal-bright);}
+  .cat-section.cat2{border-top-color:var(--plum);}
+  .cat-section.cat3{border-top-color:var(--teal);}
+  .cat-section.cat4{border-top-color:var(--teal-bright);}
   .cat-title{display:flex; align-items:center; gap:14px; margin-bottom:6px;}
   .cat-title .num{flex:0 0 40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-family:var(--serif); font-size:19px; font-weight:700;}
   .cat-title h3{font-size:25px; color:var(--teal-deep);}
@@ -237,7 +240,7 @@
     .dive-head h3{font-size:19px;}
     .dive-body-inner{padding:2px 16px 20px;}
     #toTop{width:40px; height:40px; left:14px; bottom:14px;}
-    .g3.quickcompare{grid-template-columns:1fr;}
+    .g3.quickcompare, .g4.quickcompare{grid-template-columns:1fr;}
   }
 </style>
 </head>
@@ -253,7 +256,7 @@
     <div class="facts">
       <div class="fact">📅 <b>~1 week, October 2026</b> · dates TBD</div>
       <div class="fact">🤿 <b>3 divers</b> · reef + wreck + night dive</div>
-      <div class="fact">🏡 <b>Lodging:</b> 3 options under review</div>
+      <div class="fact">🏡 <b>Lodging:</b> 4 categories under review</div>
       <div class="fact">✈️ LAX, 1 connection</div>
     </div>
   </div>
@@ -453,27 +456,34 @@
   <div class="sec-body">
     <p>Every option below fits three travelers in or near West End. The category that fits best depends on how you weigh four things: <b>total price</b>, <b>food quality</b> (you said "not high-end, but we prefer quality"), <b>diving convenience</b> (5-min walk to a dock, or arranged pickup), and how much you value <b>flexibility</b> to pick any restaurant or operator versus a bundled, no-logistics package.</p>
 
-    <div class="grid g3 quickcompare" style="margin-top:20px">
+    <div class="grid g4 quickcompare" style="margin-top:20px">
       <div class="cat-quick cat1">
         <span class="num">1</span>
         <h4>All-Inclusive Dive Resort</h4>
-        <div class="price">~$8.0K–$11.1K <span style="font-size:12px;color:var(--ink-faint);font-weight:500">/ 3 people</span></div>
+        <div class="price">~$5.5K–$8.6K <span style="font-size:12px;color:var(--ink-faint);font-weight:500">/ 3 people</span></div>
         <p class="verdict">Anthony's Key, Mayan Princess, CoCo View, Turquoise Bay. Zero logistics — room, meals and diving all bundled with one operator.</p>
         <a class="jump" href="#cat1">See full comparison ↓</a>
       </div>
       <div class="cat-quick cat2">
         <span class="num">2</span>
-        <h4>Semi All-Inclusive + Restaurant</h4>
-        <div class="price">~$3.8K–4.3K <span style="font-size:12px;color:var(--ink-faint);font-weight:500">/ 3 people</span></div>
-        <p class="verdict">Splash Inn, Seagrape, Lost Paradise Inn, West End Dive Resort (all West End), plus Naboo (West Bay, now the cheapest of the seven at its current promo). Room + meals + diving bundled.</p>
+        <h4>Boutique Dive Resort + Pool</h4>
+        <div class="price">~$3.8K–$4.4K <span style="font-size:12px;color:var(--ink-faint);font-weight:500">/ 3 people</span></div>
+        <p class="verdict">Naboo (West Bay) and Brisas del Mar (West End) — real pools, adults-only, breakfast included, an attached top-rated PADI dive shop. More boutique feel than Category 3's simpler hotels.</p>
         <a class="jump" href="#cat2">See full comparison ↓</a>
       </div>
       <div class="cat-quick cat3">
         <span class="num">3</span>
-        <h4>Condo + À La Carte</h4>
-        <div class="price">~$7.15K <span style="font-size:12px;color:var(--ink-faint);font-weight:500">/ 3 people</span></div>
-        <p class="verdict">Sunset Villas, Casa Sierra/Canuck, Iron Shore. Cheapest lodging, full choice of operator and restaurant, but you arrange everything separately.</p>
+        <h4>Semi All-Inclusive + Restaurant</h4>
+        <div class="price">~$4.3K+ <span style="font-size:12px;color:var(--ink-faint);font-weight:500">/ 3 people</span></div>
+        <p class="verdict">Splash Inn, Seagrape, Lost Paradise Inn, West End Dive Resort — all in West End village. Room + meals + diving bundled, simpler rooms than Category 2.</p>
         <a class="jump" href="#cat3">See full comparison ↓</a>
+      </div>
+      <div class="cat-quick cat4">
+        <span class="num">4</span>
+        <h4>Condo + À La Carte</h4>
+        <div class="price">~$4.8K <span style="font-size:12px;color:var(--ink-faint);font-weight:500">/ 3 people</span></div>
+        <p class="verdict">Sunset Villas, Casa Sierra/Canuck, Iron Shore. Cheapest lodging line-item, full choice of operator and restaurant, but you arrange everything separately.</p>
+        <a class="jump" href="#cat4">See full comparison ↓</a>
       </div>
     </div>
 
@@ -513,8 +523,50 @@
 
     <!-- CATEGORY 2 -->
     <div class="cat-section cat2" id="cat2">
-      <div class="cat-title"><span class="num" style="background:linear-gradient(150deg,var(--teal),var(--teal-deep))">2</span><h3>Semi All-Inclusive / Budget Dive Resort + Restaurant</h3></div>
-      <p class="muted">Room, meals and diving still bundled, but casual, West-End-village-based, and noticeably cheaper. Food quality was the deciding filter here — each entry below reflects what reviews actually say, not just that a restaurant exists on-site.</p>
+      <div class="cat-title"><span class="num" style="background:linear-gradient(150deg,var(--plum),#4a3670)">2</span><h3>Boutique Dive Resort with Pool</h3></div>
+      <p class="muted">A step up from Category 3's simpler hotel rooms: a real pool, breakfast included, an adults-only quiet, and an attached (not just nearby) dive shop with a strong reputation. Only two properties cleared this bar — one in West Bay, one right in West End.</p>
+      <div class="table-scroll">
+      <table>
+        <thead><tr><th>Resort</th><th>Pricing</th><th>Included</th><th>Food &amp; reviews</th></tr></thead>
+        <tbody>
+          <tr style="background:#fbf6ec">
+            <td><b>Naboo Resort &amp; Dive Center</b><br><span class="foodtag strong">Possibly the best food</span></td>
+            <td class="num">Sept 1–Dec 6, 2026 promo, triple occ., pp (+19% tax):<br><b>$908</b> breakfast+10 dives+Half Board<br>$1,132 with Full Board</td>
+            <td><b>West Bay.</b> On-site PADI 5-star center, real pool + hot jacuzzi (pool itself small/shallow per reviews). King or Queen room, max 3 — whole group in one room. Adults-only (18+). Transfer $50 roundtrip for all 3. Diving fully bundled into the promo price.</td>
+            <td>Reviews repeatedly call it <b>"the best food I had in Roatan"</b> — fresh Italian/international cooking.</td>
+          </tr>
+          <tr>
+            <td><b>Brisas del Mar Beach &amp; Dive Resort</b><br><span class="foodtag ok">Solid, some mixed reviews</span></td>
+            <td class="num">Two-Room Suite (sleeps 3, tax incl.): <b>$210/night</b> → ~$1,470 for 7 nights, breakfast included.<br>Diving booked separately via Island Diving Center — no published multi-dive package price.</td>
+            <td><b>West End</b> (quiet north end of the village, ~5 min walk to Main Street). Adults-only (12+). Real pool, private beach access, on-site restaurant (Tequila Jack's Beach Cantina). Attached Island Diving Center is one of West End's top-rated dive shops.</td>
+            <td>4/5 on Tripadvisor (#33 of 49). Praise: quiet beach, good pool, attentive staff, clean rooms. Minor gripes: little afternoon shade, one bathroom-leak report, and a couple of mixed reviews on Tequila Jack's food/pricing.</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      <div class="note-cool"><b>Cancellation policies differ meaningfully between these two.</b> Naboo's Stay &amp; Dive terms are the same shape as Splash Inn's and Anthony's Key's — cancel 30+ days out, fine; inside 30 days or a no-show, <b>100% of the booking is forfeited.</b> Island Diving Center's official terms for Brisas del Mar's Stay &amp; Dive packages are more forgiving: 60–31 days out, refund minus a <b>$200 fee</b>; inside 30 days, non-refundable <b>but the booking can be moved to a new date within 6 months</b> instead of being lost outright.</div>
+      <div class="procon">
+        <div class="box pros"><h5>Pros</h5><ul>
+          <li>Both add a real pool and included breakfast that Category 3's options don't consistently offer</li>
+          <li>Naboo's Sept–Dec 2026 promo is the cheapest bundled option of any property researched, diving included</li>
+          <li>Brisas del Mar's attached Island Diving Center is consistently rated one of the best dive shops in West End — praised for safety briefings, instructor patience, and dock-side gear staging</li>
+          <li>Brisas del Mar's cancellation terms (partial refund 31–60 days out, free rebooking inside 30) are the most flexible of any lodging option on this page</li>
+          <li>Both are adults-only, which some travelers value for a quieter stay</li>
+        </ul></div>
+        <div class="box cons"><h5>Cons</h5><ul>
+          <li>Naboo is in West Bay — less restaurant variety right outside the door than a West End base</li>
+          <li>Naboo's cancellation policy doesn't solve the 30-day/100%-forfeit concern that ruled out Splash Inn and Anthony's Key</li>
+          <li>Brisas del Mar's diving isn't bundled into one price — the estimate in Budget uses comparable West End per-dive rates, not an official Island Diving Center package quote</li>
+          <li>Brisas' Tequila Jack's has a few inconsistent reviews on food quality/pricing, unlike Naboo's more uniformly excellent food reports</li>
+        </ul></div>
+      </div>
+      <div class="reco"><b>Our read:</b> if the cancellation policy is a real dealbreaker, <b>Brisas del Mar is now the strongest overall pick on this page</b> — pool, breakfast, a top-rated attached dive shop, and by far the most forgiving refund terms, in West End rather than West Bay. Naboo still wins narrowly on price and food if you're comfortable with its stricter terms.</div>
+    </div>
+
+    <!-- CATEGORY 3 -->
+    <div class="cat-section cat3" id="cat3">
+      <div class="cat-title"><span class="num" style="background:linear-gradient(150deg,var(--teal),var(--teal-deep))">3</span><h3>Semi All-Inclusive / Budget Dive Resort + Restaurant</h3></div>
+      <p class="muted">Room, meals and diving still bundled, casual and West-End-village-based, but simpler rooms than Category 2's boutique pair. Food quality was the deciding filter here — each entry below reflects what reviews actually say, not just that a restaurant exists on-site.</p>
       <div class="table-scroll">
       <table>
         <thead><tr><th>Resort</th><th>Pricing</th><th>Included</th><th>Food quality</th></tr></thead>
@@ -543,38 +595,29 @@
             <td>~5 min walk to village center; on-site restaurant</td>
             <td>Guest reviews call the food "excellent," staff care "unbeatable" — thin on detail but consistently positive.</td>
           </tr>
-          <tr style="background:#fbf6ec">
-            <td><b>Naboo Resort &amp; Dive Center</b><br><span class="foodtag strong">Possibly the best food</span></td>
-            <td class="num">Sept 1–Dec 6, 2026 promo, triple occ., pp (+19% tax):<br><b>$908</b> breakfast+10 dives+Half Board<br>$1,132 with Full Board</td>
-            <td><b>West Bay</b> (not West End). On-site PADI 5-star center, real pool + hot jacuzzi. King or Queen room, max 3 — whole group in one room. Adults-only (18+). Transfer $50 roundtrip for all 3.</td>
-            <td>Reviews repeatedly call it <b>"the best food I had in Roatan"</b> — fresh Italian/international cooking. Arguably tops even Splash Inn on this specific point.</td>
-          </tr>
         </tbody>
       </table>
       </div>
       <p class="muted" style="margin-top:14px"><b>Splash Inn also runs the "South Side Special 2"</b> — Mary's Place + the Prince Albert wreck in one day, min. 4 divers, $50 with a dive package / $135 à la carte. That's the cheapest way to reach Mary's Place while staying based in West End.</p>
-      <div class="note-cool"><b>Naboo's cancellation policy is the same shape as Splash Inn's and Anthony's Key's:</b> cancel 30+ days out, fine; inside 30 days or a no-show, <b>100% of the booking is forfeited.</b> If that 30/60-day no-refund window was the actual concern with the other two, this promo doesn't remove it.</div>
       <div class="procon">
         <div class="box pros"><h5>Pros</h5><ul>
-          <li>Naboo's Sept–Dec 2026 promo now makes it the <b>cheapest bundled option of all seven properties researched</b> — see Budget</li>
-          <li>Naboo adds a real (if small) pool + jacuzzi, and reviews suggest its food may be the best of any option here</li>
-          <li>All of Splash Inn, Seagrape, Lost Paradise Inn and West End Dive Resort sit directly in West End village — confirmed walkable to Main Street's broader restaurant strip, not just the in-house kitchen</li>
+          <li>All four sit directly in West End village — confirmed walkable to Main Street's broader restaurant strip, not just the in-house kitchen</li>
+          <li>Splash Inn's food is the strongest-documented of this category, with an independently high island-wide restaurant ranking</li>
           <li>Splash Inn's South Side Special is the cheapest route to Mary's Place</li>
         </ul></div>
         <div class="box cons"><h5>Cons</h5><ul>
-          <li>Naboo is in West Bay, not West End — less restaurant variety right outside the door, more of a self-contained resort stay</li>
-          <li>Naboo's cancellation policy is just as strict as Splash Inn's/Anthony's Key's (30 days / 100%) — doesn't solve that concern</li>
           <li>Seagrape's on-site food is the weakest match for "quality food" — no dinner or alcohol served</li>
-          <li>Rooms at all of these are simpler than Category 1 — standard hotel rooms, not resort bungalows</li>
+          <li>None of these have a real pool — that's what separates Category 2 from this tier</li>
+          <li>Rooms at all of these are simpler than Category 1 or 2 — standard hotel rooms, not resort bungalows</li>
           <li>Lost Paradise Inn / West End Dive Resort pricing wasn't as precisely published — needs a direct quote</li>
         </ul></div>
       </div>
-      <div class="reco"><b>Our read:</b> at its current promo rate, <b>Naboo is the new front-runner on price</b> — cheaper than Splash Inn, with a real pool and (per reviews) excellent food — but it trades away West End's walkable restaurant variety and doesn't fix the cancellation-policy concern. <b>Splash Inn remains the strongest West-End-based pick</b> if staying in the village matters more than the pool. Seagrape fits the profile originally asked about but underdelivers specifically on food; treat it as a fallback.</div>
+      <div class="reco"><b>Our read:</b> <b>Splash Inn remains the strongest pick in this category</b> — best-documented food, cheapest bundled price, and a genuine village location. Seagrape fits the profile originally asked about but underdelivers specifically on food; treat it as a fallback. If a pool matters, look at Category 2 instead.</div>
     </div>
 
-    <!-- CATEGORY 3 -->
-    <div class="cat-section cat3" id="cat3">
-      <div class="cat-title"><span class="num" style="background:linear-gradient(150deg,var(--teal-bright),#0c7a52)">3</span><h3>Condo / Airbnb-Style, Self-Catered</h3></div>
+    <!-- CATEGORY 4 -->
+    <div class="cat-section cat4" id="cat4">
+      <div class="cat-title"><span class="num" style="background:linear-gradient(150deg,var(--teal-bright),#0c7a52)">4</span><h3>Condo / Airbnb-Style, Self-Catered</h3></div>
       <p class="muted">Cheapest lodging line-item, full choice of dive operator and restaurant — but you arrange diving and every meal separately. Two criteria applied: walkability to a <b>wide spread</b> of restaurants (you're eating out every meal), and <b>diving convenience</b> — a confirmed ~5-min walk to a dock, or an operator that treats the property as a standard pickup point.</p>
       <div class="table-scroll">
       <table>
@@ -601,18 +644,18 @@
         </tbody>
       </table>
       </div>
-      <div class="note-cool"><b>On "included pickup":</b> none of the West End dive shops advertise condo pickup as a standard feature — the village is small enough that guests are simply expected to walk the last few minutes. If door-to-door pickup matters more than a short walk, that's a point in favor of Category 1 or 2 instead.</div>
+      <div class="note-cool"><b>On "included pickup":</b> none of the West End dive shops advertise condo pickup as a standard feature — the village is small enough that guests are simply expected to walk the last few minutes. If door-to-door pickup matters more than a short walk, that's a point in favor of Category 1, 2 or 3 instead.</div>
       <div class="procon">
         <div class="box pros"><h5>Pros</h5><ul>
-          <li>Cheapest lodging line of the three categories by a wide margin</li>
+          <li>Cheapest lodging line of the four categories by a wide margin</li>
           <li>Full choice of dive operator (Roatan Divers, Sun Divers, Native Sons, Splash Inn's shop) and restaurant, every meal</li>
           <li>2BR/2BA layout gives each traveler real private space, plus a kitchen for breakfasts</li>
           <li>Sunset Villas has the most concrete evidence of meeting both new criteria</li>
         </ul></div>
         <div class="box cons"><h5>Cons</h5><ul>
-          <li>Not actually cheaper overall once you price in eating out for every meal — lands close to Category 2's total</li>
+          <li>Not actually cheaper overall once you price in eating out for every meal — lands close to Category 3's total</li>
           <li>You're the one coordinating diving, transfers, and reservations rather than one bundled itinerary</li>
-          <li>Casa Sierra/Canuck and Iron Shore pricing needs a direct quote — less firm than the other two categories</li>
+          <li>Casa Sierra/Canuck and Iron Shore pricing needs a direct quote — less firm than the other categories</li>
         </ul></div>
       </div>
       <div class="reco"><b>Our read:</b> if flexibility matters more than convenience, <b>Sunset Villas</b> is the strongest of the three — it's the only property with a confirmed ~5-minute walk to multiple named dive docks and independent evidence that at least one operator already treats it as a package accommodation.</div>
@@ -720,12 +763,12 @@
     <div>
       <div class="eyebrow">If You Book Diving Separately</div>
       <h2>Dive Operators</h2>
-      <p class="lead">Relevant if you choose Category 3 (or want à la carte diving alongside a Category 1/2 stay).</p>
+      <p class="lead">Relevant if you choose Category 4 (or want à la carte diving alongside a Category 1/2/3 stay).</p>
     </div>
     <button class="collapse-btn" data-target="operators">Collapse</button>
   </div>
   <div class="sec-body">
-    <p class="muted">Category 1 and 2 resorts bundle their own diving — this section only matters if you land on Category 3, or want a second opinion on operators near any of the properties above.</p>
+    <p class="muted">Category 1 resorts and Naboo (Category 2) bundle their own diving; Category 3 resorts do too. Brisas del Mar (also Category 2) books diving separately through its on-site Island Diving Center. This section mainly matters if you land on Category 4 (condo), are arranging Brisas' diving, or want a second opinion on operators near any of the properties above.</p>
     <div class="grid g3" style="margin-top:14px">
       <div class="card">
         <h3 style="font-size:20px;color:var(--teal-deep)">Roatan Divers</h3>
@@ -900,7 +943,7 @@
     <div>
       <div class="eyebrow">The Numbers</div>
       <h2>Estimated Budget</h2>
-      <p class="lead">Three travelers · 7 nights · six scenarios matching the lodging categories.</p>
+      <p class="lead">Three travelers · 7 nights · eight scenarios matching the lodging categories.</p>
     </div>
     <button class="collapse-btn" data-target="budget">Collapse</button>
   </div>
@@ -914,13 +957,14 @@
         <tr><td><b>A2 — Mayan Princess</b></td><td>~$2,379 pp × 3, incl. 15 dives</td><td class="num">~$7,640</td></tr>
         <tr><td><b>A3 — Anthony's Key</b></td><td>Fall 2026 special, cheapest bungalow + 12 dives, ~$2,713 pp × 3</td><td class="num">~$8,640</td></tr>
         <tr><td><b>A4 — CoCo View</b></td><td>Oceanfront + unlimited house-reef diving, ~$2,500 pp × 3</td><td class="num">~$8,000</td></tr>
+        <tr style="background:#fbf6ec"><td><b>D — Naboo Resort</b></td><td>West Bay promo rate: breakfast + 10 dives + Half Board, $908 pp × 3 + $50 roundtrip transfer for the group</td><td class="num">~$3,790</td></tr>
+        <tr style="background:#fbf6ec"><td><b>E — Brisas del Mar</b></td><td>West End Two-Room Suite w/ breakfast ~$1,470 total + est. 10-dive pkg (~$500pp, comparable West End rate — not an official quote) + night dive + lunch/dinner budget</td><td class="num">~$4,380</td></tr>
         <tr><td><b>B — Splash Inn</b></td><td>~$157 pp/day × 7 × 3 (room+meals+3 dives/day) + 1 night dive</td><td class="num">~$4,290</td></tr>
         <tr><td><b>C — Sunset Villas + Roatan Divers</b></td><td>Villa ~$1,290 total + 10-dive pkg + night dive + full food/transport budget</td><td class="num">~$4,790</td></tr>
-        <tr style="background:#fbf6ec"><td><b>D — Naboo Resort</b></td><td>West Bay promo rate: breakfast + 10 dives + Half Board, $908 pp × 3 + $50 roundtrip transfer for the group</td><td class="num">~$3,790</td></tr>
       </tbody>
     </table>
     </div>
-    <p class="muted" style="margin-top:14px">Taxes for Mayan Princess, CoCo View and Turquoise Bay weren't published, so a 19% tax is <i>assumed</i> on all three for fair comparison with Anthony's Key's confirmed tax-inclusive figure — treat A1/A2/A4 as slightly softer numbers than A3. With that adjustment, Anthony's Key's Fall 2026 discount lands it in the <b>same cluster</b> as the other Category 1 resorts rather than standing apart. <b>Naboo (Scenario D) is now the cheapest option overall</b> at its Sept–Dec 2026 promo — even below Splash Inn — while adding a real pool/jacuzzi and possibly the best food of any option here; the trade-offs are its West Bay location (less walkable restaurant variety) and the same strict 30-day/100%-penalty cancellation policy as Splash Inn and Anthony's Key. Scenario C gives the most flexibility but isn't cheaper than B or D once you price in eating out for every meal. Swap to Naboo's Full Board option (+~$800 for the group) for both lunch and dinner covered daily.</p>
+    <p class="muted" style="margin-top:14px">Taxes for Mayan Princess, CoCo View and Turquoise Bay weren't published, so a 19% tax is <i>assumed</i> on all three for fair comparison with Anthony's Key's confirmed tax-inclusive figure — treat A1/A2/A4 as slightly softer numbers than A3. With that adjustment, Anthony's Key's Fall 2026 discount lands it in the <b>same cluster</b> as the other Category 1 resorts rather than standing apart. <b>Naboo (Scenario D) remains the cheapest option overall</b> at its Sept–Dec 2026 promo, with a real pool/jacuzzi and possibly the best food of any option here — but its cancellation policy is the strict 30-day/100%-penalty shape shared with Splash Inn and Anthony's Key. <b>Brisas del Mar (Scenario E)</b> lands a bit above Naboo once diving and non-breakfast meals are priced in (using comparable West End per-dive rates, since Island Diving Center hasn't published a bundled package price), but it's in West End rather than West Bay and has by far the most forgiving cancellation terms of any option here — partial refund 31–60 days out, free rebooking inside 30. Scenario C gives the most flexibility but isn't cheaper than B, D or E once you price in eating out for every meal. Swap to Naboo's Full Board option (+~$800 for the group) for both lunch and dinner covered daily.</p>
     <div class="callout"><b>Consider DAN dive insurance</b> for the group, plus standard travel insurance given the October rainy-season timing. All figures above are planning-stage estimates — confirm live rates (and actual miles pricing) for your specific week before booking.</div>
   </div>
 </section>
@@ -938,9 +982,9 @@
   <div class="sec-body">
     <div class="card">
       <div class="check" data-ck="dates"><div class="box"></div><div class="txt"><b>Lock exact dates</b> — proposed Sat → Sat window in October 2026; confirm against flight availability.</div></div>
-      <div class="check" data-ck="lodging"><div class="box"></div><div class="txt"><b>Pick a lodging category</b> — all-inclusive resort, Splash Inn-style semi-all-inclusive, or condo + à la carte diving.</div></div>
+      <div class="check" data-ck="lodging"><div class="box"></div><div class="txt"><b>Pick a lodging category</b> — all-inclusive resort, boutique pool resort (Naboo/Brisas del Mar), Splash Inn-style semi-all-inclusive, or condo + à la carte diving.</div></div>
       <div class="check" data-ck="flights"><div class="box"></div><div class="txt"><b>Book flights LAX → RTB</b> — compare Houston / Dallas / Guatemala City connections, ~$800 pp.</div></div>
-      <div class="check" data-ck="operator"><div class="box"></div><div class="txt"><b>Book a dive operator</b> (only if Category 3, or à la carte alongside a resort) — Roatan Divers, Sun Divers, Splash Inn's shop, or a Native Sons quote.</div></div>
+      <div class="check" data-ck="operator"><div class="box"></div><div class="txt"><b>Book a dive operator</b> (only if Category 4, or à la carte alongside a resort — including Brisas del Mar's on-site Island Diving Center) — Roatan Divers, Sun Divers, Splash Inn's shop, or a Native Sons quote.</div></div>
       <div class="check" data-ck="marysplace"><div class="box"></div><div class="txt"><b>Decide on Mary's Place</b> — Splash Inn's South Side Special ($50–135), or skip it and stay reef/wreck-focused.</div></div>
       <div class="check" data-ck="insurance"><div class="box"></div><div class="txt"><b>Get DAN dive insurance</b> &amp; travel insurance — worth it given October's rainy season.</div></div>
       <div class="check" data-ck="gear"><div class="box"></div><div class="txt"><b>Pack &amp; confirm certs</b> — cert + Nitrox cards, dive computer, logbook, reef-safe sunscreen.</div></div>
@@ -961,6 +1005,10 @@
     <a href="https://www.roatandivingnativesons.com/">Native Sons Diving</a> ·
     <a href="https://roatansplashinn.com/en/dive-rates/">Splash Inn dive rates &amp; all-inclusive package</a> ·
     <a href="https://www.seagraperoatan.com/">Seagrape Plantation Resort</a> ·
+    <a href="https://nabooresort.com/promotions/">Naboo Resort promo rates</a> ·
+    <a href="https://www.brisasdelmarroatan.com/">Brisas del Mar Beach &amp; Dive Resort</a> ·
+    <a href="https://islanddivingcenter.com/dive-stay-experience-roatan/">Island Diving Center — Stay &amp; Dive</a> ·
+    <a href="https://islanddivingcenter.com/cancelation-and-refund-policy/">Island Diving Center cancellation policy</a> ·
     <a href="https://anthonyskey.com/specials/15-off-resort-package-fall-2026/">Anthony's Key Fall 2026 special</a> ·
     <a href="https://www.mayanprincess.com/roatan-packages">Mayan Princess packages</a> ·
     <a href="https://www.cocoviewresort.com/rates/">CoCo View Resort rates</a> ·
