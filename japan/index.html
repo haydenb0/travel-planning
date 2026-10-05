@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Japan · A Family Journey — Summer 2027</title>
+<meta name="description" content="10-night family itinerary for Japan: Tokyo, Hakone, Kyoto and Koyasan — samurai, temples and anime.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50' y='55' font-size='70' text-anchor='middle' dominant-baseline='central'>⛩️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1b2333; --ink-soft:#4d5a6e; --ink-faint:#8390a3;
+    --teal:#2e4a7d; --teal-deep:#1f2f54; --teal-bright:#c8462f;
+    --gold:#c8462f; --gold-soft:#f2c9b8;
+    --sand:#f7f3ec; --paper:#ffffff; --line:#e8dfd1; --line-cool:#dfe5ef;
+    --shadow:0 10px 40px rgba(31,47,84,.10);
+    --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+    --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; background:var(--sand); color:var(--ink);
+    font-family:var(--sans); font-weight:400; line-height:1.65; font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{font-family:var(--serif); font-weight:600; letter-spacing:.2px; line-height:1.15; margin:0;}
+  a{color:var(--teal); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .eyebrow{font-family:var(--sans); font-weight:600; font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:var(--gold);}
+
+  /* scroll progress */
+  #progress{position:fixed; top:0; left:0; height:3px; width:0%; background:linear-gradient(90deg,var(--teal-bright),var(--gold)); z-index:120; transition:width .1s linear;}
+
+  /* hero */
+  .hero{position:relative; min-height:88vh; display:flex; align-items:center; justify-content:center;
+    text-align:center; color:#fff; overflow:hidden;
+    background:linear-gradient(165deg,rgba(18,26,48,.50),rgba(31,47,84,.82)),url('https://images.unsplash.com/photo-1764418365982-742441557a6c?w=1920&q=80&auto=format&fit=crop') center/cover no-repeat;}
+  .hero::after{content:""; position:absolute; inset:0; background:
+    radial-gradient(circle at 78% 18%, rgba(255,255,255,.10), transparent 42%),
+    radial-gradient(circle at 12% 88%, rgba(200,70,47,.28), transparent 46%);}
+  .hero .wave{position:absolute; bottom:-1px; left:0; width:100%; z-index:2; display:block;}
+  .hero-inner{position:relative; z-index:3; padding:40px 24px 90px; max-width:880px;}
+  .hero .eyebrow{color:var(--gold-soft);}
+  .hero h1{font-size:clamp(44px,8vw,84px); font-weight:500; margin:.18em 0 .12em; text-shadow:0 2px 30px rgba(0,0,0,.25);}
+  .hero h1 .it{font-style:italic; color:var(--gold-soft);}
+  .hero .sub{font-size:clamp(16px,2.2vw,20px); font-weight:300; color:#dff0f0; max-width:620px; margin:0 auto;}
+  .hero .facts{display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin-top:34px;}
+  .hero .fact{background:rgba(255,255,255,.10); backdrop-filter:blur(6px); border:1px solid rgba(255,255,255,.22);
+    border-radius:999px; padding:9px 18px; font-size:13.5px; font-weight:500;}
+  .hero .fact b{color:#fff;}
+
+  /* sticky nav */
+  nav.bar{position:sticky; top:0; z-index:100; background:rgba(255,255,255,.86); backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line); }
+  .bar-inner{max-width:1080px; margin:0 auto; display:flex; align-items:center; gap:6px; padding:0 18px; height:58px; overflow-x:auto;}
+  .bar .brand{font-family:var(--serif); font-weight:600; font-size:19px; color:var(--teal-deep); margin-right:14px; white-space:nowrap;}
+  .bar a{color:var(--ink-soft); font-size:13px; font-weight:500; padding:7px 11px; border-radius:8px; white-space:nowrap; letter-spacing:.02em;}
+  .bar a:hover{background:var(--sand); text-decoration:none; color:var(--teal-deep);}
+  .bar a.active{color:var(--teal-deep); background:var(--sand);}
+  .bar a.active::after{content:""; display:block; height:2px; background:var(--gold); border-radius:2px; margin-top:5px;}
+
+  /* layout */
+  main{max-width:1080px; margin:0 auto; padding:0 22px;}
+  section.block{padding:64px 0 26px; scroll-margin-top:70px;}
+  .sec-head{display:flex; align-items:flex-end; justify-content:space-between; gap:16px; margin-bottom:26px; border-bottom:1px solid var(--line); padding-bottom:16px;}
+  .sec-head h2{font-size:clamp(28px,4.4vw,40px); font-weight:500; color:var(--teal-deep);}
+  .sec-head .lead{font-size:15px; color:var(--ink-soft); max-width:440px; margin-top:6px;}
+  .collapse-btn{flex:0 0 auto; font-family:var(--sans); font-size:12px; font-weight:600; letter-spacing:.04em;
+    color:var(--ink-faint); background:none; border:1px solid var(--line); border-radius:999px; padding:6px 14px; cursor:pointer; transition:.2s;}
+  .collapse-btn:hover{color:var(--teal-deep); border-color:var(--teal);}
+  .sec-body{overflow:hidden; transition:max-height .45s ease, opacity .3s ease;}
+  section.collapsed .sec-body{max-height:0 !important; opacity:0; pointer-events:none;}
+  section.collapsed .collapse-btn::after{content:" ＋";}
+  .collapse-btn::after{content:" −";}
+
+  /* cards & grids */
+  .grid{display:grid; gap:18px;}
+  .g2{grid-template-columns:repeat(2,1fr);}
+  .g3{grid-template-columns:repeat(3,1fr);}
+  .g4{grid-template-columns:repeat(4,1fr);}
+  @media(max-width:860px){.g2,.g3,.g4{grid-template-columns:1fr;}}
+  .card{background:var(--paper); border:1px solid var(--line); border-radius:16px; padding:22px 24px; box-shadow:var(--shadow);}
+  .card.flat{box-shadow:none;}
+
+  /* KPIs */
+  .kpis{display:grid; grid-template-columns:repeat(4,1fr); gap:14px;}
+  @media(max-width:680px){.kpis{grid-template-columns:repeat(2,1fr);}}
+  .kpi{background:var(--paper); border:1px solid var(--line); border-radius:14px; padding:18px 12px; text-align:center;}
+  .kpi .n{font-family:var(--serif); font-size:30px; font-weight:600; color:var(--teal);}
+  .kpi .l{font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint); margin-top:4px;}
+
+  .callout{background:linear-gradient(135deg,#fbf3ee,#f7ebe3); border:1px solid var(--gold-soft); border-left:4px solid var(--gold);
+    border-radius:12px; padding:16px 20px; font-size:14.5px; color:#7a3a2b; margin-top:20px;}
+  .callout b{color:#5e2a1e;}
+  .note-cool{background:#eef2f8; border:1px solid var(--line-cool); border-left:4px solid var(--teal); border-radius:12px; padding:16px 20px; font-size:14.5px; color:var(--teal-deep); margin-top:18px;}
+
+  p{margin:10px 0;}
+  .muted{color:var(--ink-soft); font-size:14px;}
+  ul.clean{margin:8px 0; padding-left:20px;} ul.clean li{margin:5px 0;}
+
+  /* dive site accordion */
+  .dive{background:var(--paper); border:1px solid var(--line); border-radius:16px; margin-bottom:14px; overflow:hidden; box-shadow:var(--shadow);}
+  .dive-head{display:flex; align-items:center; gap:16px; padding:20px 22px; cursor:pointer; transition:background .2s;}
+  .dive-head:hover{background:#fbf8f2;}
+  .dive-rank{flex:0 0 46px; height:46px; border-radius:50%; background:linear-gradient(150deg,var(--teal),var(--teal-deep)); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-family:var(--serif); font-size:22px; font-weight:600;}
+  .dive-head .t{flex:1; min-width:0;}
+  .dive-head h3{font-size:23px; font-weight:600; color:var(--teal-deep);}
+  .dive-head .meta{font-size:12.5px; color:var(--ink-faint); margin-top:3px; display:flex; flex-wrap:wrap; gap:6px 14px;}
+  .dive-head .meta b{color:var(--ink-soft); font-weight:600;}
+  .chev{flex:0 0 auto; color:var(--ink-faint); transition:transform .3s; font-size:18px;}
+  .dive.open .chev{transform:rotate(180deg);}
+  .dive-body{max-height:0; overflow:hidden; transition:max-height .5s ease;}
+  .dive-body-inner{padding:2px 22px 24px; border-top:1px solid var(--line);}
+  .dive-body-inner .lvl{display:inline-block; font-size:11px; font-weight:700; letter-spacing:.05em; text-transform:uppercase;
+    padding:3px 10px; border-radius:6px; margin:14px 8px 6px 0;}
+  .lvl.beg{background:#e2f3ec; color:#0c7a52;} .lvl.int{background:#fdf0d8; color:#9a6b15;}
+  .lvl.adv{background:#fbe4e0; color:#b0432f;}
+  .see{display:flex; flex-wrap:wrap; gap:7px; margin-top:10px;}
+  .see span{background:var(--sand); border:1px solid var(--line); border-radius:7px; padding:4px 10px; font-size:12.5px; color:var(--ink-soft);}
+
+  /* photos */
+  .banner{width:100%; height:210px; object-fit:cover; border-radius:14px; display:block; margin:0 0 24px; box-shadow:var(--shadow);}
+  @media(max-width:680px){.banner{height:150px;}}
+  .dive-thumb{flex:0 0 62px; width:62px; height:62px; border-radius:12px; object-fit:cover; box-shadow:var(--shadow);}
+  @media(max-width:680px){.dive-thumb{width:50px; height:50px; flex-basis:50px;}}
+
+  /* maps */
+  .mapwrap{display:grid; grid-template-columns:320px 1fr; gap:18px; align-items:start;}
+  @media(max-width:760px){.mapwrap{grid-template-columns:1fr;}}
+  .legend{list-style:none; margin:14px 0 0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:8px 18px;}
+  @media(max-width:560px){.legend{grid-template-columns:1fr;}}
+  .legend li{display:flex; gap:9px; align-items:flex-start; font-size:13px; color:var(--ink-soft);}
+  .legend .b{flex:0 0 20px; height:20px; border-radius:50%; color:#fff; font-size:11px; font-weight:700; display:flex; align-items:center; justify-content:center; margin-top:1px;}
+  .figcap{font-size:12px; color:var(--ink-faint); margin-top:8px; font-style:italic;}
+
+  /* bookmark star */
+  .bm{display:none;}
+
+  /* hotel */
+  .hotel-hero{display:grid; grid-template-columns:1.3fr 1fr; gap:0; border-radius:18px; overflow:hidden; box-shadow:var(--shadow); border:1px solid var(--line);}
+  @media(max-width:760px){.hotel-hero{grid-template-columns:1fr;}}
+  .hotel-hero .left{background:linear-gradient(150deg,#2e4a7d,#1f2f54); color:#fff; padding:30px 30px;}
+  .hotel-hero .left h3{font-size:30px; font-weight:500; color:#fff;}
+  .hotel-hero .left .stars{color:var(--gold-soft); letter-spacing:3px; margin:6px 0 2px;}
+  .hotel-hero .right{background:var(--paper); padding:26px 28px;}
+  .amen{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px;}
+  .amen span{background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.25); border-radius:999px; padding:5px 13px; font-size:12.5px;}
+  .quote{font-family:var(--serif); font-style:italic; font-size:17px; color:var(--teal-deep); border-left:3px solid var(--gold); padding-left:14px; margin:10px 0;}
+  .rev-row{display:flex; gap:10px; align-items:baseline; margin:8px 0; font-size:14px;}
+  .rev-row .tick{color:var(--teal-bright); font-weight:700;}
+
+  /* itinerary timeline */
+  .tl{position:relative; margin-top:8px;}
+  .tl::before{content:""; position:absolute; left:78px; top:6px; bottom:6px; width:2px; background:var(--line);}
+  @media(max-width:680px){.tl::before{left:54px;}}
+  .leg{position:relative; display:flex; gap:20px; padding:12px 0;}
+  .leg .date{flex:0 0 60px; text-align:right; font-family:var(--serif); font-weight:600; color:var(--teal); font-size:15px; line-height:1.2; padding-top:2px;}
+  .leg .date small{display:block; font-family:var(--sans); font-weight:600; font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-faint);}
+  .leg .dot{position:absolute; left:71px; top:8px; width:14px; height:14px; border-radius:50%; background:#fff; border:3px solid var(--teal); z-index:2;}
+  .leg.dive .dot{background:var(--teal);} .leg.star .dot{border-color:var(--gold); background:var(--gold);}
+  @media(max-width:680px){.leg .dot{left:47px;} .leg{gap:14px;} .leg .date{flex-basis:40px;}}
+  .leg .body{flex:1; background:var(--paper); border:1px solid var(--line); border-radius:13px; padding:14px 18px; margin-left:26px;}
+  .leg .body h4{font-size:17px; font-weight:600; color:var(--ink);}
+  .leg .body .din{font-size:13px; color:var(--ink-soft); margin-top:5px;}
+  .leg .body .din b{color:var(--gold);}
+  .tag-sm{display:inline-block; font-size:10px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; padding:2px 8px; border-radius:5px; vertical-align:middle; margin-left:6px;}
+  .tag-dive{background:#e2f3ec; color:#0c7a52;} .tag-rest{background:#eef0f2; color:#5b6b72;} .tag-cel{background:#f7e7c8; color:#9a6b15;}
+
+  /* table */
+  table{width:100%; border-collapse:collapse; font-size:14.5px; margin-top:8px; background:var(--paper); border-radius:12px; overflow:hidden;}
+  th,td{text-align:left; padding:12px 16px; border-bottom:1px solid var(--line);}
+  th{background:var(--teal-deep); color:#fff; font-family:var(--sans); font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; font-weight:600;}
+  td.num{text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap;}
+  tr.total td{font-weight:700; background:#fbf3ee; border-top:2px solid var(--gold-soft); font-size:16px;}
+  tr:last-child td{border-bottom:none;}
+
+  /* checklist */
+  .check{display:flex; gap:12px; align-items:flex-start; padding:12px 0; border-bottom:1px solid var(--line);}
+  .check:last-child{border:none;}
+  .check .box{flex:0 0 22px; height:22px; border:2px solid var(--teal); border-radius:6px; cursor:pointer; transition:.2s; position:relative; margin-top:2px;}
+  .check.done .box{background:var(--teal);}
+  .check.done .box::after{content:"✓"; color:#fff; position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700;}
+  .check.done .txt{text-decoration:line-through; color:var(--ink-faint);}
+  .check .txt{font-size:14.5px;}
+
+  /* bookmark panel */
+  #bmToggle{position:fixed; right:20px; bottom:20px; z-index:110; background:var(--teal-deep); color:#fff; border:none;
+    border-radius:999px; padding:13px 20px; font-family:var(--sans); font-weight:600; font-size:14px; cursor:pointer; box-shadow:0 8px 26px rgba(31,47,84,.34); display:flex; align-items:center; gap:8px;}
+  #bmToggle:hover{background:var(--teal);}
+  #bmPanel{position:fixed; right:20px; bottom:74px; z-index:111; width:300px; max-width:calc(100vw - 40px); background:#fff; border:1px solid var(--line);
+    border-radius:16px; box-shadow:0 16px 50px rgba(31,47,84,.26); padding:18px 18px 12px; display:none;}
+  #bmPanel.show{display:block;}
+  #bmPanel h4{font-size:18px; color:var(--teal-deep); margin-bottom:4px;}
+  #bmPanel .empty{font-size:13px; color:var(--ink-faint); padding:8px 0 4px;}
+  #bmList{list-style:none; margin:8px 0 0; padding:0; max-height:46vh; overflow:auto;}
+  #bmList li{display:flex; align-items:center; gap:8px; padding:8px 4px; border-bottom:1px solid var(--line); font-size:13.5px;}
+  #bmList li:last-child{border:none;}
+  #bmList li .go{flex:1; cursor:pointer; color:var(--ink);}
+  #bmList li .go:hover{color:var(--teal);}
+  #bmList li .rm{cursor:pointer; color:var(--ink-faint); font-size:16px; line-height:1;}
+  #bmList li .rm:hover{color:#b0432f;}
+
+  #toTop{position:fixed; left:20px; bottom:20px; z-index:110; width:44px; height:44px; border-radius:50%; background:#fff; border:1px solid var(--line);
+    color:var(--teal-deep); font-size:20px; cursor:pointer; box-shadow:var(--shadow); opacity:0; pointer-events:none; transition:.3s;}
+  #toTop.show{opacity:1; pointer-events:auto;}
+
+  footer{background:var(--teal-deep); color:#cfe3e6; margin-top:60px; padding:40px 22px 30px; text-align:center; font-size:13px;}
+  footer .src{max-width:1000px; margin:0 auto 16px; font-size:12px; line-height:1.9; color:#9fc2c8;}
+  footer .src a{color:#bfe0e4;}
+  footer a{color:#dff0f0;}
+
+  /* mobile tuning */
+  @media(max-width:680px){
+    body{font-size:15.5px;}
+    main{padding:0 16px;}
+    section.block{padding:44px 0 18px; scroll-margin-top:60px;}
+    .hero{min-height:76vh;}
+    .hero-inner{padding:30px 18px 80px;}
+    .sec-head{flex-wrap:wrap;}
+    .sec-head .collapse-btn{order:3; margin-top:4px;}
+    .bar-inner{height:52px; gap:2px;}
+    table{font-size:13px;}
+    th,td{padding:9px 10px;}
+    .card{padding:18px 16px;}
+    .dive-head{gap:11px; padding:15px 15px;}
+    .dive-head h3{font-size:19px;}
+    .dive-body-inner{padding:2px 16px 20px;}
+    #toTop{width:40px; height:40px; left:14px; bottom:14px;}
+  }
+
+  /* Japan additions */
+  .bar a.brand{font-family:var(--serif); font-weight:600; font-size:18px; color:var(--teal-deep); margin-right:10px;}
+  .ch{font-size:18px; color:var(--teal-deep); margin-bottom:4px;}
+  .ch2{font-size:24px; color:var(--teal-deep); margin:4px 0 6px;}
+  .leg-head{font-size:24px; color:var(--teal-deep); margin:30px 0 4px; padding-left:2px;}
+  .leg-head:first-of-type{margin-top:14px;}
+  .legend-row{display:flex; flex-wrap:wrap; gap:6px;}
+  .legend-row .tag-sm{margin-left:0;}
+  .leg .dot{left:71px;}
+  .leg.hist .dot{border-color:var(--teal); background:var(--teal);}
+  .leg.anime .dot{border-color:#7a4fb3; background:#7a4fb3;}
+  .leg.star .dot{border-color:var(--gold); background:var(--gold);}
+  .tag-hist{background:#e3e9f4; color:#2e4a7d;} .tag-anime{background:#efe6f8; color:#6a3fa3;}
+  .tag-imm{background:#fbe5de; color:#a8391f;} .tag-move{background:#eef0f2; color:#5b6b72;}
+  .stay{background:var(--paper); border:1px solid var(--line); border-radius:18px; overflow:hidden; box-shadow:var(--shadow); display:flex; flex-direction:column;}
+  .stay img{width:100%; height:190px; object-fit:cover; display:block; background:#e9e3d8;}
+  .stay-body{padding:20px 22px 22px;}
+  .stay-body h3{font-size:26px; color:var(--teal-deep); margin:4px 0 6px;}
+  .banner{background:#e9e3d8;}
+  td.num{white-space:nowrap;}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">A Family Journey · Summer 2027</div>
+    <h1>Japan, <span class="it">old &amp; new</span></h1>
+    <p class="sub">Shogun shrines and samurai swords, a night in a Buddhist monastery, a ryokan by Mt. Fuji — and two full days in Tokyo's anime heartland.</p>
+    <div class="facts">
+      <div class="fact">📅 <b>Summer 2027</b> · 10 nights</div>
+      <div class="fact">👨‍👩‍👧‍👦 2 adults · 2 teens</div>
+      <div class="fact">🏯 4 bases · 3 moves</div>
+      <div class="fact">🎒 Carry-on only</div>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,48 C240,90 480,10 720,40 C960,70 1200,20 1440,52 L1440,90 L0,90 Z" fill="#f7f3ec"/>
+  </svg>
+</header>
+
+<!-- NAV -->
+<nav class="bar">
+  <div class="bar-inner">
+    <a class="brand" href="../">← Trips</a>
+    <a href="#overview">Overview</a>
+    <a href="#route">Route</a>
+    <a href="#itinerary">Itinerary</a>
+    <a href="#stays">Stays</a>
+    <a href="#immersion">Samurai &amp; Temples</a>
+    <a href="#anime">Anime</a>
+    <a href="#transit">Getting Around</a>
+    <a href="#packing">Packing</a>
+    <a href="#timeline">Booking Timeline</a>
+    <a href="#checklist">Checklist</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- OVERVIEW -->
+<section class="block" id="overview">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">The Plan</div>
+      <h2>History First, Anime Always</h2>
+      <p class="lead">A custom, self-guided trip with private guides on the days where context matters most.</p>
+    </div>
+    <button class="collapse-btn" data-target="overview">Collapse</button>
+  </div>
+  <div class="sec-body">
+    <img class="banner" src="https://images.unsplash.com/photo-1580167227251-be70f01b0c51?w=1400&h=420&fit=crop&q=75&auto=format" alt="Senso-ji temple in Asakusa, Tokyo" loading="lazy">
+    <p>This trip leans into <b>living history</b> — not just seeing temples and castles, but sleeping in them, eating like monks, and picking up a sword. Tokyo bookends the modern side with two days of Ghibli, Akihabara and Nakano Broadway. We chose a <b>custom itinerary over a group tour</b> for pace, flexibility and cost, and skipped Universal Studios Japan (Universal Hollywood is close to home).</p>
+    <div class="kpis" style="margin-top:18px">
+      <div class="kpi"><div class="n">10</div><div class="l">Nights</div></div>
+      <div class="kpi"><div class="n">4</div><div class="l">Bases</div></div>
+      <div class="kpi"><div class="n">3</div><div class="l">Immersion stays</div></div>
+      <div class="kpi"><div class="n">1.5–2</div><div class="l">Anime days</div></div>
+    </div>
+    <div class="grid g3" style="margin-top:22px">
+      <div class="card flat"><h4 class="ch">✅ Decided</h4>
+        <ul class="clean muted">
+          <li>Custom itinerary, not a tour</li>
+          <li>Private guide for select days</li>
+          <li>Public transit — no rental car</li>
+          <li>Carry-on bags only</li>
+          <li>Skip Universal Studios Japan</li>
+          <li>No castle-stay splurge</li>
+        </ul>
+      </div>
+      <div class="card flat"><h4 class="ch">🤔 Still open</h4>
+        <ul class="clean muted">
+          <li>Exact dates (July favored)</li>
+          <li>2nd anime day: extra Tokyo night <i>or</i> Ghibli Park stop</li>
+          <li>Which series the teens follow — drives collab cafés</li>
+          <li>Hiroshima / Peace Museum — teens to weigh in</li>
+        </ul>
+      </div>
+      <div class="card flat"><h4 class="ch">💭 Future trip</h4>
+        <ul class="clean muted">
+          <li>A Japan cruise from Yokohama — Hiroshima, Nagasaki, Hokkaido — once the kids are older</li>
+          <li>Royal Caribbean's Tokyo → Los Angeles crossing ends at home</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout"><b>Timing.</b> June to mid-July is rainy season; late July and August are hot and humid. Every day here starts early and puts museums, shops and indoor stops at midday. Avoid <b>Obon</b> (mid-August), when domestic travel peaks. If you're in Kyoto <b>July 14–17 or 21–24</b> you'll catch the Gion Matsuri festival — a bonus, though hotels cost more.</div>
+  </div>
+</section>
+
+<!-- ROUTE -->
+<section class="block" id="route">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">The Shape of the Trip</div>
+      <h2>Four Bases, Three Moves</h2>
+      <p class="lead">Fly into Tokyo, out of Osaka (Kansai). Everything else is a day trip from a base.</p>
+    </div>
+    <button class="collapse-btn" data-target="route">Collapse</button>
+  </div>
+  <div class="sec-body">
+    <div class="mapwrap">
+      <div class="card flat" style="background:#fbfaf6">
+        <iframe title="Map of central Japan" width="100%" height="430" style="border:1px solid #e7ded0;border-radius:10px;display:block" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.openstreetmap.org/export/embed.html?bbox=134.6%2C33.6%2C140.6%2C36.4&amp;layer=mapnik"></iframe>
+        <p class="figcap">Central Japan, Kansai to Kanto. <a href="https://www.openstreetmap.org/#map=8/35.0/137.6" target="_blank" rel="noopener">View larger map</a> · © OpenStreetMap contributors</p>
+      </div>
+      <div class="card flat" style="background:#fbfaf6">
+        <svg viewBox="0 0 720 430" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;border-radius:10px;border:1px solid #e7ded0" role="img" aria-label="Route diagram: Tokyo to Hakone to Kyoto to Koyasan to Kansai Airport">
+          <rect width="720" height="430" fill="#f3ede1"/>
+          <path d="M70,360 C150,330 210,300 260,250 C300,210 330,170 390,150 C470,125 560,110 650,90" fill="none" stroke="#e5dac4" stroke-width="44" stroke-linecap="round"/>
+          <g fill="none" stroke-width="4" stroke-linecap="round">
+            <path d="M640,95 L520,138" stroke="#2e4a7d"/>
+            <path d="M520,138 L250,250" stroke="#2e4a7d"/>
+            <path d="M250,250 L190,330" stroke="#2e4a7d"/>
+            <path d="M190,330 L120,370" stroke="#c8462f" stroke-dasharray="8 7"/>
+            <path d="M640,95 L600,30" stroke="#8a9bb5" stroke-dasharray="4 6"/>
+            <path d="M250,250 L300,300" stroke="#8a9bb5" stroke-dasharray="4 6"/>
+            <path d="M300,300 L360,285" stroke="#8a9bb5" stroke-dasharray="4 6"/>
+          </g>
+          <g font-family="Inter,sans-serif">
+            <g><circle cx="640" cy="95" r="20" fill="#1f2f54" stroke="#fff" stroke-width="3"/><text x="640" y="101" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">4</text>
+              <text x="640" y="140" text-anchor="middle" font-size="15" font-weight="700" fill="#1f2f54">Tokyo</text><text x="640" y="157" text-anchor="middle" font-size="11.5" fill="#5d6b7e">Nights 1–4 · arrive HND</text></g>
+            <g><circle cx="520" cy="138" r="17" fill="#1f2f54" stroke="#fff" stroke-width="3"/><text x="520" y="143" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">1</text>
+              <text x="520" y="182" text-anchor="middle" font-size="15" font-weight="700" fill="#1f2f54">Hakone</text><text x="520" y="199" text-anchor="middle" font-size="11.5" fill="#5d6b7e">Night 5 · ryokan</text></g>
+            <g><circle cx="250" cy="250" r="20" fill="#1f2f54" stroke="#fff" stroke-width="3"/><text x="250" y="256" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">4</text>
+              <text x="200" y="230" text-anchor="end" font-size="15" font-weight="700" fill="#1f2f54">Kyoto</text><text x="200" y="247" text-anchor="end" font-size="11.5" fill="#5d6b7e">Nights 6–9 · machiya</text></g>
+            <g><circle cx="190" cy="330" r="17" fill="#1f2f54" stroke="#fff" stroke-width="3"/><text x="190" y="335" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">1</text>
+              <text x="215" y="362" font-size="15" font-weight="700" fill="#1f2f54">Koyasan</text><text x="215" y="379" font-size="11.5" fill="#5d6b7e">Night 10 · temple</text></g>
+            <g><rect x="96" y="356" width="34" height="26" rx="6" fill="#c8462f"/><text x="113" y="374" text-anchor="middle" fill="#fff" font-size="13">✈</text>
+              <text x="66" y="404" font-size="12" font-weight="600" fill="#c8462f">Fly home · KIX</text></g>
+            <g font-size="11.5" fill="#6d7b8f">
+              <circle cx="600" cy="30" r="6" fill="#8a9bb5"/><text x="612" y="34">Nikko day trip</text>
+              <circle cx="300" cy="300" r="6" fill="#8a9bb5"/><text x="292" y="322" text-anchor="end">Nara</text>
+              <circle cx="360" cy="285" r="6" fill="#8a9bb5"/><text x="372" y="289">Iga-Ueno (ninja)</text>
+            </g>
+            <g font-size="11" fill="#2e4a7d" font-weight="600">
+              <text x="572" y="104" text-anchor="middle" transform="rotate(-20 572,104)">Romancecar</text>
+              <text x="390" y="185" transform="rotate(-22 390,185)">Shinkansen · ~2 hr</text>
+              <text x="160" y="295" transform="rotate(-52 160,295)">~3 hr</text>
+            </g>
+            <text x="14" y="420" font-size="10" fill="#8a7a5e">Diagram only — not to scale</text>
+          </g>
+        </svg>
+        <ul class="legend">
+          <li><span class="b" style="background:#1f2f54">4</span> <span><b>Tokyo</b> — apartment hotel</span></li>
+          <li><span class="b" style="background:#1f2f54">1</span> <span><b>Hakone</b> — ryokan with onsen</span></li>
+          <li><span class="b" style="background:#1f2f54">4</span> <span><b>Kyoto</b> — machiya townhouse</span></li>
+          <li><span class="b" style="background:#1f2f54">1</span> <span><b>Koyasan</b> — temple lodging</span></li>
+        </ul>
+        <p class="figcap">Numbers are nights at each base. Dashed grey lines are day trips.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ITINERARY -->
+<section class="block" id="itinerary">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">Day by Day</div>
+      <h2>The Itinerary</h2>
+      <p class="lead">Early starts, indoor middays, evenings on foot. Days marked 🧭 are good private-guide days.</p>
+    </div>
+    <button class="collapse-btn" data-target="itinerary">Collapse</button>
+  </div>
+  <div class="sec-body">
+    <div class="legend-row">
+      <span class="tag-sm tag-hist">History</span><span class="tag-sm tag-anime">Anime</span><span class="tag-sm tag-imm">Immersion</span><span class="tag-sm tag-move">Travel</span>
+    </div>
+
+    <h3 class="leg-head">Tokyo · Nights 1–4</h3>
+    <div class="tl">
+      <div class="leg"><div class="date">Day 1<small>Arrive</small></div><div class="dot"></div>
+        <div class="body"><h4>Land at Haneda <span class="tag-sm tag-move">Travel</span></h4>
+          <div class="din">Check in, shake off the flight with an evening walk around <b>Shibuya</b> — the scramble crossing at night — then an early night.</div></div></div>
+      <div class="leg hist"><div class="date">Day 2<small>Edo</small></div><div class="dot"></div>
+        <div class="body"><h4>Edo-period Tokyo 🧭 <span class="tag-sm tag-hist">History</span></h4>
+          <div class="din"><b>Morning:</b> Senso-ji and old Asakusa before the crowds.<br><b>Midday:</b> Tokyo National Museum in Ueno — samurai armor and swords.<br><b>Afternoon:</b> Imperial Palace East Gardens, on the grounds of Edo Castle.<br><b>Evening:</b> Shinjuku — Omoide Yokocho alley and the Godzilla head.</div></div></div>
+      <div class="leg anime"><div class="date">Day 3<small>Anime</small></div><div class="dot"></div>
+        <div class="body"><h4>Anime Day 1 — Tokyo's west side <span class="tag-sm tag-anime">Anime</span></h4>
+          <div class="din"><b>Morning:</b> Ghibli Museum (timed ticket), then Inokashira Park next door.<br><b>Midday:</b> Nakano Broadway — four floors of vintage manga, figures and collectibles.<br><b>Evening:</b> Akihabara — multi-floor anime stores, retro games, gachapon halls and arcades.</div></div></div>
+      <div class="leg hist"><div class="date">Day 4<small>Nikko</small></div><div class="dot"></div>
+        <div class="body"><h4>Shogun shrine &amp; Edo Wonderland <span class="tag-sm tag-hist">History</span> <span class="tag-sm tag-imm">Immersion</span></h4>
+          <div class="din"><b>Morning:</b> Toshogu Shrine, the lavish mausoleum of the first Tokugawa shogun.<br><b>Afternoon:</b> Edo Wonderland — an Edo-period theme town with costume rental and ninja shows.<br>About 2 hours each way on the Tobu line from Asakusa; the two sites sit roughly 40 minutes apart, so start early.</div></div></div>
+    </div>
+
+    <h3 class="leg-head">Hakone · Night 5</h3>
+    <div class="tl">
+      <div class="leg anime"><div class="date">Day 5<small>Ryokan</small></div><div class="dot"></div>
+        <div class="body"><h4>Ikebukuro, then the mountains <span class="tag-sm tag-anime">Anime</span> <span class="tag-sm tag-imm">Immersion</span></h4>
+          <div class="din"><b>Morning:</b> half anime day in Ikebukuro — the Animate flagship and Pokémon Center Mega Tokyo.<br><b>Midday:</b> Romancecar from Shinjuku to Hakone.<br><b>Evening:</b> ryokan check-in, onsen, yukata robes and a multi-course kaiseki dinner.</div></div></div>
+    </div>
+
+    <h3 class="leg-head">Kyoto · Nights 6–9</h3>
+    <div class="tl">
+      <div class="leg"><div class="date">Day 6<small>Move</small></div><div class="dot"></div>
+        <div class="body"><h4>Lake Ashi → Kyoto <span class="tag-sm tag-move">Travel</span></h4>
+          <div class="din"><b>Morning:</b> Lake Ashi boat, Owakudani ropeway and the old Hakone checkpoint on the Tokaido highway.<br><b>Afternoon:</b> Shinkansen from Odawara to Kyoto, about 2 hours. Settle into the machiya.<br><b>Evening:</b> lantern-lit walk through Gion and Pontocho.</div></div></div>
+      <div class="leg hist"><div class="date">Day 7<small>Temples</small></div><div class="dot"></div>
+        <div class="body"><h4>Shrines, temples &amp; tea 🧭 <span class="tag-sm tag-hist">History</span> <span class="tag-sm tag-imm">Immersion</span></h4>
+          <div class="din"><b>Dawn:</b> Fushimi Inari's thousands of torii, before the heat and crowds.<br><b>Late morning:</b> Kiyomizu-dera and the Higashiyama lanes.<br><b>Afternoon:</b> tea ceremony with a kimono experience.</div></div></div>
+      <div class="leg hist"><div class="date">Day 8<small>Samurai</small></div><div class="dot"></div>
+        <div class="body"><h4>Samurai day <span class="tag-sm tag-imm">Immersion</span> <span class="tag-sm tag-hist">History</span></h4>
+          <div class="din"><b>Morning:</b> samurai lesson — sword handling, kembu sword dance, armor photos.<br><b>Midday:</b> Nijo Castle and its squeaking "nightingale" floors, then Kinkaku-ji, the Golden Pavilion.<br><b>Afternoon:</b> Toei Kyoto Studio Park, a working samurai film set with ninja shows.</div></div></div>
+      <div class="leg hist"><div class="date">Day 9<small>Nara</small></div><div class="dot"></div>
+        <div class="body"><h4>Great Buddha &amp; ninja country 🧭 <span class="tag-sm tag-hist">History</span> <span class="tag-sm tag-imm">Immersion</span></h4>
+          <div class="din"><b>Morning:</b> Todai-ji's Great Buddha and the bowing deer of Nara Park.<br><b>Afternoon:</b> Iga-Ueno — ninja museum, trick house, live show and shuriken throwing.<br>Book a <b>private driver-guide</b> for this one; it turns a two-stop rail day into an easy loop.</div></div></div>
+    </div>
+
+    <h3 class="leg-head">Koyasan · Night 10</h3>
+    <div class="tl">
+      <div class="leg star"><div class="date">Day 10<small>Temple</small></div><div class="dot"></div>
+        <div class="body"><h4>Bamboo, zen &amp; the holy mountain <span class="tag-sm tag-imm">Immersion</span> <span class="tag-sm tag-move">Travel</span></h4>
+          <div class="din"><b>Dawn:</b> Arashiyama bamboo grove, then a zen meditation session.<br><b>Midday:</b> about 3 hours by train and cable car to Koyasan.<br><b>Evening:</b> monastery check-in, shojin ryori vegetarian dinner, and a night lantern walk through Okunoin cemetery.</div></div></div>
+      <div class="leg"><div class="date">Day 11<small>Home</small></div><div class="dot"></div>
+        <div class="body"><h4>Morning prayers, then fly <span class="tag-sm tag-move">Travel</span></h4>
+          <div class="din">Join the monks' morning prayers and fire ritual. About 2.5 hours to Kansai Airport — book a departure <b>after roughly 2pm</b>.</div></div></div>
+    </div>
+
+    <div class="note-cool"><b>Watch the closed days.</b> The Tokyo National Museum is usually closed Mondays and the Ghibli Museum on Tuesdays. Once dates are set, shuffle Days 2–4 so neither lands on its closed day.</div>
+  </div>
+</section>
+
+<!-- STAYS -->
+<section class="block" id="stays">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">Where You'll Sleep</div>
+      <h2>Four Very Different Stays</h2>
+      <p class="lead">A practical city base, then three nights that are experiences in themselves.</p>
+    </div>
+    <button class="collapse-btn" data-target="stays">Collapse</button>
+  </div>
+  <div class="sec-body">
+    <div class="grid g2">
+      <div class="stay">
+        <img src="https://images.unsplash.com/photo-1777033751070-9ab9b76576ff?w=900&h=420&fit=crop&q=75&auto=format" alt="Tokyo street with anime billboards" loading="lazy">
+        <div class="stay-body"><div class="eyebrow">Tokyo · 4 nights</div><h3>Apartment hotel</h3>
+          <p class="muted">Standard Japanese hotel rooms rarely fit four. Family rooms at chains like <b>Mimaru</b> or <b>Tokyu Stay</b> add a kitchenette and a washer-dryer — key for packing light.</p>
+          <div class="see"><span>Sleeps 4</span><span>Washer-dryer</span><span>Near a JR station</span></div></div>
+      </div>
+      <div class="stay">
+        <img src="https://images.unsplash.com/photo-1749352133990-67bf2a652149?w=900&h=420&fit=crop&q=75&auto=format" alt="Mount Fuji over a lake with a torii gate" loading="lazy">
+        <div class="stay-body"><div class="eyebrow">Hakone · 1 night</div><h3>Ryokan</h3>
+          <p class="muted">A traditional inn: hot-spring baths, yukata robes, a seasonal kaiseki dinner and futons laid on tatami while you eat. Many families' single most memorable night.</p>
+          <div class="see"><span>Onsen</span><span>Kaiseki dinner</span><span>Ask about private baths</span></div></div>
+      </div>
+      <div class="stay">
+        <img src="https://images.unsplash.com/photo-1717496376319-ee3d354ac2d8?w=900&h=420&fit=crop&q=75&auto=format" alt="Narrow Kyoto street with pagoda" loading="lazy">
+        <div class="stay-body"><div class="eyebrow">Kyoto · 4 nights</div><h3>Machiya townhouse</h3>
+          <p class="muted">A restored wooden merchant house rented whole — sliding doors, a tiny inner garden, your own front door on an old Kyoto lane. Room for four and a place to cook.</p>
+          <div class="see"><span>Whole house</span><span>Central Kyoto</span><span>Check stair steepness</span></div></div>
+      </div>
+      <div class="stay">
+        <img src="https://images.unsplash.com/photo-1768476121792-fe04b721721f?w=900&h=420&fit=crop&q=75&auto=format" alt="Lantern-lined path through Okunoin cemetery forest" loading="lazy">
+        <div class="stay-body"><div class="eyebrow">Koyasan · 1 night</div><h3>Shukubo temple lodging</h3>
+          <p class="muted">Sleep inside a working monastery on a cool mountaintop. Vegetarian monks' dinner, dawn prayers and a fire ritual, and the Okunoin lantern walk among samurai-clan graves.</p>
+          <div class="see"><span>Shojin ryori</span><span>Dawn prayers</span><span>Book early</span></div></div>
+      </div>
+    </div>
+    <div class="callout"><b>Castle stays — considered and skipped.</b> Ozu Castle on Shikoku offers a full lord-of-the-castle night, but for four it runs well over $10K, it's closed in August and it sits far off this route. The machiya and temple nights deliver most of the feeling at a fraction of the price.</div>
+  </div>
+</section>
+
+<!-- IMMERSION -->
+<section class="block" id="immersion">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">Hands-On History</div>
+      <h2>Samurai, Ninja &amp; Temples</h2>
+      <p class="lead">Tap an experience to see what it involves and how to book.</p>
+    </div>
+    <button class="collapse-btn" data-target="immersion">Collapse</button>
+  </div>
+  <div class="sec-body">
+    <img class="banner" src="https://images.unsplash.com/photo-1688327044868-e358b414039c?w=1400&h=420&fit=crop&q=75&auto=format" alt="Samurai in armor holding a sword" loading="lazy">
+
+    <div class="dive open">
+      <div class="dive-head"><div class="dive-rank">1</div><div class="t"><h3>Samurai lesson</h3><div class="meta"><span><b>Kyoto</b> · Day 8</span><span>~2 hrs</span><span>Book ~1 month out</span></div></div><span class="chev">⌄</span></div>
+      <div class="dive-body"><div class="dive-body-inner">
+        <span class="lvl beg">Teens love it</span>
+        <p>Instructor-led sword handling and <b>kembu</b> (sword dance), usually with armor or kimono dress-up for photos. Some dojos also offer real-katana cutting (<b>tameshigiri</b>) — confirm the minimum age for your teens before booking.</p>
+        <div class="see"><span>English instruction</span><span>Armor photos</span><span>Check age limits</span></div>
+      </div></div>
+    </div>
+
+    <div class="dive">
+      <div class="dive-head"><div class="dive-rank">2</div><div class="t"><h3>Iga-Ueno ninja town</h3><div class="meta"><span><b>Mie</b> · Day 9</span><span>Half day</span><span>Private driver suggested</span></div></div><span class="chev">⌄</span></div>
+      <div class="dive-body"><div class="dive-body-inner">
+        <span class="lvl beg">Hands-on</span>
+        <p>The birthplace of the Iga ninja clans. A ninja museum and trick house with hidden doors and escape routes, live shows, and shuriken throwing. <b>Alternative:</b> the Koka Ninja House, a real ninja family's home about an hour from Kyoto.</p>
+        <div class="see"><span>Ninja museum</span><span>Live show</span><span>Shuriken throwing</span></div>
+      </div></div>
+    </div>
+
+    <div class="dive">
+      <div class="dive-head"><div class="dive-rank">3</div><div class="t"><h3>Toei Kyoto Studio Park</h3><div class="meta"><span><b>Kyoto</b> · Day 8</span><span>2–3 hrs</span></div></div><span class="chev">⌄</span></div>
+      <div class="dive-body"><div class="dive-body-inner">
+        <span class="lvl int">History meets pop culture</span>
+        <p>A working film set for samurai dramas, with Edo-period streets, ninja shows and costume options. It bridges the history and anime halves of the trip nicely.</p>
+      </div></div>
+    </div>
+
+    <div class="dive">
+      <div class="dive-head"><div class="dive-rank">4</div><div class="t"><h3>Nijo Castle</h3><div class="meta"><span><b>Kyoto</b> · Day 8</span><span>~1.5 hrs</span></div></div><span class="chev">⌄</span></div>
+      <div class="dive-body"><div class="dive-body-inner">
+        <span class="lvl int">Guide adds a lot</span>
+        <p>The Tokugawa shoguns' Kyoto residence. Its "nightingale floors" were built to chirp underfoot and warn of intruders — walk them and listen.</p>
+      </div></div>
+    </div>
+
+    <div class="dive">
+      <div class="dive-head"><div class="dive-rank">5</div><div class="t"><h3>Koyasan monastery night</h3><div class="meta"><span><b>Wakayama</b> · Day 10</span><span>Overnight</span><span>Book Jan–Mar</span></div></div><span class="chev">⌄</span></div>
+      <div class="dive-body"><div class="dive-body-inner">
+        <span class="lvl adv">Unique</span>
+        <p>Founded by the monk Kukai in the 9th century, Koyasan is the center of Shingon Buddhism. Stay at a temple, eat <b>shojin ryori</b>, take the guided night tour of Okunoin, and join morning prayers and the goma fire ritual. Many temples also offer meditation and sutra copying.</p>
+      </div></div>
+    </div>
+
+    <div class="dive">
+      <div class="dive-head"><div class="dive-rank">6</div><div class="t"><h3>Tea ceremony &amp; zen</h3><div class="meta"><span><b>Kyoto</b> · Days 7 &amp; 10</span><span>~1 hr each</span></div></div><span class="chev">⌄</span></div>
+      <div class="dive-body"><div class="dive-body-inner">
+        <span class="lvl beg">Calm counterpoint</span>
+        <p>A tea ceremony with kimono rental, and a zen meditation session led by a monk. Several Kyoto temples run English-language zazen; Shunko-in in Myoshin-ji is a well-known option.</p>
+      </div></div>
+    </div>
+
+    <div class="dive">
+      <div class="dive-head"><div class="dive-rank">7</div><div class="t"><h3>Nikko &amp; Edo Wonderland</h3><div class="meta"><span><b>Tochigi</b> · Day 4</span><span>Full day</span></div></div><span class="chev">⌄</span></div>
+      <div class="dive-body"><div class="dive-body-inner">
+        <span class="lvl int">Long day</span>
+        <p>Toshogu is the ornate mausoleum of Tokugawa Ieyasu, founder of the shogunate. Edo Wonderland recreates an Edo-period town with ninja shows and costume rental. Check Edo Wonderland's closed days when dates are set.</p>
+      </div></div>
+    </div>
+
+    <div class="note-cool"><b>Swap options.</b> <b>Kanazawa</b> (samurai district plus the trapdoor-filled "Ninja Temple") or <b>Himeji Castle</b>, Japan's finest original castle, can replace a day if you want more castles. <b>Hiroshima</b> and Miyajima are out for now, pending the teens' interest in the Peace Museum.</div>
+  </div>
+</section>
+
+<!-- ANIME -->
+<section class="block" id="anime">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">For the Fans</div>
+      <h2>Anime Days</h2>
+      <p class="lead">One full day plus a half is built in. A second full day is the main open decision.</p>
+    </div>
+    <button class="collapse-btn" data-target="anime">Collapse</button>
+  </div>
+  <div class="sec-body">
+    <div class="grid g3">
+      <div class="card"><div class="eyebrow">Day 3 · built in</div><h3 class="ch2">Ghibli, Nakano &amp; Akiba</h3>
+        <ul class="clean muted"><li><b>Ghibli Museum</b>, Mitaka — timed tickets only</li><li><b>Nakano Broadway</b> — vintage manga &amp; figures</li><li><b>Akihabara</b> — stores, arcades, gachapon</li></ul></div>
+      <div class="card"><div class="eyebrow">Option A · +1 Tokyo night</div><h3 class="ch2">More Tokyo</h3>
+        <ul class="clean muted"><li><b>Shibuya PARCO</b> — Nintendo Tokyo, Jump Shop, Capcom Store</li><li><b>Ikebukuro</b> — full day at Animate &amp; Otome Road</li><li><b>Gundam Base Tokyo</b>, Odaiba (the giant statue was removed Aug 2026)</li></ul></div>
+      <div class="card"><div class="eyebrow">Option B · no extra night</div><h3 class="ch2">Ghibli Park</h3>
+        <ul class="clean muted"><li>Near Nagoya, right on the Hakone → Kyoto Shinkansen line</li><li>Stash carry-ons in Nagoya Station lockers</li><li>Best if the teens are Ghibli-first</li></ul></div>
+    </div>
+    <div class="callout"><b>Ask the teens which series they follow.</b> Japan runs rotating collab cafés and limited exhibitions with exclusive merch. Check what's running 4–6 weeks before departure and slot the best one into an anime day.</div>
+  </div>
+</section>
+
+<!-- TRANSIT -->
+<section class="block" id="transit">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">Logistics</div>
+      <h2>Getting Around</h2>
+      <p class="lead">Trains do the heavy lifting. No car, no JR Pass.</p>
+    </div>
+    <button class="collapse-btn" data-target="transit">Collapse</button>
+  </div>
+  <div class="sec-body">
+    <table>
+      <thead><tr><th>Leg</th><th>How</th><th class="num">Time</th></tr></thead>
+      <tbody>
+        <tr><td>Haneda → Tokyo hotel</td><td>Train or taxi</td><td class="num">30–45 min</td></tr>
+        <tr><td>Tokyo ↔ Nikko (day trip)</td><td>Tobu limited express from Asakusa</td><td class="num">~2 hr each way</td></tr>
+        <tr><td>Shinjuku → Hakone</td><td>Odakyu Romancecar</td><td class="num">~1.5 hr</td></tr>
+        <tr><td>Odawara → Kyoto</td><td>Tokaido Shinkansen</td><td class="num">~2 hr</td></tr>
+        <tr><td>Kyoto → Koyasan</td><td>Train via Osaka + Nankai line + cable car</td><td class="num">~3 hr</td></tr>
+        <tr><td>Koyasan → Kansai Airport</td><td>Nankai line</td><td class="num">~2.5 hr</td></tr>
+      </tbody>
+    </table>
+    <div class="grid g3" style="margin-top:20px">
+      <div class="card flat"><h4 class="ch">🚇 IC cards</h4><p class="muted">Add Suica or PASMO to each iPhone Wallet. One tap for trains, subways, buses and convenience stores. Teens 12+ pay adult fares.</p></div>
+      <div class="card flat"><h4 class="ch">🚫 Skip the JR Pass</h4><p class="muted">The 7-day pass rose to ¥53,000 on Oct 1, 2026. This route's long legs cost far less as individual tickets.</p></div>
+      <div class="card flat"><h4 class="ch">🚕 Kyoto taxis</h4><p class="muted">City buses get packed. For four people, a taxi or the GO app often costs about the same per head and saves real time.</p></div>
+    </div>
+    <div class="note-cool"><b>Why no rental car:</b> scarce, pricey parking in Tokyo and Kyoto, steep expressway tolls, left-side driving and an International Driving Permit — while the Shinkansen runs center to center faster than you could drive.</div>
+  </div>
+</section>
+
+<!-- PACKING -->
+<section class="block" id="packing">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">Travel Light</div>
+      <h2>Carry-On Only</h2>
+      <p class="lead">Station stairs, Shinkansen racks and three hotel moves all favor small bags.</p>
+    </div>
+    <button class="collapse-btn" data-target="packing">Collapse</button>
+  </div>
+  <div class="sec-body">
+    <div class="grid g2">
+      <div class="card flat"><h4 class="ch">👕 Pack for 5 days, wash twice</h4>
+        <ul class="clean muted">
+          <li>Quick-dry merino or synthetic tops — skip cotton in summer heat</li>
+          <li>One pair of slip-on walking shoes, worn on the plane</li>
+          <li>Socks without holes — shoes come off at temples, the ryokan and some restaurants</li>
+          <li>A small hand towel each — many restrooms have no paper towels</li>
+          <li>A daypack per person for day trips</li>
+        </ul></div>
+      <div class="card flat"><h4 class="ch">🛍️ The souvenir plan</h4>
+        <ul class="clean muted">
+          <li><b>Packable duffel:</b> fill it at the end and check it home</li>
+          <li><b>Ship it:</b> Japan Post box home mid-trip — good for fragile figures</li>
+          <li><b>Merch allowance:</b> a set amount of bag space per teen</li>
+          <li>Buy umbrellas, cooling towels and fans there — cheap at Daiso and convenience stores</li>
+        </ul></div>
+    </div>
+    <div class="callout"><b>Weigh your bags.</b> ANA and JAL cap carry-ons at about 10 kg including the personal item, and bags get weighed more often in Japan. Backpack-style carry-ons handle stairs and old Kyoto lanes better than spinners.</div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="block" id="timeline">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">When to Book What</div>
+      <h2>Booking Timeline</h2>
+      <p class="lead">Dates assume a July 2027 trip — shift with your final dates.</p>
+    </div>
+    <button class="collapse-btn" data-target="timeline">Collapse</button>
+  </div>
+  <div class="sec-body">
+    <table>
+      <thead><tr><th>When</th><th>What</th></tr></thead>
+      <tbody>
+        <tr><td><b>Now – Nov 2026</b></td><td>Flights: into Haneda, out of Kansai (open-jaw). Check Star Alliance award space on United and ANA with MileagePlus miles.</td></tr>
+        <tr><td><b>Jan – Mar 2027</b></td><td>Hakone ryokan, Kyoto machiya, Koyasan temple lodging, private guides and the Nara/Iga driver-guide.</td></tr>
+        <tr><td><b>May 9, 10pm PT</b></td><td>Ghibli Park tickets for July go on sale (May 10, 2pm Japan time) — only if you choose Option B.</td></tr>
+        <tr><td><b>~1 month out</b></td><td>Samurai lesson, Shinkansen seats, Edo Wonderland, tea ceremony.</td></tr>
+        <tr><td><b>4–6 weeks out</b></td><td>Check running anime collab cafés and exhibitions.</td></tr>
+        <tr><td><b>June 9, 6pm PT</b></td><td>Ghibli Museum tickets for July go on sale (June 10, 10am Japan time). Create the Lawson Ticket account ahead of time; names must match passports.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- CHECKLIST -->
+<section class="block" id="checklist">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">Before You Go</div>
+      <h2>Booking Checklist</h2>
+      <p class="lead">Tap to tick off. Progress is saved in this browser only.</p>
+    </div>
+    <button class="collapse-btn" data-target="checklist">Collapse</button>
+  </div>
+  <div class="sec-body">
+    <div class="card">
+      <div class="check" data-ck="dates"><div class="box"></div><div class="txt"><b>Lock trip dates</b> — check Gion Matsuri overlap and Obon.</div></div>
+      <div class="check" data-ck="teens"><div class="box"></div><div class="txt"><b>Ask the teens</b> — favorite series, Ghibli vs. current anime, Peace Museum interest.</div></div>
+      <div class="check" data-ck="anime2"><div class="box"></div><div class="txt"><b>Decide anime Day 2</b> — extra Tokyo night or Ghibli Park.</div></div>
+      <div class="check" data-ck="passports"><div class="box"></div><div class="txt"><b>Check passports</b> — valid for the whole trip, names match bookings.</div></div>
+      <div class="check" data-ck="flights"><div class="box"></div><div class="txt"><b>Book flights</b> — LAX → Haneda, Kansai → LAX, departure after ~2pm.</div></div>
+      <div class="check" data-ck="tokyo"><div class="box"></div><div class="txt"><b>Book Tokyo apartment hotel</b>, 4 nights, sleeps 4, washer-dryer.</div></div>
+      <div class="check" data-ck="ryokan"><div class="box"></div><div class="txt"><b>Book Hakone ryokan</b> with kaiseki dinner; ask about private baths.</div></div>
+      <div class="check" data-ck="machiya"><div class="box"></div><div class="txt"><b>Book Kyoto machiya</b>, 4 nights, whole house.</div></div>
+      <div class="check" data-ck="koyasan"><div class="box"></div><div class="txt"><b>Book Koyasan shukubo</b> and the Okunoin night tour.</div></div>
+      <div class="check" data-ck="guides"><div class="box"></div><div class="txt"><b>Book private guides</b> — Tokyo Day 2, Kyoto Day 7, Nara/Iga driver-guide Day 9.</div></div>
+      <div class="check" data-ck="samurai"><div class="box"></div><div class="txt"><b>Book samurai lesson</b> — confirm age limits for katana cutting.</div></div>
+      <div class="check" data-ck="lawson"><div class="box"></div><div class="txt"><b>Create Lawson Ticket account</b> before Ghibli on-sale day.</div></div>
+      <div class="check" data-ck="ghibli"><div class="box"></div><div class="txt"><b>Buy Ghibli Museum tickets</b> on the 10th, the month before.</div></div>
+      <div class="check" data-ck="suica"><div class="box"></div><div class="txt"><b>Add Suica/PASMO</b> to each iPhone Wallet.</div></div>
+      <div class="check" data-ck="data"><div class="box"></div><div class="txt"><b>Sort phone data</b> — eSIM or roaming for each phone.</div></div>
+      <div class="check" data-ck="bags"><div class="box"></div><div class="txt"><b>Weigh carry-ons</b> against the 10 kg limit; pack the souvenir duffel.</div></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<button id="toTop" aria-label="Back to top">↑</button>
+
+<footer>
+  <div class="src">
+    <b>Sources</b> ·
+    <a href="https://alljapantours.com/japan-group-tours/trip-detail/japan-family-tour-summer/">All Japan Tours — family tour (tour vs. custom)</a> ·
+    <a href="https://backpackingislife.com/is-jr-pass-worth-it/">JR Pass 2026 pricing</a> ·
+    <a href="https://www.tokyotourism.org/ghibli-museum-guide/">Ghibli Museum tickets</a> ·
+    <a href="https://glostravel.com/en/article/ghibli-park-tickets">Ghibli Park tickets</a> ·
+    <a href="https://tokyocheapo.com/place/unicorn-gundam/">Odaiba Gundam statue (removed)</a> ·
+    <a href="https://castlestay.ozucastle.com/en/reservation">Ozu Castle Stay pricing</a> ·
+    <a href="https://cruiseweb.com/ports/departs-yokohama-japan">Japan cruises from Yokohama</a> ·
+    Photos via <a href="https://unsplash.com/">Unsplash</a>
+  </div>
+  <div>Prepared October 2026 · Plan in progress — confirm hours, closed days and prices before booking.</div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  // ---------- scroll progress ----------
+  var prog = document.getElementById('progress');
+  var toTop = document.getElementById('toTop');
+  function onScroll(){
+    var h = document.documentElement;
+    var scrolled = (h.scrollTop) / (h.scrollHeight - h.clientHeight);
+    prog.style.width = (scrolled*100) + '%';
+    toTop.classList.toggle('show', h.scrollTop > 600);
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+  toTop.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+
+  // ---------- active nav highlight ----------
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('nav.bar a[href^="#"]'));
+  var sections = navLinks.map(function(a){ return document.querySelector(a.getAttribute('href')); });
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        var id = e.target.id;
+        navLinks.forEach(function(a){ a.classList.toggle('active', a.getAttribute('href') === '#'+id); });
+      }
+    });
+  }, {rootMargin:'-45% 0px -50% 0px'});
+  sections.forEach(function(s){ if(s) obs.observe(s); });
+
+  // ---------- collapsible sections ----------
+  document.querySelectorAll('.collapse-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var sec = document.getElementById(btn.getAttribute('data-target'));
+      var body = sec.querySelector('.sec-body');
+      if(sec.classList.contains('collapsed')){
+        sec.classList.remove('collapsed');
+        body.style.maxHeight = body.scrollHeight + 'px';
+        btn.textContent = 'Collapse';
+        setTimeout(function(){ body.style.maxHeight='none'; }, 460);
+      } else {
+        body.style.maxHeight = body.scrollHeight + 'px';
+        requestAnimationFrame(function(){ body.style.maxHeight='0px'; });
+        sec.classList.add('collapsed');
+        btn.textContent = 'Expand';
+      }
+    });
+  });
+
+  // ---------- dive-site accordion ----------
+  document.querySelectorAll('.dive .dive-head').forEach(function(head){
+    head.addEventListener('click', function(e){
+      if(e.target.closest('.bm')) return; // don't toggle when starring
+      var dive = head.closest('.dive');
+      var body = dive.querySelector('.dive-body');
+      if(dive.classList.contains('open')){
+        body.style.maxHeight = '0px';
+        dive.classList.remove('open');
+      } else {
+        dive.classList.add('open');
+        body.style.maxHeight = body.scrollHeight + 'px';
+      }
+    });
+  });
+  // open the first one by default
+  (function(){ var f=document.querySelector('.dive.open .dive-body'); if(f) f.style.maxHeight = f.scrollHeight+'px'; })();
+
+  // ---------- checklist (localStorage) ----------
+  var CK_KEY = 'japan_checklist_v1';
+  var ck;
+  try { ck = JSON.parse(localStorage.getItem(CK_KEY) || '{}'); } catch(_){ ck = {}; }
+  document.querySelectorAll('.check').forEach(function(row){
+    var key = row.getAttribute('data-ck');
+    if(ck[key]) row.classList.add('done');
+    row.addEventListener('click', function(){
+      row.classList.toggle('done');
+      ck[key] = row.classList.contains('done');
+      try{ localStorage.setItem(CK_KEY, JSON.stringify(ck)); }catch(_){}
+    });
+  });
+})();
+</script>
+</body>
+</html>
