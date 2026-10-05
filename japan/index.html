@@ -213,6 +213,22 @@
   .stay-body h3{font-size:26px; color:var(--teal-deep); margin:4px 0 6px;}
   .banner{background:#e9e3d8;}
   td.num{white-space:nowrap;}
+  tr.total td{font-weight:700; background:#fbf3ee; border-top:2px solid var(--gold-soft); font-size:16px;}
+  tr.sub td{background:#f6f8fb; font-weight:600; color:var(--teal-deep);}
+  td small{display:block; color:var(--ink-faint); font-size:12px; font-weight:400;}
+  .decide{background:#fff8e6; border:1px solid #f0d58a; border-left:4px solid #d9a21b; border-radius:12px; padding:14px 18px; font-size:14px; color:#5f4a12; margin-top:16px;}
+  .decide .dtag{display:inline-block; font-size:10px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; background:#d9a21b; color:#fff; border-radius:5px; padding:2px 8px; margin-right:8px; vertical-align:middle;}
+  .decide b{color:#4a3a0e;}
+  .decide ul{margin:6px 0 0; padding-left:20px;} .decide li{margin:3px 0;}
+  .leg .body .decide{margin-top:10px; font-size:13px; padding:10px 14px;}
+  .leg{scroll-margin-top:80px;}
+  .dlist{display:grid; gap:12px;}
+  .ditem{display:flex; gap:14px; align-items:flex-start; background:var(--paper); border:1px solid var(--line); border-radius:14px; padding:16px 18px;}
+  .ditem .num{flex:0 0 34px; height:34px; border-radius:50%; background:#d9a21b; color:#fff; font-weight:700; display:flex; align-items:center; justify-content:center; font-size:14px;}
+  .ditem h4{font-size:18px; color:var(--teal-deep); margin-bottom:2px;}
+  .ditem p{margin:4px 0 0; font-size:14px; color:var(--ink-soft);}
+  .ditem .lean{font-size:12.5px; color:#8a6a10; margin-top:6px;}
+  .ditem .lean b{color:#5f4a12;}
 </style>
 </head>
 <body>
@@ -241,6 +257,7 @@
   <div class="bar-inner">
     <a class="brand" href="../">← Trips</a>
     <a href="#overview">Overview</a>
+    <a href="#decisions">Decisions</a>
     <a href="#route">Route</a>
     <a href="#itinerary">Itinerary</a>
     <a href="#stays">Stays</a>
@@ -248,6 +265,7 @@
     <a href="#anime">Anime</a>
     <a href="#transit">Getting Around</a>
     <a href="#packing">Packing</a>
+    <a href="#budget">Budget</a>
     <a href="#timeline">Booking Timeline</a>
     <a href="#checklist">Checklist</a>
   </div>
@@ -287,10 +305,11 @@
       </div>
       <div class="card flat"><h4 class="ch">🤔 Still open</h4>
         <ul class="clean muted">
-          <li>Exact dates (July favored)</li>
+          <li>Travel dates — see <a href="#decisions">Decisions</a></li>
+          <li>Day 4 plan: Nikko shrine, Edo Wonderland, or both</li>
           <li>2nd anime day: extra Tokyo night <i>or</i> Ghibli Park stop</li>
-          <li>Which series the teens follow — drives collab cafés</li>
-          <li>Hiroshima / Peace Museum — teens to weigh in</li>
+          <li>Add Hiroshima &amp; Miyajima or not</li>
+          <li>Which Koyasan temple; flights on cash or miles</li>
         </ul>
       </div>
       <div class="card flat"><h4 class="ch">💭 Future trip</h4>
@@ -300,7 +319,42 @@
         </ul>
       </div>
     </div>
-    <div class="callout"><b>Timing.</b> June to mid-July is rainy season; late July and August are hot and humid. Every day here starts early and puts museums, shops and indoor stops at midday. Avoid <b>Obon</b> (mid-August), when domestic travel peaks. If you're in Kyoto <b>July 14–17 or 21–24</b> you'll catch the Gion Matsuri festival — a bonus, though hotels cost more.</div>
+    <div class="callout"><b>Timing.</b> Forum advice for families with teens favors <b>late June to mid-July</b>: July can reach ~40°C (104°F), and Japanese school holidays start in late July, pushing up crowds and prices. June is rainy season but cooler. Every day here starts early and puts museums, shops and indoor stops at midday. Avoid <b>Obon</b> (mid-August). If you're in Kyoto <b>July 14–17</b> you'll catch the build-up to the Gion Matsuri festival — a bonus, though hotels cost more.</div>
+    <p class="muted" style="margin-top:14px">Updated after cross-checking against TripAdvisor reviews and forums, family trip reports and top-rated published family itineraries (Intrepid, InsideJapan, Esprit).</p>
+  </div>
+</section>
+
+<!-- DECISIONS -->
+<section class="block" id="decisions">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">To Settle</div>
+      <h2>Open Decisions</h2>
+      <p class="lead">Everything else is set. These six calls shape bookings — each is also flagged where it appears on the page.</p>
+    </div>
+    <button class="collapse-btn" data-target="decisions">Collapse</button>
+  </div>
+  <div class="sec-body">
+    <div class="dlist">
+      <div class="ditem"><div class="num">1</div><div><h4>Travel dates</h4>
+        <p>Late June (rainy, cooler, quieter) vs. early–mid July (hotter; Gion Matsuri build-up). Aim to be home before late-July school holidays.</p>
+        <div class="lean"><b>Leaning:</b> roughly July 1–15. Decide by <b>November</b> — it gates flights and every booking.</div></div></div>
+      <div class="ditem"><div class="num">2</div><div><h4>Day 4 — Nikko plan</h4>
+        <p>Both Toshogu Shrine and Edo Wonderland (a ~13-hour day) · Toshogu only (history) · Edo Wonderland only (immersion, 4–6 hrs).</p>
+        <div class="lean"><b>Leaning:</b> both, leaving Asakusa ~7am, on any day but Wednesday. <a href="#d4">See Day 4</a>.</div></div></div>
+      <div class="ditem"><div class="num">3</div><div><h4>Second anime day</h4>
+        <p>Option A: an extra Tokyo night (Shibuya PARCO, Ikebukuro, Gundam Base) · Option B: a Ghibli Park stop near Nagoya on Day 6.</p>
+        <div class="lean"><b>Depends on:</b> which series the teens follow. <a href="#anime">See Anime</a>.</div></div></div>
+      <div class="ditem"><div class="num">4</div><div><h4>Hiroshima &amp; Miyajima</h4>
+        <p>Every top-rated family itinerary we checked includes it. Adding it means +1–2 nights and one more move.</p>
+        <div class="lean"><b>Depends on:</b> the teens' interest in the Peace Museum. <a href="#immersion">See swap options</a>.</div></div></div>
+      <div class="ditem"><div class="num">5</div><div><h4>Koyasan temple</h4>
+        <p>Eko-in (best known, priciest) · Fudo-in (price/atmosphere balance) · Saizen-in (best location) · Joki-in (smaller). Shared bathrooms are typical.</p>
+        <div class="lean"><b>Decide by:</b> January–March booking window. <a href="#stays">See Stays</a>.</div></div></div>
+      <div class="ditem"><div class="num">6</div><div><h4>Flights — cash or miles</h4>
+        <p>Summer fares LAX–Tokyo average about $1,100+ round trip per person. MileagePlus award seats on United or ANA could cut the biggest budget line.</p>
+        <div class="lean"><b>Decide:</b> as soon as dates are set. <a href="#budget">See Budget</a>.</div></div></div>
+    </div>
   </div>
 </section>
 
@@ -391,13 +445,14 @@
           <div class="din">Check in, shake off the flight with an evening walk around <b>Shibuya</b> — the scramble crossing at night — then an early night.</div></div></div>
       <div class="leg hist"><div class="date">Day 2<small>Edo</small></div><div class="dot"></div>
         <div class="body"><h4>Edo-period Tokyo 🧭 <span class="tag-sm tag-hist">History</span></h4>
-          <div class="din"><b>Morning:</b> Senso-ji and old Asakusa before the crowds.<br><b>Midday:</b> Tokyo National Museum in Ueno — samurai armor and swords.<br><b>Afternoon:</b> Imperial Palace East Gardens, on the grounds of Edo Castle.<br><b>Evening:</b> Shinjuku — Omoide Yokocho alley and the Godzilla head.</div></div></div>
+          <div class="din"><b>Morning:</b> Senso-ji and old Asakusa before the crowds.<br><b>Midday:</b> Tokyo National Museum in Ueno — samurai armor and swords.<br><b>Afternoon:</b> Imperial Palace East Gardens, on the grounds of Edo Castle.<br><b>Evening:</b> teamLab Planets in Toyosu — the immersive digital-art museum is a staple of family itineraries (1–2 hrs, open until 10pm, timed tickets).</div></div></div>
       <div class="leg anime"><div class="date">Day 3<small>Anime</small></div><div class="dot"></div>
         <div class="body"><h4>Anime Day 1 — Tokyo's west side <span class="tag-sm tag-anime">Anime</span></h4>
           <div class="din"><b>Morning:</b> Ghibli Museum (timed ticket), then Inokashira Park next door.<br><b>Midday:</b> Nakano Broadway — four floors of vintage manga, figures and collectibles.<br><b>Evening:</b> Akihabara — multi-floor anime stores, retro games, gachapon halls and arcades.</div></div></div>
-      <div class="leg hist"><div class="date">Day 4<small>Nikko</small></div><div class="dot"></div>
+      <div class="leg hist" id="d4"><div class="date">Day 4<small>Nikko</small></div><div class="dot"></div>
         <div class="body"><h4>Shogun shrine &amp; Edo Wonderland <span class="tag-sm tag-hist">History</span> <span class="tag-sm tag-imm">Immersion</span></h4>
-          <div class="din"><b>Morning:</b> Toshogu Shrine, the lavish mausoleum of the first Tokugawa shogun.<br><b>Afternoon:</b> Edo Wonderland — an Edo-period theme town with costume rental and ninja shows.<br>About 2 hours each way on the Tobu line from Asakusa; the two sites sit roughly 40 minutes apart, so start early.</div></div></div>
+          <div class="din"><b>7:00</b> Tobu limited express from Asakusa (~1h50).<br><b>Morning:</b> Toshogu Shrine, the lavish mausoleum of the first Tokugawa shogun.<br><b>Afternoon:</b> Edo Wonderland (from ~2pm, when entry is cheaper) — an Edo-period town with costume rental and ninja shows. Reviewers suggest 4–6 hours; shows are mostly in Japanese.<br><b>Evening:</b> back in Tokyo around 8pm.</div>
+          <div class="decide"><span class="dtag">Decision 2</span><b>Both, or one?</b> Doing both makes a ~13-hour day in summer heat. Alternatives: Toshogu only, or a full, unhurried day at Edo Wonderland. Edo Wonderland is <b>closed Wednesdays</b> (and some Tuesdays) — schedule accordingly.</div></div></div>
     </div>
 
     <h3 class="leg-head">Hakone · Night 5</h3>
@@ -417,17 +472,17 @@
           <div class="din"><b>Dawn:</b> Fushimi Inari's thousands of torii, before the heat and crowds.<br><b>Late morning:</b> Kiyomizu-dera and the Higashiyama lanes.<br><b>Afternoon:</b> tea ceremony with a kimono experience.</div></div></div>
       <div class="leg hist"><div class="date">Day 8<small>Samurai</small></div><div class="dot"></div>
         <div class="body"><h4>Samurai day <span class="tag-sm tag-imm">Immersion</span> <span class="tag-sm tag-hist">History</span></h4>
-          <div class="din"><b>Morning:</b> samurai lesson — sword handling, kembu sword dance, armor photos.<br><b>Midday:</b> Nijo Castle and its squeaking "nightingale" floors, then Kinkaku-ji, the Golden Pavilion.<br><b>Afternoon:</b> Toei Kyoto Studio Park, a working samurai film set with ninja shows.</div></div></div>
+          <div class="din"><b>Morning:</b> <b>Kyoto Samurai Experience</b> in a former samurai home — training swords, cutting bamboo mats, a short zen session and 650-year-old blades.<br><b>Midday:</b> Nijo Castle next door and its squeaking "nightingale" floors.<br><b>Afternoon:</b> Kinkaku-ji, the Golden Pavilion, at an easy pace, then a rest before dinner.</div></div></div>
       <div class="leg hist"><div class="date">Day 9<small>Nara</small></div><div class="dot"></div>
         <div class="body"><h4>Great Buddha &amp; ninja country 🧭 <span class="tag-sm tag-hist">History</span> <span class="tag-sm tag-imm">Immersion</span></h4>
-          <div class="din"><b>Morning:</b> Todai-ji's Great Buddha and the bowing deer of Nara Park.<br><b>Afternoon:</b> Iga-Ueno — ninja museum, trick house, live show and shuriken throwing.<br>Book a <b>private driver-guide</b> for this one; it turns a two-stop rail day into an easy loop.</div></div></div>
+          <div class="din"><b>7:00</b> Private driver-guide pickup in Kyoto.<br><b>Early morning:</b> Todai-ji's Great Buddha and the bowing deer of Nara Park, before the heat.<br><b>Late morning–afternoon:</b> Iga-Ueno — ninja house, live show and shuriken throwing. The show runs only <b>twice a day</b>, so time arrival around it, and book the <b>English ninja-house tour 48 hours ahead</b>.<br><b>Evening:</b> back in Kyoto. The driver is essential here — by train Iga alone is ~2 hours each way.</div></div></div>
     </div>
 
     <h3 class="leg-head">Koyasan · Night 10</h3>
     <div class="tl">
       <div class="leg star"><div class="date">Day 10<small>Temple</small></div><div class="dot"></div>
         <div class="body"><h4>Bamboo, zen &amp; the holy mountain <span class="tag-sm tag-imm">Immersion</span> <span class="tag-sm tag-move">Travel</span></h4>
-          <div class="din"><b>Dawn:</b> Arashiyama bamboo grove, then a zen meditation session.<br><b>Midday:</b> about 3 hours by train and cable car to Koyasan.<br><b>Evening:</b> monastery check-in, shojin ryori vegetarian dinner, and a night lantern walk through Okunoin cemetery.</div></div></div>
+          <div class="din"><b>Dawn:</b> Arashiyama bamboo grove, then an optional zen session at Shunko-in (English, by reservation) — or a slower morning, since Day 8 already includes zen.<br><b>Midday:</b> about 3 hours by train and cable car to Koyasan.<br><b>Evening:</b> monastery check-in, shojin ryori vegetarian dinner, and a night lantern walk through Okunoin cemetery.</div></div></div>
       <div class="leg"><div class="date">Day 11<small>Home</small></div><div class="dot"></div>
         <div class="body"><h4>Morning prayers, then fly <span class="tag-sm tag-move">Travel</span></h4>
           <div class="din">Join the monks' morning prayers and fire ritual. About 2.5 hours to Kansai Airport — book a departure <b>after roughly 2pm</b>.</div></div></div>
@@ -471,10 +526,11 @@
         <img src="https://images.unsplash.com/photo-1768476121792-fe04b721721f?w=900&h=420&fit=crop&q=75&auto=format" alt="Lantern-lined path through Okunoin cemetery forest" loading="lazy">
         <div class="stay-body"><div class="eyebrow">Koyasan · 1 night</div><h3>Shukubo temple lodging</h3>
           <p class="muted">Sleep inside a working monastery on a cool mountaintop. Vegetarian monks' dinner, dawn prayers and a fire ritual, and the Okunoin lantern walk among samurai-clan graves.</p>
-          <div class="see"><span>Shojin ryori</span><span>Dawn prayers</span><span>Book early</span></div></div>
+          <div class="see"><span>Shojin ryori</span><span>Dawn prayers</span><span>Shared baths typical</span><span>Book via official association</span></div></div>
       </div>
     </div>
     <div class="callout"><b>Castle stays — considered and skipped.</b> Ozu Castle on Shikoku offers a full lord-of-the-castle night, but for four it runs well over $10K, it's closed in August and it sits far off this route. The machiya and temple nights deliver most of the feeling at a fraction of the price.</div>
+    <div class="decide"><span class="dtag">Decision 5</span><b>Which Koyasan temple?</b> Eko-in is the best known and priciest; Fudo-in balances price and atmosphere; Saizen-in has the best location; Joki-in is smaller. Book through the official Koyasan Shukubo Association site. Reviewers note Koyasan is busier and pricier than it used to be — still a family-specialist favorite for teens.</div>
   </div>
 </section>
 
@@ -492,11 +548,11 @@
     <img class="banner" src="https://images.unsplash.com/photo-1688327044868-e358b414039c?w=1400&h=420&fit=crop&q=75&auto=format" alt="Samurai in armor holding a sword" loading="lazy">
 
     <div class="dive open">
-      <div class="dive-head"><div class="dive-rank">1</div><div class="t"><h3>Samurai lesson</h3><div class="meta"><span><b>Kyoto</b> · Day 8</span><span>~2 hrs</span><span>Book ~1 month out</span></div></div><span class="chev">⌄</span></div>
+      <div class="dive-head"><div class="dive-rank">1</div><div class="t"><h3>Kyoto Samurai Experience</h3><div class="meta"><span><b>Kyoto</b> · Day 8</span><span>1–2 hrs</span><span>From ~$116 pp</span><span>★ 5.0 · ~1,480 reviews</span></div></div><span class="chev">⌄</span></div>
       <div class="dive-body"><div class="dive-body-inner">
-        <span class="lvl beg">Teens love it</span>
-        <p>Instructor-led sword handling and <b>kembu</b> (sword dance), usually with armor or kimono dress-up for photos. Some dojos also offer real-katana cutting (<b>tameshigiri</b>) — confirm the minimum age for your teens before booking.</p>
-        <div class="see"><span>English instruction</span><span>Armor photos</span><span>Check age limits</span></div>
+        <span class="lvl beg">Top-rated for older teens</span>
+        <p>Held in a former samurai residence near Nijo Castle. Training with iaitō swords, cutting bamboo mats, a short zen meditation, and a look at swords up to 650 years old. Parents describe it as safe, well-briefed and especially good for older teens; professional photos are included. Confirm the minimum age for mat-cutting when booking.</p>
+        <div class="see"><span>English instruction</span><span>Bamboo-mat cutting</span><span>Photos included</span></div>
       </div></div>
     </div>
 
@@ -504,21 +560,13 @@
       <div class="dive-head"><div class="dive-rank">2</div><div class="t"><h3>Iga-Ueno ninja town</h3><div class="meta"><span><b>Mie</b> · Day 9</span><span>Half day</span><span>Private driver suggested</span></div></div><span class="chev">⌄</span></div>
       <div class="dive-body"><div class="dive-body-inner">
         <span class="lvl beg">Hands-on</span>
-        <p>The birthplace of the Iga ninja clans. A ninja museum and trick house with hidden doors and escape routes, live shows, and shuriken throwing. <b>Alternative:</b> the Koka Ninja House, a real ninja family's home about an hour from Kyoto.</p>
-        <div class="see"><span>Ninja museum</span><span>Live show</span><span>Shuriken throwing</span></div>
+        <p>The birthplace of the Iga ninja clans. A preserved ninja house with hidden passages, a live show of ninja techniques and shuriken throwing, plus nearby Iga Ueno Castle. The show runs about 25 minutes, twice a day; the English ninja-house tour needs booking 48 hours ahead. Mostly Japanese otherwise. <b>Alternative:</b> the Koka Ninja House, a real ninja family's home about an hour from Kyoto.</p>
+        <div class="see"><span>Show twice daily</span><span>Book English tour 48h ahead</span><span>Costume rental</span></div>
       </div></div>
     </div>
 
     <div class="dive">
-      <div class="dive-head"><div class="dive-rank">3</div><div class="t"><h3>Toei Kyoto Studio Park</h3><div class="meta"><span><b>Kyoto</b> · Day 8</span><span>2–3 hrs</span></div></div><span class="chev">⌄</span></div>
-      <div class="dive-body"><div class="dive-body-inner">
-        <span class="lvl int">History meets pop culture</span>
-        <p>A working film set for samurai dramas, with Edo-period streets, ninja shows and costume options. It bridges the history and anime halves of the trip nicely.</p>
-      </div></div>
-    </div>
-
-    <div class="dive">
-      <div class="dive-head"><div class="dive-rank">4</div><div class="t"><h3>Nijo Castle</h3><div class="meta"><span><b>Kyoto</b> · Day 8</span><span>~1.5 hrs</span></div></div><span class="chev">⌄</span></div>
+      <div class="dive-head"><div class="dive-rank">3</div><div class="t"><h3>Nijo Castle</h3><div class="meta"><span><b>Kyoto</b> · Day 8</span><span>~1.5 hrs</span></div></div><span class="chev">⌄</span></div>
       <div class="dive-body"><div class="dive-body-inner">
         <span class="lvl int">Guide adds a lot</span>
         <p>The Tokugawa shoguns' Kyoto residence. Its "nightingale floors" were built to chirp underfoot and warn of intruders — walk them and listen.</p>
@@ -526,30 +574,32 @@
     </div>
 
     <div class="dive">
-      <div class="dive-head"><div class="dive-rank">5</div><div class="t"><h3>Koyasan monastery night</h3><div class="meta"><span><b>Wakayama</b> · Day 10</span><span>Overnight</span><span>Book Jan–Mar</span></div></div><span class="chev">⌄</span></div>
+      <div class="dive-head"><div class="dive-rank">4</div><div class="t"><h3>Koyasan monastery night</h3><div class="meta"><span><b>Wakayama</b> · Day 10</span><span>Overnight</span><span>Book Jan–Mar</span></div></div><span class="chev">⌄</span></div>
       <div class="dive-body"><div class="dive-body-inner">
         <span class="lvl adv">Unique</span>
-        <p>Founded by the monk Kukai in the 9th century, Koyasan is the center of Shingon Buddhism. Stay at a temple, eat <b>shojin ryori</b>, take the guided night tour of Okunoin, and join morning prayers and the goma fire ritual. Many temples also offer meditation and sutra copying.</p>
+        <p>Founded by the monk Kukai in the 9th century, Koyasan is the center of Shingon Buddhism. Stay at a temple, eat <b>shojin ryori</b>, take the guided night tour of Okunoin, and join morning prayers and the goma fire ritual. Many temples also offer meditation and sutra copying. Expect shared bathrooms at most temples, and book months ahead.</p>
       </div></div>
     </div>
 
     <div class="dive">
-      <div class="dive-head"><div class="dive-rank">6</div><div class="t"><h3>Tea ceremony &amp; zen</h3><div class="meta"><span><b>Kyoto</b> · Days 7 &amp; 10</span><span>~1 hr each</span></div></div><span class="chev">⌄</span></div>
+      <div class="dive-head"><div class="dive-rank">5</div><div class="t"><h3>Tea ceremony &amp; zen</h3><div class="meta"><span><b>Kyoto</b> · Days 7 &amp; 10</span><span>~1 hr each</span></div></div><span class="chev">⌄</span></div>
       <div class="dive-body"><div class="dive-body-inner">
         <span class="lvl beg">Calm counterpoint</span>
-        <p>A tea ceremony with kimono rental, and a zen meditation session led by a monk. Several Kyoto temples run English-language zazen; Shunko-in in Myoshin-ji is a well-known option.</p>
+        <p>A tea ceremony with kimono rental, and a zen meditation session led by a monk. Shunko-in in Myoshin-ji runs English-language zen sessions through 2026 (about 2 hours, reservation required, fees on request). Optional, since the Day 8 samurai experience includes a short zen session.</p>
       </div></div>
     </div>
 
     <div class="dive">
-      <div class="dive-head"><div class="dive-rank">7</div><div class="t"><h3>Nikko &amp; Edo Wonderland</h3><div class="meta"><span><b>Tochigi</b> · Day 4</span><span>Full day</span></div></div><span class="chev">⌄</span></div>
+      <div class="dive-head"><div class="dive-rank">6</div><div class="t"><h3>Nikko &amp; Edo Wonderland</h3><div class="meta"><span><b>Tochigi</b> · Day 4</span><span>Full day</span><span>★ 4.2 · ~700 reviews</span></div></div><span class="chev">⌄</span></div>
       <div class="dive-body"><div class="dive-body-inner">
         <span class="lvl int">Long day</span>
-        <p>Toshogu is the ornate mausoleum of Tokugawa Ieyasu, founder of the shogunate. Edo Wonderland recreates an Edo-period town with ninja shows and costume rental. Check Edo Wonderland's closed days when dates are set.</p>
+        <p>Toshogu is the ornate mausoleum of Tokugawa Ieyasu, founder of the shogunate. Edo Wonderland recreates an Edo-period town with ninja shows and costume rental; reviewers praise the immersion but note shows are mostly in Japanese and food is pricey. ¥5,800 per adult (¥5,000 after 2pm in summer). Closed Wednesdays and some Tuesdays.</p>
+        <div class="decide"><span class="dtag">Decision 2</span>Both sites in one day, or pick one? <a href="#d4">See Day 4</a>.</div>
       </div></div>
     </div>
 
-    <div class="note-cool"><b>Swap options.</b> <b>Kanazawa</b> (samurai district plus the trapdoor-filled "Ninja Temple") or <b>Himeji Castle</b>, Japan's finest original castle, can replace a day if you want more castles. <b>Hiroshima</b> and Miyajima are out for now, pending the teens' interest in the Peace Museum.</div>
+    <div class="note-cool"><b>Dropped after review:</b> Toei Kyoto Studio Park (3.7★ — reviewers call it dated, with Japanese-only shows). Edo Wonderland covers the same ground better.<br><b>Swap options:</b> <b>Kanazawa</b> (samurai district plus the trapdoor-filled "Ninja Temple") or <b>Himeji Castle</b>, Japan's finest original castle, can replace a day if you want more castles.</div>
+    <div class="decide"><span class="dtag">Decision 4</span><b>Hiroshima &amp; Miyajima?</b> Every top-rated family itinerary we checked includes the Peace Park and Miyajima's floating torii — including InsideJapan's teen itinerary. Adding it means +1–2 nights and one more move. Ask the teens.</div>
   </div>
 </section>
 
@@ -572,6 +622,7 @@
       <div class="card"><div class="eyebrow">Option B · no extra night</div><h3 class="ch2">Ghibli Park</h3>
         <ul class="clean muted"><li>Near Nagoya, right on the Hakone → Kyoto Shinkansen line</li><li>Stash carry-ons in Nagoya Station lockers</li><li>Best if the teens are Ghibli-first</li></ul></div>
     </div>
+    <div class="decide"><span class="dtag">Decision 3</span><b>Option A or B?</b> Option A adds a night and ~$300–400 in lodging; Option B fits on the Day 6 travel day but makes it long. Ghibli Park tickets go on sale two months ahead.</div>
     <div class="callout"><b>Ask the teens which series they follow.</b> Japan runs rotating collab cafés and limited exhibitions with exclusive merch. Check what's running 4–6 weeks before departure and slot the best one into an anime day.</div>
   </div>
 </section>
@@ -639,6 +690,81 @@
   </div>
 </section>
 
+<!-- BUDGET -->
+<section class="block" id="budget">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">What It Costs</div>
+      <h2>Estimated Budget</h2>
+      <p class="lead">Family of four, 10 nights, summer 2027. Ranges in USD at ¥158 = $1 — confirm live prices when booking.</p>
+    </div>
+    <button class="collapse-btn" data-target="budget">Collapse</button>
+  </div>
+  <div class="sec-body">
+    <div class="kpis">
+      <div class="kpi"><div class="n">$12–19K</div><div class="l">Trip total</div></div>
+      <div class="kpi"><div class="n">$8–13K</div><div class="l">Land only</div></div>
+      <div class="kpi"><div class="n">$3–4.8K</div><div class="l">Per person</div></div>
+      <div class="kpi"><div class="n">~$14.4K</div><div class="l">Group tour, land only</div></div>
+    </div>
+
+    <table style="margin-top:22px">
+      <thead><tr><th>Item</th><th class="num">Low</th><th class="num">High</th></tr></thead>
+      <tbody>
+        <tr class="sub"><td colspan="3">Flights</td></tr>
+        <tr><td>LAX → Haneda, Kansai → LAX × 4<small>Summer economy averages ~$1,100+ round trip per person</small></td><td class="num">$4,000</td><td class="num">$6,000</td></tr>
+
+        <tr class="sub"><td colspan="3">Lodging · 10 nights</td></tr>
+        <tr><td>Tokyo apartment hotel · 4 nights<small>~$250–400/night for a family room</small></td><td class="num">$1,000</td><td class="num">$1,600</td></tr>
+        <tr><td>Hakone ryokan · 1 night<small>Family room with kaiseki dinner &amp; breakfast</small></td><td class="num">$650</td><td class="num">$1,300</td></tr>
+        <tr><td>Kyoto machiya · 4 nights<small>Mid-tier whole house; summer runs 30–40% below peak</small></td><td class="num">$800</td><td class="num">$1,500</td></tr>
+        <tr><td>Koyasan temple · 1 night<small>Dinner &amp; breakfast included; varies widely by temple</small></td><td class="num">$500</td><td class="num">$1,300</td></tr>
+
+        <tr class="sub"><td colspan="3">Getting around</td></tr>
+        <tr><td>Nikko day trip<small>Tobu limited express ¥3,050 each way, plus local transfers</small></td><td class="num">$180</td><td class="num">$200</td></tr>
+        <tr><td>Tokyo → Hakone + Hakone loop<small>Hakone Freepass ¥7,100 + Romancecar surcharge</small></td><td class="num">$200</td><td class="num">$220</td></tr>
+        <tr><td>Odawara → Kyoto Shinkansen<small>Hikari reserved ¥12,300 per person</small></td><td class="num">$310</td><td class="num">$310</td></tr>
+        <tr><td>Kyoto → Koyasan → Kansai Airport<small>Nankai line, cable car and bus</small></td><td class="num">$170</td><td class="num">$210</td></tr>
+        <tr><td>Airport transfer, subways, Kyoto taxis</td><td class="num">$350</td><td class="num">$500</td></tr>
+
+        <tr class="sub"><td colspan="3">Guides &amp; driver</td></tr>
+        <tr><td>Tokyo guide, Day 2 · full day<small>Standard rates $300–450, plus guide's transit</small></td><td class="num">$300</td><td class="num">$450</td></tr>
+        <tr><td>Kyoto guide, Day 7 · full day</td><td class="num">$300</td><td class="num">$450</td></tr>
+        <tr><td>Nara + Iga driver-guide, Day 9<small>Kyoto–Nara car tours start ~$420–530 per group; Iga adds distance</small></td><td class="num">$600</td><td class="num">$900</td></tr>
+
+        <tr class="sub"><td colspan="3">Experiences &amp; admissions</td></tr>
+        <tr><td>Kyoto Samurai Experience<small>From ~$116 per person</small></td><td class="num">$465</td><td class="num">$600</td></tr>
+        <tr><td>teamLab Planets<small>From ¥4,200 per adult, date-based</small></td><td class="num">$110</td><td class="num">$140</td></tr>
+        <tr><td>Edo Wonderland<small>¥5,800 per adult; ¥5,000 after 2pm</small></td><td class="num">$125</td><td class="num">$150</td></tr>
+        <tr><td>Ghibli Museum<small>¥1,000 adults, ¥700 ages 13–18</small></td><td class="num">$22</td><td class="num">$22</td></tr>
+        <tr><td>Tea ceremony with kimono<small>Estimate</small></td><td class="num">$150</td><td class="num">$300</td></tr>
+        <tr><td>Temples, castles, Iga, Hakone extras<small>Estimate</small></td><td class="num">$200</td><td class="num">$300</td></tr>
+
+        <tr class="sub"><td colspan="3">Daily costs</td></tr>
+        <tr><td>Food · ~9 days outside included meals<small>Estimate: $150–250/day for four</small></td><td class="num">$1,350</td><td class="num">$2,250</td></tr>
+        <tr><td>Data, laundry, luggage or souvenir shipping<small>Estimate</small></td><td class="num">$250</td><td class="num">$500</td></tr>
+
+        <tr class="total"><td>Estimated total</td><td class="num">~$12,000</td><td class="num">~$19,200</td></tr>
+      </tbody>
+    </table>
+    <p class="figcap">Not included: teen merch allowance (set your own), travel insurance, and upgrades such as a private in-room onsen.</p>
+
+    <div class="decide"><span class="dtag">Decision 6</span><b>Cash or miles for flights?</b> Flights are the single biggest line. MileagePlus award seats on United or ANA nonstops could cut $4–6K substantially — check award space as soon as dates are set.</div>
+
+    <h3 class="leg-head" style="margin-top:28px">If you add…</h3>
+    <table>
+      <thead><tr><th>Option</th><th class="num">Approx. added cost</th></tr></thead>
+      <tbody>
+        <tr><td>Option A — extra Tokyo night for anime Day 2</td><td class="num">+$300–400</td></tr>
+        <tr><td>Hiroshima &amp; Miyajima, 1–2 nights<small>Estimate: hotel, Shinkansen and ferry for four</small></td><td class="num">+$800–1,500</td></tr>
+        <tr><td>Ryokan room with private in-room onsen</td><td class="num">+$200–600</td></tr>
+      </tbody>
+    </table>
+
+    <div class="note-cool"><b>Custom vs. tour.</b> A comparable 9-day group family tour lists from $3,598 per person — about $14,400 for four before flights. This plan's land costs come to roughly $8,000–13,200, with more control over pace and stays.</div>
+  </div>
+</section>
+
 <!-- TIMELINE -->
 <section class="block" id="timeline">
   <div class="sec-head">
@@ -656,7 +782,8 @@
         <tr><td><b>Now – Nov 2026</b></td><td>Flights: into Haneda, out of Kansai (open-jaw). Check Star Alliance award space on United and ANA with MileagePlus miles.</td></tr>
         <tr><td><b>Jan – Mar 2027</b></td><td>Hakone ryokan, Kyoto machiya, Koyasan temple lodging, private guides and the Nara/Iga driver-guide.</td></tr>
         <tr><td><b>May 9, 10pm PT</b></td><td>Ghibli Park tickets for July go on sale (May 10, 2pm Japan time) — only if you choose Option B.</td></tr>
-        <tr><td><b>~1 month out</b></td><td>Samurai lesson, Shinkansen seats, Edo Wonderland, tea ceremony.</td></tr>
+        <tr><td><b>~1 month out</b></td><td>Kyoto Samurai Experience, teamLab Planets timed tickets, Shinkansen seats, Edo Wonderland, tea ceremony, Shunko-in zen (optional).</td></tr>
+        <tr><td><b>3+ days out</b></td><td>Iga English ninja-house tour (needs 48 hours' notice) — confirm the show times with the driver-guide.</td></tr>
         <tr><td><b>4–6 weeks out</b></td><td>Check running anime collab cafés and exhibitions.</td></tr>
         <tr><td><b>June 9, 6pm PT</b></td><td>Ghibli Museum tickets for July go on sale (June 10, 10am Japan time). Create the Lawson Ticket account ahead of time; names must match passports.</td></tr>
       </tbody>
@@ -676,8 +803,9 @@
   </div>
   <div class="sec-body">
     <div class="card">
-      <div class="check" data-ck="dates"><div class="box"></div><div class="txt"><b>Lock trip dates</b> — check Gion Matsuri overlap and Obon.</div></div>
-      <div class="check" data-ck="teens"><div class="box"></div><div class="txt"><b>Ask the teens</b> — favorite series, Ghibli vs. current anime, Peace Museum interest.</div></div>
+      <div class="check" data-ck="dates"><div class="box"></div><div class="txt"><b>Lock trip dates</b> — late June to mid-July; home before late-July school holidays.</div></div>
+      <div class="check" data-ck="day4"><div class="box"></div><div class="txt"><b>Decide the Day 4 plan</b> and make sure it isn't a Wednesday.</div></div>
+      <div class="check" data-ck="teens"><div class="box"></div><div class="txt"><b>Ask the teens</b> — favorite series, Ghibli vs. current anime, Hiroshima / Peace Museum interest.</div></div>
       <div class="check" data-ck="anime2"><div class="box"></div><div class="txt"><b>Decide anime Day 2</b> — extra Tokyo night or Ghibli Park.</div></div>
       <div class="check" data-ck="passports"><div class="box"></div><div class="txt"><b>Check passports</b> — valid for the whole trip, names match bookings.</div></div>
       <div class="check" data-ck="flights"><div class="box"></div><div class="txt"><b>Book flights</b> — LAX → Haneda, Kansai → LAX, departure after ~2pm.</div></div>
@@ -685,8 +813,10 @@
       <div class="check" data-ck="ryokan"><div class="box"></div><div class="txt"><b>Book Hakone ryokan</b> with kaiseki dinner; ask about private baths.</div></div>
       <div class="check" data-ck="machiya"><div class="box"></div><div class="txt"><b>Book Kyoto machiya</b>, 4 nights, whole house.</div></div>
       <div class="check" data-ck="koyasan"><div class="box"></div><div class="txt"><b>Book Koyasan shukubo</b> and the Okunoin night tour.</div></div>
-      <div class="check" data-ck="guides"><div class="box"></div><div class="txt"><b>Book private guides</b> — Tokyo Day 2, Kyoto Day 7, Nara/Iga driver-guide Day 9.</div></div>
-      <div class="check" data-ck="samurai"><div class="box"></div><div class="txt"><b>Book samurai lesson</b> — confirm age limits for katana cutting.</div></div>
+      <div class="check" data-ck="guides"><div class="box"></div><div class="txt"><b>Book private guides</b> — Tokyo Day 2, Kyoto Day 7, Nara/Iga driver-guide Day 9 (7am start).</div></div>
+      <div class="check" data-ck="samurai"><div class="box"></div><div class="txt"><b>Book Kyoto Samurai Experience</b> — confirm age limit for bamboo-mat cutting.</div></div>
+      <div class="check" data-ck="teamlab"><div class="box"></div><div class="txt"><b>Book teamLab Planets</b> timed tickets for Day 2 evening.</div></div>
+      <div class="check" data-ck="iga"><div class="box"></div><div class="txt"><b>Book Iga English ninja-house tour</b> (48 hours ahead) and note show times.</div></div>
       <div class="check" data-ck="lawson"><div class="box"></div><div class="txt"><b>Create Lawson Ticket account</b> before Ghibli on-sale day.</div></div>
       <div class="check" data-ck="ghibli"><div class="box"></div><div class="txt"><b>Buy Ghibli Museum tickets</b> on the 10th, the month before.</div></div>
       <div class="check" data-ck="suica"><div class="box"></div><div class="txt"><b>Add Suica/PASMO</b> to each iPhone Wallet.</div></div>
@@ -710,9 +840,23 @@
     <a href="https://tokyocheapo.com/place/unicorn-gundam/">Odaiba Gundam statue (removed)</a> ·
     <a href="https://castlestay.ozucastle.com/en/reservation">Ozu Castle Stay pricing</a> ·
     <a href="https://cruiseweb.com/ports/departs-yokohama-japan">Japan cruises from Yokohama</a> ·
+    <a href="https://www.intrepidtravel.com/en/japan/japan-family-holiday-166783">Intrepid family itinerary</a> ·
+    <a href="https://www.insidejapantours.com/au/luxury-tailormade-trips/i-epjfam12/japan-with-teens/">InsideJapan — Japan with teens</a> ·
+    <a href="https://www.tripadvisor.com/Attraction_Review-g298564-d11727379-Reviews-Kyoto_Samurai_Experience-Kyoto_Kyoto_Prefecture_Kinki.html">Kyoto Samurai Experience reviews</a> ·
+    <a href="https://www.tripadvisor.com/Attraction_Review-g298182-d652994-Reviews-Edo_Wonderland_Nikko_Edomura-Nikko_Tochigi_Prefecture_Kanto.html">Edo Wonderland reviews</a> ·
+    <a href="https://www.japan-guide.com/e/e3879.html">Edo Wonderland hours &amp; access</a> ·
+    <a href="https://selfguidejapan.com/blog/iga-ninja-museum-family-guide">Iga Ninja Museum guide</a> ·
+    <a href="https://koyasan-shukubo.net/en/">Koyasan Shukubo Association</a> ·
+    <a href="https://japanstartshere.com/2023/02/21/koyasan-temple-stay/">Koyasan temple stay review</a> ·
+    <a href="https://www.tripadvisor.com/ShowTopic-g298184-i861-k6975745-Tokyo_Kyoto_June_or_July-Tokyo_Tokyo_Prefecture_Kanto.html">June vs. July forum thread</a> ·
+    <a href="https://lunitravels.com/teamlab-planets-tokyo/">teamLab Planets guide</a> ·
+    <a href="https://www.kayak.com/flight-routes/Los-Angeles-LAX/Tokyo-TYO">LAX–Tokyo fares</a> ·
+    <a href="https://www.check-in-kyoto.com/machiya-kyoto/">Kyoto machiya pricing</a> ·
+    <a href="https://tourjapan.jp/japan-private-tour-guide-cost/">Private guide rates</a> ·
+    <a href="https://ekitan.com/en/planner/shinkansen/section/odawara/kyoto">Odawara–Kyoto fares</a> ·
     Photos via <a href="https://unsplash.com/">Unsplash</a>
   </div>
-  <div>Prepared October 2026 · Plan in progress — confirm hours, closed days and prices before booking.</div>
+  <div>Prepared October 2026 · Updated Oct 4 after a review of family feedback and published tours · Estimates only — confirm hours, closed days and prices before booking.</div>
 </footer>
 
 <script>
