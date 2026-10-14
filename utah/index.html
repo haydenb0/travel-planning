@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Utah · Christmas in the Wasatch — Dec 2026</title>
+<meta name="description" content="Christmas week 2026: drive from Simi Valley, pick up Max in Tooele (and drop him back Dec 26), then dinosaurs, butterflies, Luminaria, snow tubing in Midway and Christmas Day in Park City.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50' y='55' font-size='70' text-anchor='middle' dominant-baseline='central'>❄️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#17222f; --ink-soft:#4b5a6b; --ink-faint:#8693a2;
+    --teal:#2d6a8e; --teal-deep:#152b44; --teal-bright:#5fa8c9;
+    --gold:#b7362f; --gold-soft:#f3c7b8; --brass:#c9973f;
+    --sand:#f4f6f8; --paper:#ffffff; --line:#e0e6ec; --line-cool:#d6e2ec;
+    --shadow:0 10px 40px rgba(21,43,68,.10);
+    --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+    --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0; background:var(--sand); color:var(--ink); font-family:var(--sans); font-weight:400; line-height:1.65; font-size:16px; -webkit-font-smoothing:antialiased;}
+  h1,h2,h3,h4{font-family:var(--serif); font-weight:600; letter-spacing:.2px; line-height:1.15; margin:0;}
+  a{color:var(--teal); text-decoration:none;} a:hover{text-decoration:underline;}
+  .eyebrow{font-family:var(--sans); font-weight:600; font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:var(--gold);}
+
+  #progress{position:fixed; top:0; left:0; height:3px; width:0%; background:linear-gradient(90deg,var(--teal-bright),var(--gold)); z-index:120; transition:width .1s linear;}
+
+  /* hero — illustrated winter night, no external image needed */
+  .hero{position:relative; min-height:86vh; display:flex; align-items:center; justify-content:center; text-align:center; color:#fff; overflow:hidden; background:#0f2136;}
+  .hero-art{position:absolute; inset:0; width:100%; height:100%; display:block;}
+  .hero::before{content:""; position:absolute; inset:0; z-index:1; background:radial-gradient(ellipse 60% 45% at 50% 46%, rgba(9,20,34,.62), rgba(9,20,34,0) 72%);}
+  .hero .wave{position:absolute; bottom:-1px; left:0; width:100%; z-index:2; display:block;}
+  .hero-inner{position:relative; z-index:3; padding:40px 24px 120px; max-width:880px;}
+  .hero .eyebrow{color:#f6d9a8;}
+  .hero h1{font-size:clamp(44px,8vw,84px); font-weight:500; margin:.18em 0 .12em; text-shadow:0 2px 30px rgba(0,0,0,.35);}
+  .hero h1 .it{font-style:italic; color:#f6d9a8;}
+  .hero .sub{font-size:clamp(16px,2.2vw,20px); font-weight:300; color:#e6eff6; text-shadow:0 1px 12px rgba(0,0,0,.45); max-width:640px; margin:0 auto;}
+  .hero .facts{display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-top:32px;}
+  .hero .fact{background:rgba(255,255,255,.10); backdrop-filter:blur(6px); border:1px solid rgba(255,255,255,.22); border-radius:999px; padding:9px 18px; font-size:13.5px; font-weight:500;}
+  .hero .fact b{color:#fff;}
+  .flake{position:absolute; top:-10px; z-index:2; color:#fff; opacity:.7; pointer-events:none; animation:fall linear infinite;}
+  @keyframes fall{to{transform:translateY(95vh) translateX(30px);}}
+  @media (prefers-reduced-motion:reduce){.flake{display:none;}}
+
+  nav.bar{position:sticky; top:0; z-index:100; background:rgba(255,255,255,.88); backdrop-filter:blur(12px); border-bottom:1px solid var(--line);}
+  .bar-inner{max-width:1080px; margin:0 auto; display:flex; align-items:center; gap:6px; padding:0 18px; height:58px; overflow-x:auto;}
+  .bar a{color:var(--ink-soft); font-size:13px; font-weight:500; padding:7px 11px; border-radius:8px; white-space:nowrap; letter-spacing:.02em;}
+  .bar a:hover{background:var(--sand); text-decoration:none; color:var(--teal-deep);}
+  .bar a.active{color:var(--teal-deep); background:var(--sand);}
+  .bar a.active::after{content:""; display:block; height:2px; background:var(--gold); border-radius:2px; margin-top:5px;}
+  .bar a.brand{font-family:var(--serif); font-weight:600; font-size:18px; color:var(--teal-deep); margin-right:10px;}
+
+  main{max-width:1080px; margin:0 auto; padding:0 22px;}
+  section.block{padding:64px 0 26px; scroll-margin-top:70px;}
+  .sec-head{display:flex; align-items:flex-end; justify-content:space-between; gap:16px; margin-bottom:26px; border-bottom:1px solid var(--line); padding-bottom:16px;}
+  .sec-head h2{font-size:clamp(28px,4.4vw,40px); font-weight:500; color:var(--teal-deep);}
+  .sec-head .lead{font-size:15px; color:var(--ink-soft); max-width:460px; margin-top:6px;}
+  .collapse-btn{flex:0 0 auto; font-family:var(--sans); font-size:12px; font-weight:600; letter-spacing:.04em; color:var(--ink-faint); background:none; border:1px solid var(--line); border-radius:999px; padding:6px 14px; cursor:pointer; transition:.2s;}
+  .collapse-btn:hover{color:var(--teal-deep); border-color:var(--teal);}
+  .sec-body{overflow:hidden; transition:max-height .45s ease, opacity .3s ease;}
+  section.collapsed .sec-body{max-height:0 !important; opacity:0; pointer-events:none;}
+  section.collapsed .collapse-btn::after{content:" ＋";}
+  .collapse-btn::after{content:" −";}
+
+  .grid{display:grid; gap:18px;}
+  .g2{grid-template-columns:repeat(2,1fr);} .g3{grid-template-columns:repeat(3,1fr);}
+  @media(max-width:860px){.g2,.g3{grid-template-columns:1fr;}}
+  .card{background:var(--paper); border:1px solid var(--line); border-radius:16px; padding:22px 24px; box-shadow:var(--shadow);}
+  .card.flat{box-shadow:none;}
+  .ch{font-size:19px; color:var(--teal-deep); margin-bottom:4px;}
+
+  .kpis{display:grid; grid-template-columns:repeat(4,1fr); gap:14px;}
+  @media(max-width:680px){.kpis{grid-template-columns:repeat(2,1fr);}}
+  .kpi{background:var(--paper); border:1px solid var(--line); border-radius:14px; padding:18px 12px; text-align:center;}
+  .kpi .n{font-family:var(--serif); font-size:30px; font-weight:600; color:var(--teal);}
+  .kpi .l{font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint); margin-top:4px;}
+
+  .callout{background:linear-gradient(135deg,#fbf1ee,#f7e8e3); border:1px solid var(--gold-soft); border-left:4px solid var(--gold); border-radius:12px; padding:16px 20px; font-size:14.5px; color:#6e2a24; margin-top:20px;}
+  .callout b{color:#561d18;}
+  .note-cool{background:#edf3f8; border:1px solid var(--line-cool); border-left:4px solid var(--teal); border-radius:12px; padding:16px 20px; font-size:14.5px; color:var(--teal-deep); margin-top:18px;}
+  .decide{background:#fff8e6; border:1px solid #f0d58a; border-left:4px solid #d9a21b; border-radius:12px; padding:14px 18px; font-size:14px; color:#5f4a12; margin-top:16px;}
+  .decide .dtag{display:inline-block; font-size:10px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; background:#d9a21b; color:#fff; border-radius:5px; padding:2px 8px; margin-right:8px; vertical-align:middle;}
+  .decide b{color:#4a3a0e;}
+  .verify{display:inline-block; font-size:10px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; background:#fdf0d8; color:#9a6b15; border-radius:5px; padding:1px 7px; margin-left:4px; vertical-align:middle;}
+
+  p{margin:10px 0;}
+  .muted{color:var(--ink-soft); font-size:14px;}
+  ul.clean{margin:8px 0; padding-left:20px;} ul.clean li{margin:5px 0;}
+
+  /* glance strip */
+  .glance{display:grid; grid-template-columns:repeat(5,1fr); gap:10px; margin-top:22px;}
+  @media(max-width:860px){.glance{grid-template-columns:1fr 1fr;}}
+  @media(max-width:480px){.glance{grid-template-columns:1fr;}}
+  .gday{background:var(--paper); border:1px solid var(--line); border-radius:14px; padding:14px 14px 12px; display:block; color:inherit;}
+  .gday:hover{text-decoration:none; border-color:var(--teal-bright);}
+  .gday .d{font-size:10.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--gold);}
+  .gday .e{font-size:26px; margin:4px 0 2px;}
+  .gday .t{font-family:var(--serif); font-size:18px; font-weight:600; color:var(--teal-deep); line-height:1.2;}
+  .gday .s{font-size:12.5px; color:var(--ink-soft); margin-top:4px;}
+
+  /* accordion */
+  .dive{background:var(--paper); border:1px solid var(--line); border-radius:16px; margin-bottom:14px; overflow:hidden; box-shadow:var(--shadow);}
+  .dive-head{display:flex; align-items:center; gap:16px; padding:20px 22px; cursor:pointer; transition:background .2s;}
+  .dive-head:hover{background:#f8fafc;}
+  .dive-rank{flex:0 0 46px; height:46px; border-radius:50%; background:linear-gradient(150deg,var(--teal),var(--teal-deep)); color:#fff; display:flex; align-items:center; justify-content:center; font-size:22px;}
+  .dive-head .t{flex:1; min-width:0;}
+  .dive-head h3{font-size:23px; font-weight:600; color:var(--teal-deep);}
+  .dive-head .meta{font-size:12.5px; color:var(--ink-faint); margin-top:3px; display:flex; flex-wrap:wrap; gap:6px 14px;}
+  .dive-head .meta b{color:var(--ink-soft); font-weight:600;}
+  .chev{flex:0 0 auto; color:var(--ink-faint); transition:transform .3s; font-size:18px;}
+  .dive.open .chev{transform:rotate(180deg);}
+  .dive-body{max-height:0; overflow:hidden; transition:max-height .5s ease;}
+  .dive-body-inner{padding:6px 22px 24px; border-top:1px solid var(--line);}
+  .facts-row{display:flex; flex-wrap:wrap; gap:7px; margin-top:12px;}
+  .facts-row span{background:var(--sand); border:1px solid var(--line); border-radius:7px; padding:4px 10px; font-size:12.5px; color:var(--ink-soft);}
+  .facts-row span b{color:var(--ink);}
+
+  /* timeline */
+  .leg-head{font-size:24px; color:var(--teal-deep); margin:34px 0 4px; padding-left:2px;}
+  .leg-head:first-of-type{margin-top:14px;}
+  .tl{position:relative; margin-top:8px;}
+  .tl::before{content:""; position:absolute; left:78px; top:6px; bottom:6px; width:2px; background:var(--line);}
+  .leg{position:relative; display:flex; gap:20px; padding:10px 0; scroll-margin-top:80px;}
+  .leg .date{flex:0 0 60px; text-align:right; font-family:var(--serif); font-weight:600; color:var(--teal); font-size:15px; line-height:1.2; padding-top:2px;}
+  .leg .date small{display:block; font-family:var(--sans); font-weight:600; font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-faint);}
+  .leg .dot{position:absolute; left:71px; top:8px; width:14px; height:14px; border-radius:50%; background:#fff; border:3px solid var(--teal); z-index:2;}
+  .leg.star .dot{background:var(--gold); border-color:var(--gold);}
+  .leg.drive .dot{background:#8a97a6; border-color:#8a97a6;}
+  .leg .body{flex:1; background:var(--paper); border:1px solid var(--line); border-radius:13px; padding:14px 18px; margin-left:26px;}
+  .leg .body h4{font-size:18px; font-weight:600; color:var(--ink);}
+  .leg .body .din{font-size:13.5px; color:var(--ink-soft); margin-top:5px;}
+  .leg .body .din b{color:var(--teal-deep);}
+  .leg .body .decide{margin-top:10px; font-size:13px; padding:10px 14px;}
+  @media(max-width:680px){.tl::before{left:54px;} .leg .dot{left:47px;} .leg{gap:14px;} .leg .date{flex-basis:40px;} .leg .body{margin-left:20px;}}
+  .tag-sm{display:inline-block; font-size:10px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; padding:2px 8px; border-radius:5px; vertical-align:middle; margin-left:6px;}
+  .tag-drive{background:#eceff2; color:#56616d;} .tag-dino{background:#efe7da; color:#7a5521;}
+  .tag-lights{background:#fbe6e2; color:#a3312a;} .tag-snow{background:#e3eef7; color:#2d6a8e;}
+  .tag-xmas{background:#e4f1e7; color:#2b6b3d;}
+  .legend-row{display:flex; flex-wrap:wrap; gap:6px;} .legend-row .tag-sm{margin-left:0;}
+
+  /* schedule rows inside a day */
+  .sched{width:100%; border-collapse:collapse; margin-top:8px; font-size:13.5px; background:none;}
+  .sched td{padding:6px 8px 6px 0; border-bottom:1px dashed var(--line); vertical-align:top; color:var(--ink-soft);}
+  .sched td:first-child{white-space:nowrap; font-weight:600; color:var(--teal-deep); width:92px;}
+  .sched tr:last-child td{border-bottom:none;}
+  @media(max-width:680px){.sched td:first-child{white-space:normal; width:70px; font-size:12.5px;} .sched{font-size:13px;} .leg .body{padding:12px 14px;}}
+
+  /* drive legs */
+  .route-legs{display:grid; gap:0; margin-top:4px;}
+  .rl{display:grid; grid-template-columns:150px 1fr 110px; gap:14px; padding:12px 0; border-bottom:1px solid var(--line); align-items:start;}
+  .rl:last-child{border-bottom:none;}
+  .rl .p{font-weight:600; color:var(--teal-deep); font-size:14.5px;}
+  .rl .p small{display:block; font-weight:500; color:var(--ink-faint); font-size:12px;}
+  .rl .w{font-size:13.5px; color:var(--ink-soft);}
+  .rl .m{text-align:right; font-variant-numeric:tabular-nums; font-size:13px; color:var(--ink-soft);}
+  .rl .m b{display:block; color:var(--ink); font-size:14px;}
+  @media(max-width:620px){.rl{grid-template-columns:1fr auto;} .rl .w{grid-column:1 / -1; order:3;}}
+
+  /* plan cards */
+  .plan{border-radius:16px; padding:20px 22px; border:1px solid var(--line); background:var(--paper);}
+  .plan .pl{display:inline-block; font-size:10.5px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; border-radius:6px; padding:3px 9px; margin-bottom:8px;}
+  .plan.a .pl{background:#e2f3ec; color:#0c7a52;} .plan.b .pl{background:#fdf0d8; color:#9a6b15;} .plan.c .pl{background:#fbe4e0; color:#b0432f;}
+  .plan h4{font-size:21px; color:var(--teal-deep); margin-bottom:4px;}
+
+  /* extras */
+  .xcard{background:var(--paper); border:1px solid var(--line); border-radius:16px; padding:18px 20px; display:flex; flex-direction:column;}
+  .xcard .em{font-size:28px;}
+  .xcard h4{font-size:20px; color:var(--teal-deep); margin:4px 0 2px;}
+  .xcard .where{font-size:11px; letter-spacing:.12em; text-transform:uppercase; font-weight:700; color:var(--gold);}
+  .xcard p{font-size:13.5px; color:var(--ink-soft); flex:1;}
+  .xcard .when{font-size:12.5px; background:var(--sand); border-radius:8px; padding:7px 10px; color:var(--ink-soft); margin-top:6px;}
+  .xcard .when b{color:var(--ink);}
+  .badge{display:inline-block; font-size:10px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; border-radius:5px; padding:2px 7px; margin-left:6px; vertical-align:middle;}
+  .badge.tube{background:#e3eef7; color:#2d6a8e;} .badge.dino{background:#efe7da; color:#7a5521;} .badge.max{background:#fbe6e2; color:#a3312a;}
+
+  table{width:100%; border-collapse:collapse; font-size:14.5px; margin-top:8px; background:var(--paper); border-radius:12px; overflow:hidden;}
+  th,td{text-align:left; padding:12px 16px; border-bottom:1px solid var(--line);}
+  th{background:var(--teal-deep); color:#fff; font-family:var(--sans); font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; font-weight:600;}
+  td.num{text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap;}
+  tr:last-child td{border-bottom:none;}
+  td small{display:block; color:var(--ink-faint); font-size:12px; font-weight:400;}
+  .tablewrap{overflow-x:auto; border-radius:12px; border:1px solid var(--line);}
+
+  .stay{background:var(--paper); border:1px solid var(--line); border-radius:18px; overflow:hidden; box-shadow:none; display:flex; flex-direction:column;}
+  .stay-top{height:92px; display:flex; align-items:center; justify-content:center; font-size:42px; background:linear-gradient(135deg,#1d3a5a,#2d6a8e);}
+  .stay-top.alt{background:linear-gradient(135deg,#3a4250,#6b7787);}
+  .stay-body{padding:20px 22px 22px;}
+  .stay-body h3{font-size:26px; color:var(--teal-deep); margin:4px 0 6px;}
+
+  .check{display:flex; gap:12px; align-items:flex-start; padding:12px 0; border-bottom:1px solid var(--line); cursor:pointer;}
+  .check:last-child{border:none;}
+  .check .box{flex:0 0 22px; height:22px; border:2px solid var(--teal); border-radius:6px; transition:.2s; position:relative; margin-top:2px;}
+  .check.done .box{background:var(--teal);}
+  .check.done .box::after{content:"✓"; color:#fff; position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700;}
+  .check.done .txt{text-decoration:line-through; color:var(--ink-faint);}
+  .check .txt{font-size:14.5px;}
+
+  #toTop{position:fixed; left:20px; bottom:20px; z-index:110; width:44px; height:44px; border-radius:50%; background:#fff; border:1px solid var(--line); color:var(--teal-deep); font-size:20px; cursor:pointer; box-shadow:var(--shadow); opacity:0; pointer-events:none; transition:.3s;}
+  #toTop.show{opacity:1; pointer-events:auto;}
+
+  footer{background:var(--teal-deep); color:#cfdde8; margin-top:60px; padding:40px 22px 30px; text-align:center; font-size:13px;}
+  footer .src{max-width:1000px; margin:0 auto 16px; font-size:12px; line-height:1.9; color:#9fb8cb;}
+  footer .src a{color:#c4d9e8;}
+
+  @media(max-width:680px){
+    body{font-size:15.5px;}
+    main{padding:0 16px;}
+    section.block{padding:44px 0 18px; scroll-margin-top:60px;}
+    .hero{min-height:80vh;}
+    .hero-inner{padding:30px 18px 110px;}
+    .sec-head{flex-wrap:wrap;}
+    .sec-head .collapse-btn{order:3; margin-top:4px;}
+    .bar-inner{height:52px; gap:2px;}
+    table{font-size:13px;} th,td{padding:9px 10px;}
+    .card{padding:18px 16px;}
+    .dive-head{gap:11px; padding:15px 15px;} .dive-head h3{font-size:19px;}
+    .dive-rank{flex-basis:40px; height:40px; font-size:19px;}
+    .dive-body-inner{padding:6px 16px 20px;}
+    #toTop{width:40px; height:40px; left:14px; bottom:14px;}
+  }
+</style>
+</head>
+<body>
+<div id="progress"></div>
+
+<!-- HERO -->
+<header class="hero">
+  <svg class="hero-art" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#0b1a2c"/><stop offset=".55" stop-color="#1c3a5c"/><stop offset="1" stop-color="#4f7598"/>
+      </linearGradient>
+      <linearGradient id="m1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5d7c99"/><stop offset="1" stop-color="#2c4763"/></linearGradient>
+      <linearGradient id="m2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a5875"/><stop offset="1" stop-color="#1c3149"/></linearGradient>
+      <radialGradient id="glow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#ffd38a" stop-opacity=".55"/><stop offset="1" stop-color="#ffd38a" stop-opacity="0"/></radialGradient>
+    </defs>
+    <rect width="1440" height="900" fill="url(#sky)"/>
+    <g fill="#fff">
+      <circle cx="120" cy="90" r="1.6" opacity=".8"/><circle cx="260" cy="160" r="1.2" opacity=".6"/><circle cx="410" cy="70" r="1.8" opacity=".9"/>
+      <circle cx="560" cy="130" r="1.1" opacity=".6"/><circle cx="700" cy="60" r="1.5" opacity=".8"/><circle cx="830" cy="150" r="1.2" opacity=".5"/>
+      <circle cx="980" cy="90" r="1.7" opacity=".9"/><circle cx="1110" cy="170" r="1.1" opacity=".6"/><circle cx="1250" cy="80" r="1.5" opacity=".8"/>
+      <circle cx="1370" cy="140" r="1.2" opacity=".6"/><circle cx="350" cy="230" r="1" opacity=".5"/><circle cx="1180" cy="250" r="1" opacity=".5"/>
+    </g>
+    <circle cx="1180" cy="150" r="46" fill="#f4efe1" opacity=".92"/>
+    <g transform="translate(0,90)">
+    <!-- far range -->
+    <path d="M0,560 L120,470 L210,520 L330,400 L430,480 L560,360 L680,470 L780,410 L900,500 L1010,380 L1130,470 L1250,420 L1360,490 L1440,450 L1440,900 L0,900Z" fill="url(#m1)"/>
+    <path d="M330,400 L300,425 L318,423 L335,438 L352,420 L372,430 L330,400Z M560,360 L528,392 L548,388 L566,404 L584,386 L604,395 L560,360Z M1010,380 L978,410 L998,407 L1016,422 L1034,404 L1052,412 L1010,380Z M780,410 L758,432 L775,430 L790,442 L806,428 L780,410Z" fill="#eef4fa" opacity=".9"/>
+    <!-- near range -->
+    <path d="M0,660 L150,560 L260,620 L400,520 L520,610 L640,540 L760,620 L900,530 L1040,620 L1180,540 L1300,610 L1440,560 L1440,900 L0,900Z" fill="url(#m2)"/>
+    <path d="M400,520 L372,546 L392,543 L408,556 L424,541 L444,550 L400,520Z M900,530 L872,556 L892,552 L908,566 L924,550 L944,558 L900,530Z M1180,540 L1156,562 L1174,559 L1188,571 L1202,557 L1220,563 L1180,540Z M150,560 L128,580 L146,578 L160,589 L174,576 L150,560Z" fill="#e6eef6" opacity=".85"/>
+    </g>
+    <!-- snowy valley floor -->
+    <path d="M0,760 C240,720 480,745 720,728 C960,712 1200,740 1440,718 L1440,900 L0,900Z" fill="#dfe9f2"/>
+    <!-- pines -->
+    <g fill="#14283d">
+      <path d="M90,770 l22,-70 l22,70z M80,790 l32,-60 l32,60z"/>
+      <path d="M170,775 l16,-52 l16,52z"/>
+      <path d="M1250,760 l24,-78 l24,78z M1240,782 l34,-62 l34,62z"/>
+      <path d="M1340,770 l18,-58 l18,58z"/>
+      <path d="M1180,778 l14,-44 l14,44z"/>
+    </g>
+    <!-- luminaria glow + village lights -->
+    <circle cx="720" cy="735" r="120" fill="url(#glow)"/>
+    <g fill="#ffd38a">
+      <circle cx="640" cy="742" r="3"/><circle cx="668" cy="736" r="3"/><circle cx="696" cy="733" r="3"/><circle cx="724" cy="731" r="3"/>
+      <circle cx="752" cy="733" r="3"/><circle cx="780" cy="737" r="3"/><circle cx="808" cy="742" r="3"/>
+    </g>
+    <path d="M720,640 l26,78 h-52z" fill="#1f4a35"/><circle cx="720" cy="636" r="5" fill="#ffd38a"/>
+    <g fill="#ffcf7a"><circle cx="708" cy="690" r="2.4"/><circle cx="730" cy="700" r="2.4"/><circle cx="716" cy="708" r="2.4"/><circle cx="724" cy="676" r="2.4"/></g>
+  </svg>
+  <div class="hero-inner">
+    <div class="eyebrow">Christmas Week · December 22–26, 2026</div>
+    <h1>Utah, <span class="it">in the snow</span></h1>
+    <p class="sub">Pick Max up in Tooele, then dinosaurs and butterflies in Lehi, Utah's largest Christmas light display, snow tubing in Midway, and Christmas Day in Park City.</p>
+    <div class="facts">
+      <div class="fact">📅 <b>Dec 22–26</b> · 4 nights</div>
+      <div class="fact">🚗 <b>~1,550 mi</b> round trip</div>
+      <div class="fact">🎓 Max: Tooele pickup Dec 23 · drop-off Dec 26</div>
+      <div class="fact">🏔️ Base: Heber Valley</div>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,48 C240,90 480,10 720,40 C960,70 1200,20 1440,52 L1440,90 L0,90 Z" fill="#f4f6f8"/>
+  </svg>
+</header>
+
+<nav class="bar">
+  <div class="bar-inner">
+    <a class="brand" href="../">← Trips</a>
+    <a href="#overview">Overview</a>
+    <a href="#booknow">Book Now</a>
+    <a href="#drive">The Drive</a>
+    <a href="#weather">Weather Plan</a>
+    <a href="#itinerary">Itinerary</a>
+    <a href="#activities">Activities</a>
+    <a href="#dining">Christmas Dining</a>
+    <a href="#extras">Plan B &amp; Extras</a>
+    <a href="#stays">Stays</a>
+    <a href="#costs">Costs</a>
+    <a href="#packing">Packing</a>
+    <a href="#checklist">Checklist</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- OVERVIEW -->
+<section class="block" id="overview">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">The Plan</div>
+      <h2>Home for the Holidays, Utah-Style</h2>
+      <p class="lead">Drive up, collect Max from school, and spend Christmas together in the snow before heading home.</p>
+    </div>
+    <button class="collapse-btn" data-target="overview">Collapse</button>
+  </div>
+  <div class="sec-body">
+    <p>One long drive up on <b>Dec 22</b> with a night in Tooele puts us at Max's school for the <b>9 AM pickup on Dec 23</b>. From there it's paleontology and butterflies at <b>Thanksgiving Point</b> in Lehi and the <b>Luminaria</b> lights that night. Then three nights at the <b>Best Western Plus Heber Valley</b>: tubing at <b>Soldier Hollow</b> on Christmas Eve, a slow Christmas morning, and an early Christmas dinner in <b>Park City</b>. On <b>Dec 26</b> we drop Max back at school in Tooele and drive home.</p>
+    <div class="kpis" style="margin-top:18px">
+      <div class="kpi"><div class="n">4</div><div class="l">Nights</div></div>
+      <div class="kpi"><div class="n">10½–11½ h</div><div class="l">Each drive day</div></div>
+      <div class="kpi"><div class="n">60</div><div class="l">Dinosaur skeletons</div></div>
+      <div class="kpi"><div class="n">1,000+</div><div class="l">Live butterflies</div></div>
+    </div>
+
+    <div class="glance">
+      <a class="gday" href="#d1"><div class="d">Tue · Dec 22</div><div class="e">🚗</div><div class="t">Drive to Tooele</div><div class="s">Simi Valley → Tooele, ~700 mi</div></a>
+      <a class="gday" href="#d2"><div class="d">Wed · Dec 23</div><div class="e">🦕</div><div class="t">Max + Dinos + Lights</div><div class="s">Pickup · Thanksgiving Point · Luminaria</div></a>
+      <a class="gday" href="#d3"><div class="d">Thu · Dec 24</div><div class="e">🛷</div><div class="t">Christmas Eve</div><div class="s">Tubing · Midway lunch · Dinner</div></a>
+      <a class="gday" href="#d4"><div class="d">Fri · Dec 25</div><div class="e">🎄</div><div class="t">Christmas Day</div><div class="s">Presents · Pool · Main St · Squatters</div></a>
+      <a class="gday" href="#d5"><div class="d">Sat · Dec 26</div><div class="e">🏠</div><div class="t">Tooele → Home</div><div class="s">Drop Max at school, then I-15 south</div></a>
+    </div>
+
+    <div class="grid g3" style="margin-top:22px">
+      <div class="card flat"><h4 class="ch">✅ Decided</h4>
+        <ul class="clean muted">
+          <li>Drive, don't fly</li>
+          <li>Leave Simi 6 AM Dec 22, sleep in Tooele</li>
+          <li>Max pickup in Tooele, 9 AM Dec 23</li>
+          <li>Heber Valley base, 3 nights</li>
+          <li>Park City on Christmas Day, early dinner at Squatters (Eating Establishment as backup)</li>
+          <li>Drop Max back in Tooele Dec 26, on the way home</li>
+          <li>Add a road day if the weather turns</li>
+        </ul>
+      </div>
+      <div class="card flat"><h4 class="ch">🤔 Still open</h4>
+        <ul class="clean muted">
+          <li>Tubing session time on Christmas Eve (hours not posted)</li>
+          <li>Christmas Eve dinner venue</li>
+          <li>Is Squatters open Christmas Day? Call to check</li>
+          <li>Bobsled ride for Max? (13+, $225+)</li>
+          <li>Split the drive home with a St. George night?</li>
+          <li>Tooele hotel</li>
+        </ul>
+      </div>
+      <div class="card flat"><h4 class="ch">🎯 Highlights</h4>
+        <ul class="clean muted">
+          <li>🦕 Dinosaurs and paleontology for Max</li>
+          <li>🦋 Butterflies for Julia</li>
+          <li>✨ Luminaria Christmas lights</li>
+          <li>🛷 Snow tubing at the 2002 Olympic venue</li>
+          <li>🏔️ Snowy Midway and a little Park City</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout"><b>Two things to know.</b> (1) Thanksgiving Point and Luminaria are both <b>closed Christmas Eve evening and Christmas Day</b>, so Dec 23 is the only day for Lehi and there's no backup day. (2) Christmas Day in Heber and Midway is very quiet. Almost every restaurant there is closed, so book dinner and buy groceries ahead of time.</div>
+  </div>
+</section>
+
+<!-- BOOK NOW -->
+<section class="block" id="booknow">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">Time-Sensitive</div>
+      <h2>What to Book, and When</h2>
+      <p class="lead">Holiday-week tickets sell out, and most of them can't be refunded.</p>
+    </div>
+    <button class="collapse-btn" data-target="booknow">Collapse</button>
+  </div>
+  <div class="sec-body">
+    <div class="tablewrap"><table>
+      <thead><tr><th>When</th><th>What</th></tr></thead>
+      <tbody>
+        <tr><td><b>Now</b></td><td>Heber hotel for Dec 23–26 (3 nights) and Tooele for Dec 22. <b>Choose free cancellation</b> on Tooele so it can move a night earlier if the weather turns.</td></tr>
+        <tr><td><b>Mon Oct 19 · 10 AM MT</b><small>= 9 AM in California</small></td><td><b>Soldier Hollow tubing</b> 2026–27 tickets go on sale. Use the <b>Holiday</b> ticket button for Dec 24. Non-refundable, with no refunds for weather or snow. Call 435-709-3463 first if you can, to ask about Christmas Eve hours.</td></tr>
+        <tr><td><b>Mon Oct 26</b></td><td><b>Utah Olympic Park bobsled</b> 2026–27 dates and tickets released (optional, for Max). Ages 13+ and 100 lb+, $225, or $249 on holiday dates Dec 26–30.</td></tr>
+        <tr><td><b>Late Oct</b></td><td><b>Christmas dinners.</b> Book Christmas Eve in Midway or Heber. For Christmas Day, <b>call Squatters Roadhouse (435-649-9868)</b> to check it's open. It doesn't take small-party reservations, so plan to arrive early. The Eating Establishment on Main Street is the backup. See <a href="#dining">Dining</a>.</td></tr>
+        <tr><td><b>Oct–Nov</b></td><td><b>Luminaria timed entry</b> for Wed Dec 23, around 5:30 PM. Non-refundable, and prices vary by date. Members get a discount in the October presale.</td></tr>
+        <tr><td><b>Nov–early Dec</b></td><td><b>Thanksgiving Point All-Access Passes</b> for Dec 23. Entry is timed, so pick a ~10:15 AM entry at the Museum of Ancient Life. Optional add-on: Paleo Studio fossil prep ($10).</td></tr>
+        <tr><td><b>Dec 18–20</b></td><td><b>Weather decision.</b> Leave Dec 22 as planned, or Dec 21 with a night in St. George. See <a href="#weather">Weather Plan</a>.</td></tr>
+        <tr><td><b>Dec 24, by ~4 PM</b></td><td><b>Grocery run</b> for Christmas Day snacks and breakfast backup. Many stores close early Christmas Eve and are closed Christmas Day.</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<!-- DRIVE -->
+<section class="block" id="drive">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">Simi Valley ⇄ Salt Lake Area</div>
+      <h2>The Drive</h2>
+      <p class="lead">About 700 miles up and 770 back via Tooele, all on I-15. Roughly 10½–11½ hours of driving each way, plus stops.</p>
+    </div>
+    <button class="collapse-btn" data-target="drive">Collapse</button>
+  </div>
+  <div class="sec-body">
+    <div class="grid g2">
+      <div class="card flat" style="background:#fbfcfd">
+        <h4 class="ch">⬆️ Up — Tue Dec 22</h4>
+        <p class="muted" style="margin-top:0">Leave 6:00 AM PT → arrive Tooele ≈ 7:15 PM MT</p>
+        <div class="route-legs">
+          <div class="rl"><div class="p">Simi → Barstow<small>~6:00–8:05 AM PT</small></div><div class="w">CA-118 E → I-210 E → I-15 N over Cajon Pass. Leaving at 6 AM gets you ahead of the worst LA traffic. Coffee and fuel in Barstow.</div><div class="m"><b>~133 mi</b>~2 h</div></div>
+          <div class="rl"><div class="p">Barstow → Las Vegas<small>~8:25–10:45 AM PT</small></div><div class="w">Open desert past Baker and Primm. Gas is cheaper once you're into Nevada.</div><div class="m"><b>~157 mi</b>~2¼ h</div></div>
+          <div class="rl"><div class="p">Las Vegas → St. George<small>~11:05 AM PT → ~1:55 PM MT</small></div><div class="w">Through the Virgin River Gorge. <b>Clocks jump +1 hr</b> at the Arizona line past Mesquite (Arizona and Utah are both on Mountain Time in winter). Lunch in St. George.</div><div class="m"><b>~118 mi</b>~1¾ h</div></div>
+          <div class="rl"><div class="p">St. George → Beaver<small>~2:40–4:15 PM MT</small></div><div class="w">Climbs past Cedar City. <b>This is the stretch most likely to have snow.</b> Fuel up in Beaver while it's still light (sunset ≈ 5:05 PM).</div><div class="m"><b>~106 mi</b>~1½ h</div></div>
+          <div class="rl"><div class="p">Beaver → Tooele<small>~4:30–7:15 PM MT</small></div><div class="w">I-15 N past Fillmore, Scipio and Nephi in the dark. At Lehi, SR-73 west over Five Mile Pass to SR-36 into Tooele. Maps may route via I-80 instead, which takes about the same time.</div><div class="m"><b>~182 mi</b>~2¾ h</div></div>
+        </div>
+      </div>
+      <div class="card flat" style="background:#fbfcfd">
+        <h4 class="ch">⬇️ Home — Sat Dec 26</h4>
+        <p class="muted" style="margin-top:0">Leave Heber 7:30 AM MT → drop Max in Tooele ~9 AM → home ≈ 7:45–8:15 PM PT</p>
+        <div class="route-legs">
+          <div class="rl"><div class="p">Heber → Tooele<small>~7:30–8:50 AM MT</small></div><div class="w">US-40 N → I-80 W through Parleys Canyon (traction law zone) and past Salt Lake, then SR-36 south into Tooele. <b>Drop Max at school.</b></div><div class="m"><b>~78 mi</b>~1¼–1½ h</div></div>
+          <div class="rl"><div class="p">Tooele → St. George<small>~9:20 AM–1:45 PM MT</small></div><div class="w">SR-36 → SR-73 over Five Mile Pass to I-15 S at Lehi. Fuel in Beaver. Lunch in St. George.</div><div class="m"><b>~287 mi</b>~4¼ h</div></div>
+          <div class="rl"><div class="p">St. George → Las Vegas<small>clocks go back −1 hr</small></div><div class="w">Virgin River Gorge, then Mesquite. You gain the hour back.</div><div class="m"><b>~118 mi</b>~1¾ h</div></div>
+          <div class="rl"><div class="p">Las Vegas → Simi<small>~4–4½ h</small></div><div class="w">Southbound I-15 out of Vegas can back up from Primm to Barstow on the weekend after Christmas. Saturday is usually easier than Sunday.</div><div class="m"><b>~290 mi</b>~4¼ h</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid g3" style="margin-top:18px">
+      <div class="card flat"><h4 class="ch">🗺️ In-trip drives</h4>
+        <ul class="clean muted">
+          <li><b>Tooele → Thanksgiving Point:</b> ~45–55 min east on SR-73</li>
+          <li><b>Lehi → Heber:</b> ~50 min via US-189 Provo Canyon, at night</li>
+          <li><b>Hotel → Soldier Hollow:</b> ~15 min</li>
+          <li><b>Hotel → Park City:</b> ~25 min on US-40</li>
+          <li><b>Heber → Tooele (Dec 26):</b> ~1¼–1½ hrs via I-80</li>
+        </ul>
+      </div>
+      <div class="card flat"><h4 class="ch">🧊 Utah traction law</h4>
+        <p class="muted" style="margin-top:0">When conditions call for it, UDOT can require traction devices, including on <b>US-40 in Wasatch and Summit Counties</b> (hotel ⇄ Park City) and <b>I-80 in Parleys Canyon</b> (Dec 26 drive to Tooele).</p>
+        <ul class="clean muted">
+          <li><b>AWD/4WD:</b> M+S tires on all four wheels at minimum</li>
+          <li><b>2WD:</b> 3-peak mountain snowflake tires, or chains or socks on the drive wheels</li>
+        </ul>
+      </div>
+      <div class="card flat"><h4 class="ch">📱 Check before each drive</h4>
+        <ul class="clean muted">
+          <li><a href="https://udottraffic.utah.gov" target="_blank" rel="noopener">UDOT Traffic</a> (app + web): cameras, closures</li>
+          <li><a href="https://quickmap.dot.ca.gov" target="_blank" rel="noopener">Caltrans QuickMap</a>: Cajon Pass chain controls</li>
+          <li><a href="https://www.nvroads.com" target="_blank" rel="noopener">NV Roads</a>: the Vegas stretch</li>
+          <li><a href="https://www.weather.gov/slc/" target="_blank" rel="noopener">NWS Salt Lake City</a>: winter storm warnings</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="note-cool"><b>Max goes back to school on Dec 26.</b> He rides with us Dec 23–26, so leave room for his bag, the presents and snow gear. Pack the car on Christmas night, and keep his school bag and gifts on top so the Tooele stop is quick.</div>
+    <p class="figcap muted" style="font-size:12px; font-style:italic; margin-top:12px">Mileage and times are estimates from mapping routes, before stops, traffic or weather.</p>
+  </div>
+</section>
+
+<!-- WEATHER -->
+<section class="block" id="weather">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">Contingency</div>
+      <h2>Weather Plan</h2>
+      <p class="lead">The 9 AM pickup on Dec 23 is fixed, so any extra day goes on the front end. We have the whole week off, so we can take it.</p>
+    </div>
+    <button class="collapse-btn" data-target="weather">Collapse</button>
+  </div>
+  <div class="sec-body">
+    <div class="grid g3">
+      <div class="plan a"><span class="pl">Plan A · Clear forecast</span>
+        <h4>One-day drive</h4>
+        <p class="muted">Leave Simi <b>6 AM Tue Dec 22</b>, sleep in Tooele, pickup at 9 AM. This is the baseline plan.</p>
+      </div>
+      <div class="plan b"><span class="pl">Plan B · Storm forecast</span>
+        <h4>Leave Mon Dec 21</h4>
+        <p class="muted">Drive <b>~6 hrs to St. George</b> and stay the night. On Dec 22, drive <b>~4–4½ hrs</b> to Tooele in daylight, with time to wait out a morning storm. If you arrive early, the <a href="#extras">Natural History Museum of Utah</a> is about 45 min away (open until 5 PM).</p>
+      </div>
+      <div class="plan c"><span class="pl">Plan C · Caught mid-drive</span>
+        <h4>Stop short</h4>
+        <p class="muted">If it turns ugly on Dec 22, stop in <b>Cedar City or Beaver</b> and finish at dawn Dec 23. Beaver to Tooele is about 2¾ hrs, so leaving by 6 AM still makes 9 AM.</p>
+      </div>
+    </div>
+
+    <div class="tablewrap" style="margin-top:20px"><table>
+      <thead><tr><th>When</th><th>What to do</th></tr></thead>
+      <tbody>
+        <tr><td><b>Dec 18–19</b></td><td>The 5-day forecast becomes reliable. Watch <b>I-15 in central and southern Utah</b> (Cedar City, Beaver, Fillmore, Scipio) and <b>Cajon Pass</b>.</td></tr>
+        <tr><td><b>Dec 19–20</b></td><td><b>Decide.</b> If there's a winter storm warning or watch along the route on Dec 21–22, switch to Plan B and book St. George for Dec 21. Midweek lodging there is easy to find.</td></tr>
+        <tr><td><b>Dec 21–22, night before</b></td><td>Check UDOT Traffic and QuickMap. Fill the tank, pack the car kit, and charge phones.</td></tr>
+        <tr><td><b>Dec 25 evening</b></td><td>Check the return forecast for <b>I-80 Parleys Canyon</b> and <b>I-15 south</b>. Max still needs to get back to Tooele, which is a short hop. If the long stretch looks bad, drop him off, then sleep in Tooele or St. George and finish on Dec 27. If Parleys itself is closed, go around via Provo Canyon and I-15 north. Nothing else is booked after Christmas.</td></tr>
+      </tbody>
+    </table></div>
+
+    <div class="grid g2" style="margin-top:18px">
+      <div class="card flat"><h4 class="ch">🧰 Winter car kit</h4>
+        <ul class="clean muted">
+          <li>Chains or socks that fit your tires, plus gloves to put them on</li>
+          <li>Ice scraper and snow brush</li>
+          <li>Blankets and a warm layer for everyone</li>
+          <li>Water, snacks, phone chargers and a power bank</li>
+          <li>Flashlight, jumper cables, small shovel</li>
+          <li>Washer fluid rated below freezing (top it off before leaving)</li>
+        </ul>
+      </div>
+      <div class="card flat"><h4 class="ch">❄️ What to expect</h4>
+        <ul class="clean muted">
+          <li>Late-December days are short: sunrise ≈ 7:45 AM, sunset ≈ 5:05 PM in Salt Lake.</li>
+          <li>Heber Valley is a cold mountain valley. Plan for highs around freezing and nights well below. Luminaria is outdoors at night, so dress warm.</li>
+          <li>Never let the tank drop below half between Beaver and Nephi. Services are sparse there.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ITINERARY -->
+<section class="block" id="itinerary">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">Day by Day</div>
+      <h2>The Itinerary</h2>
+      <p class="lead">Times are targets, not appointments, except for the ones you've booked.</p>
+    </div>
+    <button class="collapse-btn" data-target="itinerary">Collapse</button>
+  </div>
+  <div class="sec-body">
+    <div class="legend-row">
+      <span class="tag-sm tag-drive">Drive</span><span class="tag-sm tag-dino">Dinos &amp; Bugs</span><span class="tag-sm tag-lights">Lights</span><span class="tag-sm tag-snow">Snow</span><span class="tag-sm tag-xmas">Christmas</span>
+    </div>
+
+    <h3 class="leg-head">Getting there · Tooele</h3>
+    <div class="tl">
+      <div class="leg drive" id="d1"><div class="date">Dec 22<small>Tue</small></div><div class="dot"></div>
+        <div class="body"><h4>Simi Valley → Tooele <span class="tag-sm tag-drive">Drive</span></h4>
+          <table class="sched">
+            <tr><td>6:00 AM PT</td><td>Depart Simi Valley.</td></tr>
+            <tr><td>~8:05</td><td>Barstow: fuel and coffee.</td></tr>
+            <tr><td>~10:45</td><td>Las Vegas: quick stop.</td></tr>
+            <tr><td>~1:55 PM MT</td><td>St. George: lunch. <i>Clocks have jumped forward an hour.</i></td></tr>
+            <tr><td>~4:15</td><td>Beaver: fuel before dark.</td></tr>
+            <tr><td>~7:15 PM</td><td>Check in at Tooele. Easy dinner, early night.</td></tr>
+          </table>
+          <div class="decide"><span class="dtag">Weather</span>If a storm is forecast, use <b>Plan B</b>: leave Dec 21 and stay in St. George. See <a href="#weather">Weather Plan</a>.</div>
+        </div></div>
+    </div>
+
+    <h3 class="leg-head">Heber Valley · Nights 2–4</h3>
+    <div class="tl">
+      <div class="leg star" id="d2"><div class="date">Dec 23<small>Wed</small></div><div class="dot"></div>
+        <div class="body"><h4>Max, dinosaurs, butterflies &amp; Luminaria <span class="tag-sm tag-dino">Dinos &amp; Bugs</span> <span class="tag-sm tag-lights">Lights</span></h4>
+          <table class="sched">
+            <tr><td>7:30 AM</td><td>Hotel breakfast, then check out.</td></tr>
+            <tr><td>9:00</td><td><b>Pick up Max</b> in Tooele.</td></tr>
+            <tr><td>9:15</td><td>Drive to Thanksgiving Point, Lehi (~45–55 min on SR-73).</td></tr>
+            <tr><td>10:15</td><td><b>Museum of Ancient Life</b>. Catch <b>Lab Live at 11 AM</b> (included daily). Optional: Paleo Studio, where you prepare a fossil and take it home ($10).</td></tr>
+            <tr><td>12:30</td><td>Lunch on campus or in Lehi.</td></tr>
+            <tr><td>1:15</td><td><b>Butterfly Biosphere</b>. Midday is when the butterflies are most active. Add <i>Butterfly's First Flight</i> ($4) to help release newly emerged butterflies.</td></tr>
+            <tr><td>3:00</td><td>Free time. The All-Access Pass covers all seven venues, so you can add another or rest up.</td></tr>
+            <tr><td>4:30</td><td>Early dinner nearby.</td></tr>
+            <tr><td>5:30</td><td><b>Luminaria</b> timed entry at Ashton Gardens. Plan on 1.5 hrs, or 2+ with the Tree of Life garden.</td></tr>
+            <tr><td>~7:30</td><td>Drive to Heber via Provo Canyon (~50 min).</td></tr>
+            <tr><td>~8:30 PM</td><td>Check in at the Best Western Plus Heber Valley. <i>Tell the hotel you'll arrive late.</i></td></tr>
+          </table>
+          <div class="decide"><span class="dtag">Long day</span>About 13 hours door to door. If energy runs low, skip the extra venues at 3:00 and rest at a café or in the car instead. Don't drop Luminaria. This is the only night it fits.</div>
+        </div></div>
+
+      <div class="leg" id="d3"><div class="date">Dec 24<small>Thu</small></div><div class="dot"></div>
+        <div class="body"><h4>Christmas Eve: snow tubing &amp; Midway <span class="tag-sm tag-snow">Snow</span> <span class="tag-sm tag-xmas">Christmas</span></h4>
+          <table class="sched">
+            <tr><td>Morning</td><td>Sleep in after the long day, then hotel breakfast.</td></tr>
+            <tr><td>~10:30–12:30</td><td><b>Soldier Hollow tubing</b>, a 2-hour session on 1,200-ft lanes with a lift back up, at the 2002 Olympic Nordic venue. ~15 min from the hotel. <span class="verify">Confirm Christmas Eve hours</span></td></tr>
+            <tr><td>12:45</td><td><b>Lunch in Midway</b>: wood-fired pizza at The Pizza Yard, BBQ at 1886 Grill (Homestead), or sandwiches at Hidden Peak Provisions.</td></tr>
+            <tr><td>Afternoon</td><td>Pick one: a soak in the <b>Homestead Crater</b> hot spring, skating at the <b>Midway Ice Rink</b>, or the hotel pool and a rest. See <a href="#extras">Extras</a>.</td></tr>
+            <tr><td>By ~4 PM</td><td><b>Grocery run</b> for Christmas Day breakfast backup, snacks and drinks. In 2024, Lee's Market in Heber closed at 5 PM Christmas Eve and stayed closed Christmas Day.</td></tr>
+            <tr><td>Evening</td><td><b>Christmas Eve dinner</b> (reserved). See <a href="#dining">Dining</a>.</td></tr>
+          </table>
+        </div></div>
+
+      <div class="leg star" id="d4"><div class="date">Dec 25<small>Fri</small></div><div class="dot"></div>
+        <div class="body"><h4>Christmas Day: slow morning, Park City &amp; an early dinner <span class="tag-sm tag-xmas">Christmas</span></h4>
+          <table class="sched">
+            <tr><td>Morning</td><td><b>Presents</b>, hotel breakfast (<span class="verify">confirm it runs Christmas morning</span>), then the <b>indoor pool and hot tub</b>.</td></tr>
+            <tr><td>Midday</td><td>Snow scenery. Drive the loop through Midway's farm fields, or walk Wasatch Mountain State Park.</td></tr>
+            <tr><td>~2:15 PM</td><td>Drive to Park City (~25 min on US-40).</td></tr>
+            <tr><td>2:45–4:30</td><td><b>Historic Main Street</b> as the lights come on (sunset ≈ 5 PM): window displays, the Snow Globe Art Stroll and window shopping. <b>Expect many shops closed or closing early</b> on Christmas Day.</td></tr>
+            <tr><td>~4:45</td><td><b>Early Christmas dinner at Squatters Roadhouse Grill &amp; Bar</b>, 1900 Park Ave, about 1.5 mi from Main Street. Casual, with a kids' menu and free parking. <span class="verify">Call to confirm it's open Dec 25</span><br><b>Backup:</b> The Eating Establishment, 317 Main St. Walk there straight from Main Street. Last year it served its regular menu with dinner 5–9 PM. See <a href="#dining">Dining</a>.</td></tr>
+            <tr><td>~6:30 PM</td><td>Back to Heber. Pack the car tonight, Max included, for a 7:30 AM start.</td></tr>
+          </table>
+        </div></div>
+    </div>
+
+    <h3 class="leg-head">Heading home</h3>
+    <div class="tl">
+      <div class="leg drive" id="d5"><div class="date">Dec 26<small>Sat</small></div><div class="dot"></div>
+        <div class="body"><h4>Drop Max in Tooele, then home <span class="tag-sm tag-drive">Drive</span></h4>
+          <table class="sched">
+            <tr><td>6:45 AM MT</td><td>Early breakfast and check out. The car should already be packed.</td></tr>
+            <tr><td>7:30</td><td>Depart via US-40 → I-80 W through Parleys Canyon.</td></tr>
+            <tr><td>~8:50</td><td><b>Tooele: drop Max back at school</b> and say goodbye. <span class="verify">Confirm return time with the school</span></td></tr>
+            <tr><td>~9:20</td><td>Head south via SR-36 → SR-73 → I-15 S.</td></tr>
+            <tr><td>~11:30</td><td>Fuel in Beaver.</td></tr>
+            <tr><td>~1:45 PM</td><td>St. George: lunch.</td></tr>
+            <tr><td>~2:30 PM MT</td><td>Back on the road. Clocks go back an hour past Mesquite, so it's 1:30 PM in California.</td></tr>
+            <tr><td>~8 PM PT</td><td>Home, roughly 7:45–8:15 PM.</td></tr>
+          </table>
+          <div class="decide"><span class="dtag">Option</span>Make it two days: drop Max, sleep in <b>St. George</b>, and visit the <a href="#extras">Dinosaur Discovery Site</a> (200-million-year-old tracks) on Sunday morning before the last 6 hours home. Use this if the weather is bad, or just to make the drive easier.</div>
+        </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ACTIVITIES -->
+<section class="block" id="activities">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">Know Before You Go</div>
+      <h2>The Main Events</h2>
+      <p class="lead">Details from each venue's website. Tap to expand.</p>
+    </div>
+    <button class="collapse-btn" data-target="activities">Collapse</button>
+  </div>
+  <div class="sec-body">
+
+    <div class="dive open">
+      <div class="dive-head"><div class="dive-rank">🦕</div><div class="t"><h3>Museum of Ancient Life</h3>
+        <div class="meta"><span><b>Thanksgiving Point, Lehi</b></span><span>Wed Dec 23 · 10:15 AM</span><span>Max's pick</span></div></div><div class="chev">▾</div></div>
+      <div class="dive-body"><div class="dive-body-inner">
+        <p>Mountain America Museum of Ancient Life has <b>60 complete dinosaur skeletons</b>, one of the largest mounted-dinosaur displays in the world, and more than <b>50 hands-on exhibits</b>. There's a working paleontology lab where staff and volunteers are excavating a <b>150-million-year-old Barosaurus</b> in view of visitors. Newer exhibits include <i>Need for Speed</i> in Jurassic Hall (Allosaurus, Ceratosaurus, Tanycolagreus) and a Sauropods gallery where you can stand next to a sauropod for scale.</p>
+        <ul class="clean muted">
+          <li><b>Lab Live</b>: daily at 11 AM, included with admission.</li>
+          <li><b>Paleo Studio</b> ($10): prepare a real Eocene fossil and take it home. Book early. A good fit for Max.</li>
+          <li><b>Dino Quest</b> ($8) runs Tue/Thu/Sat at 12:30, so <b>not on Wednesday the 23rd</b>.</li>
+          <li>Geode cracking: $10 medium, $18 large.</li>
+        </ul>
+        <div class="facts-row"><span><b>Hours</b> Mon–Sat 9 AM–8 PM</span><span><b>Closed</b> Sundays, Christmas</span><span><b>Online</b> $24 adult · $19 youth 13–17 · $17 child</span><span><b>Entry</b> timed, limited</span></div>
+      </div></div>
+    </div>
+
+    <div class="dive">
+      <div class="dive-head"><div class="dive-rank">🦋</div><div class="t"><h3>Butterfly Biosphere</h3>
+        <div class="meta"><span><b>Thanksgiving Point, Lehi</b></span><span>Wed Dec 23 · ~1:15 PM</span><span>Julia's pick</span></div></div><div class="chev">▾</div></div>
+      <div class="dive-body"><div class="dive-body-inner">
+        <p>Utah's only butterfly conservatory and insectarium. The tropical conservatory has <b>more than a thousand live butterflies</b> from around the world, which makes a warm break from December. The Discovery Zone has hundreds of live insects and a <b>120,000-ant leafcutter colony</b>.</p>
+        <ul class="clean muted">
+          <li><b>Butterfly's First Flight</b> ($4): help release newly emerged butterflies.</li>
+          <li>Daily programs: Critter Encounters, Bug Races, Entomologist Chats.</li>
+          <li><b>Timing tip from the venue:</b> butterflies are most active at <b>midday</b>. Owl butterflies fly in the evening.</li>
+          <li>Butterflies can't leave the conservatory. Pinned specimens are sold in the gift shop.</li>
+        </ul>
+        <div class="facts-row"><span><b>Hours</b> Mon–Sat 9 AM–8 PM</span><span><b>Closed</b> Sundays, Christmas</span><span><b>Online</b> $24 / $19 / $17</span></div>
+        <div class="note-cool"><b>Buy the All-Access Pass.</b> It's $39 adult, $33 youth or $29 child, and covers all seven Thanksgiving Point venues for the day. Two single-venue tickets cost more ($48 per adult online).</div>
+      </div></div>
+    </div>
+
+    <div class="dive">
+      <div class="dive-head"><div class="dive-rank">✨</div><div class="t"><h3>Luminaria</h3>
+        <div class="meta"><span><b>Ashton Gardens, Thanksgiving Point</b></span><span>Wed Dec 23 · 5:30 PM</span><span>Last night before the Christmas closure</span></div></div><div class="chev">▾</div></div>
+      <div class="dive-body"><div class="dive-body-inner">
+        <p>Billed as Utah's largest Christmas light display, set across the 50-acre gardens. You start at the <b>luminary hill</b>, where <b>6,500 programmable luminaries</b> and a 120-ft tree make animated images synced to holiday music. The <b>Fire &amp; Ice</b> show at the Waterfall Amphitheatre runs about 8 minutes every 20 minutes, with flames shooting over 20 ft. The <b>Tree of Life</b> garden has 130 bronze sculptures and is included with admission.</p>
+        <ul class="clean muted">
+          <li>Plan <b>at least 1.5 hours</b>. The Tree of Life adds 30–45 min.</li>
+          <li><b>Timed entry</b> every 15 minutes. All sales are final, and same-day changes need an exchangeable ticket.</li>
+          <li>Last season's hours for Dec 23 were 4–9:30 PM, with last entry 9:45. <b>Closed Sundays, Christmas Eve and Christmas Day.</b></li>
+          <li>Extras: food punch cards ($18 for 5) and private fire pits ($120 for 2 hrs, admission not included).</li>
+          <li>Tickets: Youth 13–17 and Child 3–12 pricing. Prices vary by date.</li>
+        </ul>
+        <div class="facts-row"><span><b>Address</b> 3900 N Garden Dr, Lehi</span><span><b>Dress</b> outdoors at night: full winter layers</span></div>
+      </div></div>
+    </div>
+
+    <div class="dive">
+      <div class="dive-head"><div class="dive-rank">🛷</div><div class="t"><h3>Soldier Hollow Snow Tubing</h3>
+        <div class="meta"><span><b>Wasatch Mountain State Park, Midway</b></span><span>Thu Dec 24</span><span>On sale Oct 19</span></div></div><div class="chev">▾</div></div>
+      <div class="dive-body"><div class="dive-body-inner">
+        <p>Long <b>1,200-foot lanes</b> with a lift back to the top, at the Nordic venue of the 2002 Winter Olympics. The hill runs day and night under lights, and sessions last <b>2 hours</b>. The 2026–27 season is scheduled for <b>Dec 18, 2026 – Mar 13, 2027</b>, depending on weather.</p>
+        <ul class="clean muted">
+          <li><b>Tickets on sale Mon Oct 19, 10 AM</b> (Mountain Time). Holiday dates use a separate "Holiday" ticket button.</li>
+          <li><b>Non-refundable</b>, with no refunds for weather or snow. That's another reason to hold an <a href="#extras">alternative</a> in mind.</li>
+          <li>Pricing changes by date and time. A recent guide put it at $25–40.</li>
+          <li>Kids under 3 aren't allowed, and nobody rides on a lap.</li>
+          <li>Colder days make for faster runs, while warm or fresh-snow days are slower.</li>
+        </ul>
+        <div class="facts-row"><span><b>Address</b> 2002 Soldier Hollow Ln, Midway</span><span><b>Info</b> 435-709-3463</span><span><b>Christmas Eve hours</b> not posted</span></div>
+        <div class="decide"><span class="dtag">Risk</span>Opening day is only about a week before Dec 24. A dry December could mean limited lanes. If tickets sell out or the hill isn't ready, see <a href="#extras">Plan B</a>.</div>
+      </div></div>
+    </div>
+
+    <div class="dive">
+      <div class="dive-head"><div class="dive-rank">🏔️</div><div class="t"><h3>Park City on Christmas Day</h3>
+        <div class="meta"><span><b>Historic Main Street</b></span><span>Fri Dec 25 · afternoon–evening</span><span>~25 min from hotel</span></div></div><div class="chev">▾</div></div>
+      <div class="dive-body"><div class="dive-body-inner">
+        <p>Park City is a ski town, so it stays open on Christmas more than most places. Walk Historic Main Street as the lights come on, look at the window displays and the <b>Snow Globe Art Stroll</b> (it ran through Jan 1 last season), then have an early dinner at <b>Squatters</b>. Plan it as an evening out, not a shopping trip. <b>Many shops will be closed or keep short hours on the 25th.</b></p>
+        <ul class="clean muted">
+          <li>Arrive around 2:45 PM to see Main Street in daylight and at dusk.</li>
+          <li>For a free stop on the way, the <b>Utah Olympic Park</b> museums are near Kimball Junction. <span class="verify">Christmas Day hours</span></li>
+          <li>Driving home: US-40 can come under the traction law. Check UDOT before leaving.</li>
+        </ul>
+      </div></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- DINING -->
+<section class="block" id="dining">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">Reserve Ahead</div>
+      <h2>Christmas Eve &amp; Christmas Day Dining</h2>
+      <p class="lead">Listings are from the 2025 season. Menus and prices for 2026 usually come out in November or December.</p>
+    </div>
+    <button class="collapse-btn" data-target="dining">Collapse</button>
+  </div>
+  <div class="sec-body">
+    <div class="grid g2">
+      <div class="card">
+        <h4 class="ch">🕯️ Christmas Eve · near the hotel</h4>
+        <div class="tablewrap" style="margin-top:10px"><table>
+          <thead><tr><th>Where</th><th>What (2025)</th></tr></thead>
+          <tbody>
+            <tr><td><b>Homestead Resort</b><small>Midway · 435-654-1102</small></td><td>3-course Christmas Eve dinner with fireside dining, <b>$49/person</b>, on OpenTable. They also served dinner on Christmas Day. <span class="verify">Confirm venue</span> Simon's Tavern, the resort's fine-dining room, doesn't reopen until spring 2027.</td></tr>
+            <tr><td><b>Overlook</b><small>Black Rock Mountain Resort, Heber · 435-575-1650</small></td><td>Holiday specials on Dec 24 and 25: lobster bisque, Wagyu tenderloin or crab cake, salted-caramel ice cream. Closest to the hotel.</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+      <div class="card">
+        <h4 class="ch">🎄 Christmas Day · Park City</h4>
+        <p class="muted" style="margin:2px 0 0">Plan: early, casual dinner. The fancier options are listed in case you change your mind.</p>
+        <div class="tablewrap" style="margin-top:10px"><table>
+          <thead><tr><th>Where</th><th>What (2025)</th></tr></thead>
+          <tbody>
+            <tr><td><b>Squatters Roadhouse Grill &amp; Bar</b> <span class="badge tube">Our plan</span><small>1900 Park Ave · (435) 649-9868</small></td><td>Casual brewpub comfort food, kids' menu, free parking. Open daily 8 AM–9 PM. Reservations only for large parties. <span class="verify">Call to confirm</span> A 2020 roundup listed it as closed on Christmas Day, and no holiday hours are posted.</td></tr>
+            <tr><td><b>The Eating Establishment</b> <span class="badge dino">Backup</span><small>317 Main St · 435-649-8284</small></td><td>Regular menu every day through the 2025 holidays, with dinner 5–9 PM. Right on Main Street.</td></tr>
+            <tr><td><b>Le Depot Brasserie</b><small>660 Main St · Resy</small></td><td>Four-course holiday tasting menu, Dec 24 and 25, 5:30–8:30 PM.</td></tr>
+            <tr><td><b>Fletcher's</b><small>562 Main St · Resy</small></td><td>Open for dinner Christmas Eve and Day.</td></tr>
+            <tr><td><b>Apex, Montage Deer Valley</b><small>435-604-1402</small></td><td>Christmas dinner 5:30–9:30 PM, <b>$155 adult / $65 child</b>. Brunch buffet 11:30–3, $105 / $50.</td></tr>
+            <tr><td><b>Kita, Pendry</b><small>OpenTable</small></td><td>Christmas dinner, 5–10 PM.</td></tr>
+            <tr><td><b>Sterling Steak &amp; Lounge</b><small>Newpark, Kimball Junction</small></td><td>Open Dec 25, 11 AM–10 PM.</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </div>
+    <div class="grid g2" style="margin-top:18px">
+      <div class="card flat"><h4 class="ch">🥪 Casual lunch in Midway (Dec 24)</h4>
+        <ul class="clean muted">
+          <li><b>The Pizza Yard</b>: wood-fired pizza, laid-back and family-friendly</li>
+          <li><b>1886 Grill</b> at Homestead: BBQ, pizza</li>
+          <li><b>Hidden Peak Provisions</b>: made-to-order sandwiches and soup</li>
+          <li><b>Café Galleria</b>: wood-fired pizza, bagels</li>
+          <li><b>Maya's Mexican Food</b>: tacos, burritos, tamales</li>
+        </ul>
+      </div>
+      <div class="card flat"><h4 class="ch">🛒 Christmas Day food reality</h4>
+        <ul class="clean muted">
+          <li>Heber and Midway restaurants are mostly closed on the 25th. Past reports list Blue Boar Inn among the closures.</li>
+          <li>In 2024, <b>Lee's Market</b> (Heber) and Smith's closed early on Christmas Eve and stayed closed Christmas Day. <b>Fresh Market</b> and <b>The Market at Park City</b> kept hours on the 25th.</li>
+          <li>Ask for a room with a fridge or kitchenette. The hotel lists family suites with kitchens.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXTRAS -->
+<section class="block" id="extras">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">If Tubing Sells Out — or There's Extra Time</div>
+      <h2>Plan B &amp; Extras</h2>
+      <p class="lead">Swap-ins for Christmas Eve afternoon, Christmas Day, or the drive.</p>
+    </div>
+    <button class="collapse-btn" data-target="extras">Collapse</button>
+  </div>
+  <div class="sec-body">
+    <div class="grid g3">
+      <div class="xcard"><div class="em">🛝</div><div class="where">Park City · ~25 min</div>
+        <h4>Woodward Park City Tubing <span class="badge tube">Tubing backup</span></h4>
+        <p>This is the former Gorgoza Park hill. Four lanes run from the top of a <b>1,200-ft hill</b>, plus three shorter mid-mountain lanes, with two carpet lifts. Tickets are limited per time slot, so book ahead. A recent guide listed 2-hour sessions at $55–89, more than Soldier Hollow.</p>
+        <div class="when"><b>Best fit:</b> Dec 24 if Soldier Hollow sells out, or Dec 25 afternoon before Main Street. <span class="verify">Holiday hours</span></div></div>
+
+      <div class="xcard"><div class="em">🥇</div><div class="where">Utah Olympic Park · Park City</div>
+        <h4>Olympic Bobsled Ride <span class="badge max">For Max</span></h4>
+        <p>A real run on the 2002 Olympic track at <b>60+ mph</b> with a pro pilot. The ride is under a minute, and the visit takes about 1¼ hrs including orientation. <b>Ages 13+ and at least 100 lb.</b> Under-18s need a parent to sign the waiver. The park's two Olympic and ski museums are <b>free</b>.</p>
+        <div class="when"><b>$225</b>, or $249 Dec 26–30 · Dates released Oct 26. <span class="verify">Dec 24/25 operation</span></div></div>
+
+      <div class="xcard"><div class="em">♨️</div><div class="where">Homestead Resort · Midway</div>
+        <h4>Homestead Crater</h4>
+        <p>A 10,000-year-old geothermal spring inside a 55-ft limestone dome, with <b>~90–96°F water, 35 ft deep</b>. You can soak, swim, snorkel or take a beginner scuba session. Soak sessions are about 40 min, and life jackets are required for swimming.</p>
+        <div class="when"><b>Reservations recommended</b> · 435-657-3840 · Soaks started around $16 (older listing). <span class="verify">Holiday hours</span></div></div>
+
+      <div class="xcard"><div class="em">⛸️</div><div class="where">Midway</div>
+        <h4>Midway Ice Rink</h4>
+        <p>A large outdoor public rink with daily public sessions, skate rentals, a warming hut and concessions. It usually opens around Dec 1. Easy to add on Christmas Eve afternoon.</p>
+        <div class="when"><b>Walk-up</b> · <span class="verify">Dec 24/25 hours</span></div></div>
+
+      <div class="xcard"><div class="em">🐴</div><div class="where">Midway</div>
+        <h4>Horse-Drawn Sleigh Ride</h4>
+        <p>Rocky Mountain Outfitters runs private sleigh rides of 20–30 min in Midway. Each sleigh holds up to six, with no group minimum. It feels very Christmas Eve.</p>
+        <div class="when"><b>Book ahead</b> · <span class="verify">Holiday schedule</span></div></div>
+
+      <div class="xcard"><div class="em">🚂</div><div class="where">Heber City</div>
+        <h4>North Pole Express</h4>
+        <p>Heber Valley Railroad's 90-minute holiday train runs <b>Nov 19 – Dec 30, 2026</b>, on weeknights at 5:00 and 7:30 PM. Coach seats are $70 adult and $40 child. Tickets went on sale in June, so holiday-week trips may already be gone.</p>
+        <div class="when"><b>Check availability</b> · 435-654-5601 · <span class="verify">Dec 24/25 trips</span></div></div>
+
+      <div class="xcard"><div class="em">🦖</div><div class="where">Salt Lake City · ~45 min from Tooele</div>
+        <h4>Natural History Museum of Utah <span class="badge dino">Dinos</span></h4>
+        <p>The University of Utah's natural history museum, a second paleontology stop for Max. Open daily 10–5 (until 9 on Wednesdays). It closes at 3 PM Christmas Eve and is closed Christmas Day.</p>
+        <div class="when"><b>Best fit:</b> Dec 22 afternoon under Weather Plan B · $24.95 adult · $22.95 ages 13–24</div></div>
+
+      <div class="xcard"><div class="em">👣</div><div class="where">St. George · on I-15</div>
+        <h4>Dinosaur Discovery Site <span class="badge dino">Dinos</span></h4>
+        <p>A museum built over a <b>200-million-year-old Early Jurassic lakeshore</b>, with rare tracks still in the rock where they were found, fossil fish and plants, and a fossil prep lab. Max will be back at school by then, so this is a bonus for whoever else wants to stop.</p>
+        <div class="when"><b>Best fit:</b> Sunday morning Dec 27 if you split the drive home · 10 AM–5 PM, last entry 4:30 · $10 adult, $5 ages 5–17 · <span class="verify">Holiday hours</span></div></div>
+
+      <div class="xcard"><div class="em">🥾</div><div class="where">Wasatch Mountain State Park</div>
+        <h4>Snowshoeing</h4>
+        <p>Rentals and groomed trails at Soldier Hollow Nordic Center and Wasatch Mountain State Park. It's quiet, cheap, and right next to the tubing hill, so you can do both the same day.</p>
+        <div class="when"><b>Walk-up</b> · weather permitting</div></div>
+    </div>
+    <div class="note-cool"><b>Not this year:</b> Midway's <b>Ice Castles</b> skipped the 2025–26 season to rework their build process. A return hasn't been announced, and they usually open in January anyway.</div>
+  </div>
+</section>
+
+<!-- STAYS -->
+<section class="block" id="stays">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">Where We'll Sleep</div>
+      <h2>Two Stops</h2>
+      <p class="lead">One road night in Tooele, then three nights in Heber.</p>
+    </div>
+    <button class="collapse-btn" data-target="stays">Collapse</button>
+  </div>
+  <div class="sec-body">
+    <div class="grid g2">
+      <div class="stay"><div class="stay-top alt">🛏️</div><div class="stay-body">
+        <div class="eyebrow">Night 1 · Tue Dec 22</div>
+        <h3>Tooele</h3>
+        <p class="muted">Just a place to sleep near Max's school. Chain options include <b>Holiday Inn Express &amp; Suites Tooele</b>. Book a <b>free-cancellation</b> rate so you can move to Dec 21–22 with a St. George night if the weather turns.</p>
+        <ul class="clean muted"><li>Late arrival, around 7:15 PM</li><li>Breakfast before the 9 AM pickup</li></ul>
+      </div></div>
+      <div class="stay"><div class="stay-top">🏔️</div><div class="stay-body">
+        <div class="eyebrow">Nights 2–4 · Dec 23–26</div>
+        <h3>Best Western Plus Heber Valley</h3>
+        <p class="muted">1227 S US-40, Heber City · (435) 657-6500</p>
+        <ul class="clean muted">
+          <li><b>Indoor pool and hot tub</b>, listed as open 24 hours, which is useful for Christmas Day</li>
+          <li>Complimentary <b>hot breakfast</b>. One review said it ends at 9 AM. <span class="verify">Christmas hours</span></li>
+          <li>Family suites with full kitchens. Worth it for Christmas Day.</li>
+          <li>Free parking · ~15 min to Soldier Hollow, ~25 min to Park City</li>
+          <li>Late check-in Dec 23, around 8:30 PM · early checkout Dec 26, around 7:15 AM</li>
+        </ul>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- COSTS -->
+<section class="block" id="costs">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">Published Prices</div>
+      <h2>Tickets &amp; Costs</h2>
+      <p class="lead">Per person, from venue sites. Confirm before buying.</p>
+    </div>
+    <button class="collapse-btn" data-target="costs">Collapse</button>
+  </div>
+  <div class="sec-body">
+    <div class="tablewrap"><table>
+      <thead><tr><th>Item</th><th class="num">Adult</th><th class="num">Youth 13–17</th></tr></thead>
+      <tbody>
+        <tr><td>Thanksgiving Point <b>All-Access Pass</b><small>All 7 venues, 1 day (child 3–12: $29)</small></td><td class="num">$39</td><td class="num">$33</td></tr>
+        <tr><td>Single venue, online<small>Museum of Ancient Life or Butterfly Biosphere</small></td><td class="num">$24</td><td class="num">$19</td></tr>
+        <tr><td>Paleo Studio · Butterfly's First Flight<small>Add-ons</small></td><td class="num">$10 · $4</td><td class="num">$10 · $4</td></tr>
+        <tr><td>Luminaria<small>Varies by date. Check the pricing calendar</small></td><td class="num">varies</td><td class="num">varies</td></tr>
+        <tr><td>Soldier Hollow tubing, 2 hrs<small>Dynamic pricing. Range from a recent guide</small></td><td class="num">~$25–40</td><td class="num">~$25–40</td></tr>
+        <tr><td>Homestead Christmas Eve dinner<small>2025 price</small></td><td class="num">$49</td><td class="num">$49</td></tr>
+        <tr><td>Christmas Day dinner<small>Squatters or The Eating Establishment, regular menu</small></td><td class="num">menu</td><td class="num">menu</td></tr>
+        <tr><td>Olympic bobsled (optional)<small>$249 on Dec 26–30</small></td><td class="num">$225</td><td class="num">$225</td></tr>
+        <tr><td>Dinosaur Discovery Site (optional)<small>Youth price covers 5–17</small></td><td class="num">$10</td><td class="num">$5</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<!-- PACKING -->
+<section class="block" id="packing">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">Cold-Weather Kit</div>
+      <h2>Packing</h2>
+      <p class="lead">Since we're driving, bring the bulky stuff.</p>
+    </div>
+    <button class="collapse-btn" data-target="packing">Collapse</button>
+  </div>
+  <div class="sec-body">
+    <div class="grid g3">
+      <div class="card flat"><h4 class="ch">🛷 Tubing &amp; snow</h4><ul class="clean muted"><li>Waterproof snow pants and jackets</li><li>Waterproof gloves (not knit)</li><li>Beanies, neck gaiters</li><li>Snow boots with good tread</li><li>Sunglasses for snow glare</li></ul></div>
+      <div class="card flat"><h4 class="ch">✨ Luminaria night</h4><ul class="clean muted"><li>Base layers, since you'll be outdoors for about 2 hrs at night</li><li>Hand and toe warmers</li><li>Thermos for hot cocoa in the car</li><li>Phone battery packs (cold drains them)</li></ul></div>
+      <div class="card flat"><h4 class="ch">🎄 Christmas &amp; hotel</h4><ul class="clean muted"><li>Wrapped presents, kept out of sight of Max</li><li>Swimsuits for the pool, hot tub or Crater</li><li>A nicer outfit for the two dinners</li><li>Lip balm and lotion (it's very dry)</li><li>Stocking stuffers and a small tree or lights for the room</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- CHECKLIST -->
+<section class="block" id="checklist">
+  <div class="sec-head">
+    <div>
+      <div class="eyebrow">Before You Go</div>
+      <h2>Booking Checklist</h2>
+      <p class="lead">Tap to tick off. Progress is saved in this browser only.</p>
+    </div>
+    <button class="collapse-btn" data-target="checklist">Collapse</button>
+  </div>
+  <div class="sec-body">
+    <div class="card">
+      <div class="check" data-ck="heber"><div class="box"></div><div class="txt"><b>Book Best Western Plus Heber Valley</b>, Dec 23–26. Ask for a family suite with a kitchen and note the late arrival.</div></div>
+      <div class="check" data-ck="tooele"><div class="box"></div><div class="txt"><b>Book Tooele hotel</b> for Dec 22 on a free-cancellation rate.</div></div>
+      <div class="check" data-ck="tubing"><div class="box"></div><div class="txt"><b>Buy Soldier Hollow tubing</b> for Dec 24. On sale <b>Mon Oct 19, 9 AM Pacific</b>. Use the Holiday tickets button.</div></div>
+      <div class="check" data-ck="tubingcall"><div class="box"></div><div class="txt"><b>Call Soldier Hollow</b> (435-709-3463) about Christmas Eve hours.</div></div>
+      <div class="check" data-ck="lum"><div class="box"></div><div class="txt"><b>Buy Luminaria</b> timed entry for Wed Dec 23, ~5:30 PM.</div></div>
+      <div class="check" data-ck="tp"><div class="box"></div><div class="txt"><b>Buy Thanksgiving Point All-Access Passes</b> for Dec 23, plus Paleo Studio for Max.</div></div>
+      <div class="check" data-ck="xmaseve"><div class="box"></div><div class="txt"><b>Reserve Christmas Eve dinner</b> at Homestead or Overlook.</div></div>
+      <div class="check" data-ck="xmasday"><div class="box"></div><div class="txt"><b>Call Squatters</b> (435-649-9868) about Christmas Day hours. If it's closed, the Eating Establishment is the backup.</div></div>
+      <div class="check" data-ck="bobsled"><div class="box"></div><div class="txt"><b>Decide on the bobsled</b> for Max. Tickets released Oct 26.</div></div>
+      <div class="check" data-ck="school"><div class="box"></div><div class="txt"><b>Confirm with the school</b>: Dec 23 pickup time and the Dec 26 return time.</div></div>
+      <div class="check" data-ck="car"><div class="box"></div><div class="txt"><b>Car prep</b>: tires (M+S or 3PMSF), chains or socks, wipers, washer fluid, oil change.</div></div>
+      <div class="check" data-ck="weather"><div class="box"></div><div class="txt"><b>Make the weather call</b> Dec 19–20: Plan A or Plan B.</div></div>
+      <div class="check" data-ck="grocery"><div class="box"></div><div class="txt"><b>Grocery run</b> on Christmas Eve by ~4 PM.</div></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<button id="toTop" aria-label="Back to top">↑</button>
+
+<footer>
+  <div class="src">
+    <b>Sources</b> ·
+    <a href="https://thanksgivingpoint.org/attractions/museum-of-ancient-life/">Museum of Ancient Life</a> ·
+    <a href="https://thanksgivingpoint.org/attractions/butterfly-biosphere/">Butterfly Biosphere</a> ·
+    <a href="https://thanksgivingpoint.org/events/luminaria">Luminaria</a> ·
+    <a href="https://thanksgivingpoint.org/blog-utahs-largest-christmas-light-display/">Luminaria features</a> ·
+    <a href="https://thanksgivingpoint.org/app/uploads/2024/08/Property-Hours-Fall-2025-Spring-2026.pdf">Thanksgiving Point holiday hours</a> ·
+    <a href="https://utaholympiclegacy.org/activity/winter-tubing/">Soldier Hollow tubing</a> ·
+    <a href="https://utaholympiclegacy.org/faq/soldier-hollow/">Soldier Hollow FAQ</a> ·
+    <a href="https://utaholympiclegacy.org/activity/winter-bobsled-experience/">Olympic bobsled</a> ·
+    <a href="https://www.visitparkcity.com/blog/stories/post/tubing-at-woodward-park-city/">Woodward tubing</a> ·
+    <a href="https://www.allseasonsresortlodging.com/blog/best-snow-tubing-spots-in-park-city/">Park City tubing roundup</a> ·
+    <a href="https://www.sltrib.com/artsliving/food/2025/12/06/christmas-dining-2025-where-go/">Salt Lake Tribune — Christmas dining 2025</a> ·
+    <a href="https://www.gohebervalley.com/christmas-eve-dinner-at-homestead/">Homestead Christmas dinner</a> ·
+    <a href="https://homesteadmidwayutah.com/">Homestead Resort</a> ·
+    <a href="https://tipsforfamilytrips.com/homestead-crater-midway/">Homestead Crater guide</a> ·
+    <a href="https://www.mountainluxury.com/midway-ut/restaurants/">Midway restaurants</a> ·
+    <a href="https://www.squatterspubs.com/restaurants/roadhouse">Squatters Roadhouse</a> ·
+    <a href="https://dishingpc.com/holiday-hours-and-offerings-where-to-dine-in-park-city-this-holiday-season/">Dishing Park City holiday hours (2020)</a> ·
+    <a href="https://www.kpcw.org/summit-county/2024-12-20/whats-open-closed-on-christmas">KPCW — what's open on Christmas</a> ·
+    <a href="https://townlift.com/2025/12/things-to-do-in-park-city-christmas-week-holiday-events-art-walks-and-family-fun/">TownLift — Park City Christmas week</a> ·
+    <a href="https://www.american-rails.com/heber-npe26.html">North Pole Express 2026</a> ·
+    <a href="https://mountainparkcity.com/winter-wonderland-heber-valley-utah/">Heber Valley winter guide</a> ·
+    <a href="https://www.fox13now.com/the-place/private-horse-drawn-sleigh-rides-at-solider-hollow">Midway sleigh rides</a> ·
+    <a href="https://nhmu.utah.edu/visit/hours">Natural History Museum of Utah</a> ·
+    <a href="https://utahdinosaurs.org/">Dinosaur Discovery Site</a> ·
+    <a href="https://townlift.com/2025/10/utahs-iconic-ice-castles-will-skip-2025-season-plan-future-return/">Ice Castles pause</a> ·
+    <a href="https://wasatchback.udot.utah.gov/traction-law/">UDOT traction law</a> ·
+    <a href="https://www.bestwestern.fr/en/hotel-Heber-City-Best-Western-Plus-Heber-Valley-Hotel-45092">Best Western Plus Heber Valley</a>
+  </div>
+  <div>Prepared October 2026 · Updated Oct 13 · Dining listings reflect the 2025 season · Estimates only. Confirm hours, holiday closures and prices before booking.</div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var prog = document.getElementById('progress');
+  var toTop = document.getElementById('toTop');
+  function onScroll(){
+    var h = document.documentElement;
+    var max = h.scrollHeight - h.clientHeight;
+    prog.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+    toTop.classList.toggle('show', h.scrollTop > 600);
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+  toTop.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+
+  // falling snow in the hero
+  var hero = document.querySelector('.hero');
+  if (!window.matchMedia || !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    for (var i = 0; i < 28; i++) {
+      var f = document.createElement('span');
+      f.className = 'flake'; f.textContent = '❄';
+      f.style.left = (Math.random() * 100) + '%';
+      f.style.fontSize = (8 + Math.random() * 10) + 'px';
+      f.style.animationDuration = (9 + Math.random() * 10) + 's';
+      f.style.animationDelay = (-Math.random() * 18) + 's';
+      f.style.opacity = (0.35 + Math.random() * 0.5).toFixed(2);
+      hero.appendChild(f);
+    }
+  }
+
+  // active nav highlight
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('nav.bar a[href^="#"]'));
+  var sections = navLinks.map(function(a){ return document.querySelector(a.getAttribute('href')); });
+  if ('IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) {
+          var id = e.target.id;
+          navLinks.forEach(function(a){ a.classList.toggle('active', a.getAttribute('href') === '#' + id); });
+        }
+      });
+    }, {rootMargin:'-45% 0px -50% 0px'});
+    sections.forEach(function(s){ if (s) obs.observe(s); });
+  }
+
+  // collapsible sections
+  document.querySelectorAll('.collapse-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var sec = document.getElementById(btn.getAttribute('data-target'));
+      var body = sec.querySelector('.sec-body');
+      if (sec.classList.contains('collapsed')) {
+        sec.classList.remove('collapsed');
+        body.style.maxHeight = body.scrollHeight + 'px';
+        btn.textContent = 'Collapse';
+        setTimeout(function(){ body.style.maxHeight = 'none'; }, 460);
+      } else {
+        body.style.maxHeight = body.scrollHeight + 'px';
+        requestAnimationFrame(function(){ body.style.maxHeight = '0px'; });
+        sec.classList.add('collapsed');
+        btn.textContent = 'Expand';
+      }
+    });
+  });
+
+  // accordion
+  document.querySelectorAll('.dive .dive-head').forEach(function(head){
+    head.addEventListener('click', function(){
+      var dive = head.closest('.dive');
+      var body = dive.querySelector('.dive-body');
+      if (dive.classList.contains('open')) {
+        body.style.maxHeight = '0px';
+        dive.classList.remove('open');
+      } else {
+        dive.classList.add('open');
+        body.style.maxHeight = body.scrollHeight + 'px';
+      }
+    });
+  });
+  (function(){ var f = document.querySelector('.dive.open .dive-body'); if (f) f.style.maxHeight = f.scrollHeight + 'px'; })();
+
+  // checklist (localStorage, per browser)
+  var CK_KEY = 'utah_xmas_checklist_v1';
+  var ck = {};
+  try { ck = JSON.parse(localStorage.getItem(CK_KEY) || '{}') || {}; } catch(_) { ck = {}; }
+  document.querySelectorAll('.check').forEach(function(row){
+    var key = row.getAttribute('data-ck');
+    if (ck[key]) row.classList.add('done');
+    row.addEventListener('click', function(){
+      row.classList.toggle('done');
+      ck[key] = row.classList.contains('done');
+      try { localStorage.setItem(CK_KEY, JSON.stringify(ck)); } catch(_) {}
+    });
+  });
+})();
+</script>
+</body>
+</html>
